@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name Here - Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> <!-- Przykładowy link do FontAwesome -->
+
+    <style>
+        /* --- RESET & GLOBAL STYLES --- */
+        :root {
+            --dark-bg: #121212;
+            --dark-secondary: #1A1A1A;
+            --text-light: #F5F5F5;
+            --text-muted: #A9A9A9;
+            --green: #6BCB3B;
+            --green-gradient: linear-gradient(90deg, #6BCB3B 0%, #4CAF50 100%);
+            --orange: #FFA500;
+            --blue: #4A6CFF;
+            --teal: #2EC4B6;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        h1, h2, h3 {
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        h1 {
+            font-size: 4rem;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: var(--text-muted);
+        }
+        
+        .section-intro {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto 50px auto;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: transform 0.3s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+        }
+
+        .btn-green {
+            background: var(--green-gradient);
+            color: white;
+        }
+        
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        /* --- HEADER --- */
+        .main-header {
+            background-color: var(--dark-secondary);
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .main-header .container {
+            display: flex;
+            justify-content: center; /* Centered navigation */
+            align-items: center;
+            position: relative;
+        }
+
+        .main-nav ul {
+            list-style: none;
+            display: flex;
+            gap: 40px;
+        }
+
+        .main-nav a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+
+        .main-nav a:hover {
+            color: var(--text-light);
+        }
+
+        .social-links {
+            position: absolute; /* Positioned to the right */
+            right: 20px;
+            display: flex;
+            gap: 20px;
+            font-size: 1.2rem;
+        }
+
+        .social-links a {
+            color: var(--text-muted);
+            transition: color 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            color: var(--text-light);
+        }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            padding: 100px 0;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 60px;
+        }
+
+        .hero-text h1 {
+            margin-bottom: 20px;
+        }
+
+        .hero-text p {
+            font-size: 1.1rem;
+            max-width: 450px;
+            margin-bottom: 30px;
+        }
+
+        .hero-image img {
+            width: 350px;
+            height: 350px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto;
+        }
+        
+        /* --- WORKED WITH --- */
+        .worked-with {
+            text-align: center;
+            margin-top: 100px;
+        }
+        
+        .worked-with p {
+            margin-bottom: 30px;
+            color: var(--text-muted);
+        }
+
+        .logos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .logo-item {
+            border: 1px solid #333;
+            border-radius: 8px;
+            padding: 15px 30px;
+            min-width: 150px;
+            text-align: center;
+        }
+        
+        /* I will use text for logos, but you should replace them with <img> or <svg> */
+        .logo-item {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        /* --- CASE STUDIES --- */
+        .case-studies {
+            background-color: #fff;
+            color: #333;
+        }
+
+        .case-studies h2 {
+            color: #111;
+        }
+        
+        .case-studies .section-intro p {
+            color: #666;
+        }
+
+        .case-study-item {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            margin-bottom: 80px;
+        }
+        
+        /* Alternating layout */
+        .case-study-item:nth-child(even) .case-study-text {
+            order: 2;
+        }
+
+        .case-study-item:nth-child(even) .case-study-image {
+            order: 1;
+        }
+        
+        .case-study-image img {
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .case-study-tag {
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+        
+        .tag-fintech { background-color: #FFF1E3; color: #D97706; }
+        .tag-edtech { background-color: #E3E7FF; color: #4A6CFF; }
+        .tag-pharma { background-color: #E3FFF1; color: #10B981; }
+
+        .case-study-text h3 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: #111;
+        }
+
+        .case-study-text p {
+            color: #555;
+            margin-bottom: 25px;
+        }
+
+        .btn-case-study {
+            color: #fff;
+        }
+
+        .btn-fintech { background-color: #F97316; }
+        .btn-edtech { background-color: #3B82F6; }
+        .btn-pharma { background-color: #10B981; }
+        
+        /* --- TESTIMONIALS --- */
+        .testimonials {
+            background-color: var(--dark-bg);
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+
+        .testimonial-card {
+            border: 1px solid #333;
+            border-radius: 12px;
+            padding: 30px;
+            position: relative;
+        }
+
+        .testimonial-card::before {
+            content: '“';
+            font-size: 4rem;
+            color: var(--text-light);
+            position: absolute;
+            top: 15px;
+            left: 25px;
+            opacity: 0.8;
+        }
+
+        .testimonial-card p {
+            margin-top: 30px;
+            margin-bottom: 30px;
+            font-size: 1rem;
+        }
+        
+        .client-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .client-info img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        
+        .client-info .client-name {
+            font-weight: 500;
+            color: var(--text-light);
+        }
+
+        /* --- RECENT WORK --- */
+        .recent-work {
+            background-color: #fff;
+            color: #333;
+            position: relative;
+        }
+        
+        .recent-work h2 { color: #111; }
+        .recent-work .section-intro p { color: #666; }
+
+        .work-slider {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+        
+        .work-item img {
+            border-radius: 12px;
+            margin-bottom: 20px;
+        }
+
+        .work-item h3 {
+            font-size: 1.5rem;
+            color: #111;
+            margin-bottom: 10px;
+        }
+
+        .work-item p {
+            color: #555;
+            margin-bottom: 20px;
+        }
+        
+        .slider-nav {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+            left: 0;
+            padding: 0 -20px; /* To push arrows outside container */
+        }
+        
+        .slider-nav button {
+            background: #fff;
+            border: 1px solid #ddd;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            font-size: 1.2rem;
+            color: #555;
+            transition: all 0.3s;
+        }
+        
+        .slider-nav button:hover {
+             background: #f5f5f5;
+             transform: scale(1.1);
+        }
+        
+        .nav-prev { margin-left: -50px; }
+        .nav-next { margin-right: -50px; }
+        
+
+        /* --- GET IN TOUCH --- */
+        .contact {
+            background-color: var(--dark-bg);
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--text-muted);
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            background-color: var(--dark-secondary);
+            border: 1px solid #333;
+            border-radius: 8px;
+            color: var(--text-light);
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+        }
+        
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        .btn-submit {
+            width: 100%;
+            font-size: 1.1rem;
+        }
+
+        /* --- FOOTER --- */
+        .main-footer {
+            background-color: var(--dark-secondary);
+            padding: 25px 0;
+            text-align: center;
+        }
+
+        .main-footer p {
+            color: var(--text-muted);
+        }
+
+        /* --- RESPONSIVE DESIGN --- */
+        @media (max-width: 992px) {
+            h1 { font-size: 3rem; }
+            h2 { font-size: 2rem; }
+            .hero-content { grid-template-columns: 1fr; text-align: center; }
+            .hero-text p { margin-left: auto; margin-right: auto; }
+            .hero-image { order: -1; margin-bottom: 40px; }
+            .case-study-item { grid-template-columns: 1fr; }
+            .case-study-item:nth-child(even) .case-study-text,
+            .case-study-item .case-study-text { order: 2; text-align: center; }
+            .case-study-item:nth-child(even) .case-study-image,
+            .case-study-item .case-study-image { order: 1; }
+            .testimonial-grid { grid-template-columns: 1fr; }
+            .slider-nav { display: none; }
+            .main-nav { display: none; } /* Simplified for mobile */
+            .social-links { position: static; justify-content: center; padding-top: 10px; }
+            .main-header .container { flex-direction: column; }
+        }
+
+        @media (max-width: 768px) {
+            section { padding: 60px 0; }
+            .work-slider { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="main-header">
+        <div class="container">
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#case-studies">Case Studies</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#recent-work">Recent work</a></li>
+                    <li><a href="#contact">Get In Touch</a></li>
+                </ul>
+            </nav>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-behance"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- HERO SECTION -->
+        <section id="hero" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1>Your Name Here</h1>
+                        <p>Intro text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <a href="#contact" class="btn btn-green">Let's get started &gt;</a>
+                    </div>
+                    <div class="hero-image">
+                        <img src="https://i.imgur.com/uG5u5bT.jpeg" alt="Your Name">
+                    </div>
+                </div>
+
+                <div class="worked-with">
+                    <p>Worked with</p>
+                    <div class="logos">
+                        <div class="logo-item">❖ ClickUp</div>
+                        <div class="logo-item">⬨ Dropbox</div>
+                        <div class="logo-item">PAYCHEX</div>
+                        <div class="logo-item">elastic</div>
+                        <div class="logo-item">stripe</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CASE STUDIES SECTION -->
+        <section id="case-studies" class="case-studies">
+            <div class="container">
+                <div class="section-intro">
+                    <h2>Case Studies</h2>
+                    <p>Solving user & business problems since last 15+ years. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+                
+                <div class="case-study-item">
+                    <div class="case-study-text">
+                        <span class="case-study-tag tag-fintech">Fintech</span>
+                        <h3>Work name here</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <a href="#" class="btn btn-case-study btn-fintech">View case study &gt;</a>
+                    </div>
+                    <div class="case-study-image">
+                        <img src="https://i.imgur.com/8Qp4kL4.jpeg" alt="Case Study 1">
+                    </div>
+                </div>
+
+                <div class="case-study-item">
+                     <div class="case-study-image">
+                        <img src="https://i.imgur.com/5lV5Yqg.jpeg" alt="Case Study 2">
+                    </div>
+                    <div class="case-study-text">
+                        <span class="case-study-tag tag-edtech">EdTech</span>
+                        <h3>Work name here</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <a href="#" class="btn btn-case-study btn-edtech">View case study &gt;</a>
+                    </div>
+                </div>
+
+                <div class="case-study-item">
+                    <div class="case-study-text">
+                        <span class="case-study-tag tag-pharma">Pharma</span>
+                        <h3>Work name here</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <a href="#" class="btn btn-case-study btn-pharma">View case study &gt;</a>
+                    </div>
+                    <div class="case-study-image">
+                        <img src="https://i.imgur.com/M6LgDEK.jpeg" alt="Case Study 3">
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- TESTIMONIALS SECTION -->
+        <section id="testimonials" class="testimonials">
+            <div class="container">
+                <div class="section-intro">
+                    <h2>Testimonials</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+
+                <div class="testimonial-grid">
+                    <div class="testimonial-card">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <div class="client-info">
+                            <img src="https://i.imgur.com/gko8QJj.jpeg" alt="Client 1">
+                            <span class="client-name">Client Name</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <div class="client-info">
+                            <img src="https://i.imgur.com/rOshwR4.jpeg" alt="Client 2">
+                            <span class="client-name">Client Name</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <div class="client-info">
+                            <img src="https://i.imgur.com/8xWX3vR.jpeg" alt="Client 3">
+                            <span class="client-name">Client Name</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <p>Ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                        <div class="client-info">
+                            <img src="https://i.imgur.com/X4JgEzk.jpeg" alt="Client 4">
+                            <span class="client-name">Client Name</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- RECENT WORK SECTION -->
+        <section id="recent-work" class="recent-work">
+             <div class="container">
+                <div class="section-intro">
+                    <h2>Recent Work</h2>
+                    <p>Solving user & business problems since last 15+ years. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+                
+                <div class="work-slider">
+                    <div class="work-item">
+                        <img src="https://i.imgur.com/NBYgLoH.jpeg" alt="Recent Work 1">
+                        <h3>Work name here</h3>
+                        <p>Labore et dolore magna aliqua. Sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+                        <a href="#" class="btn btn-green">Know more &gt;</a>
+                    </div>
+                    <div class="work-item">
+                        <img src="https://i.imgur.com/L7sL0JB.jpeg" alt="Recent Work 2">
+                        <h3>Work name here</h3>
+                        <p>Rempor incididunt ut labore et dolore magna aliqua. Sed do eiusmod tempor incididunt u.</p>
+                        <a href="#" class="btn btn-green">Know more &gt;</a>
+                    </div>
+                </div>
+
+                <div class="slider-nav">
+                    <button class="nav-prev">&lt;</button>
+                    <button class="nav-next">&gt;</button>
+                </div>
+             </div>
+        </section>
+
+        <!-- GET IN TOUCH SECTION -->
+        <section id="contact" class="contact">
+            <div class="container">
+                 <div class="section-intro">
+                    <h2>Get In Touch</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Please enter your email">
+                    </div>
+                     <div class="form-group">
+                        <label for="mobile">Mobile</label>
+                        <input type="tel" id="mobile" name="mobile" placeholder="Enter mobile">
+                    </div>
+                     <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="Enter your message"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-green btn-submit">Submit &gt;</button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="main-footer">
+        <div class="container">
+            <p>Made with ❤️</p>
+        </div>
+    </footer>
+
+    <!-- Font Awesome Kit (replace with your own if you have one) -->
+    <script src="https://kit.fontawesome.com/9b799b8d4e.js" crossorigin="anonymous"></script>
+</body>
+</html>
