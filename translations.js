@@ -65,9 +65,33 @@ const translations = {
         'en': 'A modern, responsive website designed for a local business. Optimized for SEO and mobile, ready to convert visitors into clients.',
         'pl': 'Nowoczesna, responsywna strona zaprojektowana dla lokalnego biznesu. Zoptymalizowana pod kątem SEO i urządzeń mobilnych, gotowa do konwersji odwiedzających w klientów.'
     },
-    'case1-btn': {
+    'case2-tag': {
+        'en': 'Pizza&Fire',
+        'pl': 'Pizza&Fire'
+    },
+    'case2-title': {
+        'en': 'Landing Page for Small Business',
+        'pl': 'Strona internetowa dla małej firmy'
+    },
+    'case2-desc': {
+        'en': 'A modern, responsive website designed for a local business. Optimized for SEO and mobile, ready to convert visitors into clients.',
+        'pl': 'Nowoczesna, responsywna strona zaprojektowana dla lokalnego biznesu. Zoptymalizowana pod kątem SEO i urządzeń mobilnych, gotowa do konwersji odwiedzających w klientów.'
+    },
+    'case3-tag': {
+        'en': 'Pizza&Fire',
+        'pl': 'Pizza&Fire'
+    },
+    'case3-title': {
+        'en': 'Landing Page for Small Business',
+        'pl': 'Strona internetowa dla małej firmy'
+    },
+    'case3-desc': {
+        'en': 'A modern, responsive website designed for a local business. Optimized for SEO and mobile, ready to convert visitors into clients.',
+        'pl': 'Nowoczesna, responsywna strona zaprojektowana dla lokalnego biznesu. Zoptymalizowana pod kątem SEO i urządzeń mobilnych, gotowa do konwersji odwiedzających w klientów.'
+    },
+    'case-btn': {
         'en': 'View case study >',
-        'pl': 'Zobacz studium przypadku >'
+        'pl': 'Zobacz projekt >'
     },
     
     // Continue with all other text elements...
