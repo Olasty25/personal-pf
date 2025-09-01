@@ -66,28 +66,28 @@ const translations = {
         'pl': 'Nowoczesna, responsywna strona zaprojektowana dla lokalnego biznesu. Zoptymalizowana pod kątem SEO i urządzeń mobilnych, gotowa do konwersji odwiedzających w klientów.'
     },
     'case2-tag': {
-        'en': 'Pizza&Fire',
-        'pl': 'Pizza&Fire'
+        'en': 'Edssistant',
+        'pl': 'Edsisstant'
     },
     'case2-title': {
-        'en': 'Landing Page for Small Business',
-        'pl': 'Strona internetowa dla małej firmy'
+        'en': 'AI Automation Agent',
+        'pl': 'AI Automatyczny Agent'
     },
     'case2-desc': {
-        'en': 'A modern, responsive website designed for a local business. Optimized for SEO and mobile, ready to convert visitors into clients.',
-        'pl': 'Nowoczesna, responsywna strona zaprojektowana dla lokalnego biznesu. Zoptymalizowana pod kątem SEO i urządzeń mobilnych, gotowa do konwersji odwiedzających w klientów.'
+        'en': 'A custom Python script that scrapes online data and organizes it into Excel sheets, saving hours of manual work.',
+        'pl': 'Customowy kod w Pythonie, który zbiera dane z internetu i zapisuje je w Excelu, szczędząc godziny manualnej roboty.'
     },
     'case3-tag': {
-        'en': 'Pizza&Fire',
-        'pl': 'Pizza&Fire'
+        'en': 'Pharmagent',
+        'pl': 'Pharmagent'
     },
     'case3-title': {
-        'en': 'Landing Page for Small Business',
-        'pl': 'Strona internetowa dla małej firmy'
+        'en': 'Trained AI Chatbot (PDF & Q/A)',
+        'pl': 'Wytrenowany Czatbot AI (PDFy & Q&A)'
     },
     'case3-desc': {
-        'en': 'A modern, responsive website designed for a local business. Optimized for SEO and mobile, ready to convert visitors into clients.',
-        'pl': 'Nowoczesna, responsywna strona zaprojektowana dla lokalnego biznesu. Zoptymalizowana pod kątem SEO i urządzeń mobilnych, gotowa do konwersji odwiedzających w klientów.'
+        'en': 'A tool that can be tuned even more to focus on solving certain problems of one niche.',
+        'pl': 'Narzędze które można dostrajać (ćwiczyć) w rozwiązywaniu problemów konkretnej niszy.'
     },
     'case-btn': {
         'en': 'View case study >',
@@ -99,11 +99,11 @@ const translations = {
     // Contact form
     'contact-title': {
         'en': 'Get In Touch',
-        'pl': 'Skontaktuj się'
+        'pl': 'Kontakt do mnie'
     },
     'contact-subtitle': {
-        'en': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-        'pl': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+        'en': 'I work on rates ranging from 5$ - 30$ / hour',
+        'pl': 'Pracuję na stawkach od 25 zł do 120 zł za godz..'
     },
     'email-label': {
         'en': 'Email',
@@ -111,7 +111,7 @@ const translations = {
     },
     'email-placeholder': {
         'en': 'Please enter your email',
-        'pl': 'Wprowadź swój adres email'
+        'pl': 'Twój adres email'
     },
     'mobile-label': {
         'en': 'Mobile',
@@ -119,7 +119,7 @@ const translations = {
     },
     'mobile-placeholder': {
         'en': 'Enter mobile',
-        'pl': 'Wprowadź numer telefonu'
+        'pl': 'Twój telefon'
     },
     'message-label': {
         'en': 'Message',
