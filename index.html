@@ -490,6 +490,41 @@
         .main-footer p {
             color: var(--text-muted);
         }
+        /* Add this to your CSS */
+        .language-switcher {
+            position: absolute;
+            left: 20px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .lang-btn {
+            background: none;
+            border: none;
+            color: var(--text-muted);
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-weight: 500;
+            padding: 5px;
+            transition: color 0.3s ease;
+        }
+        
+        .lang-btn:hover, .lang-btn.active {
+            color: var(--text-light);
+        }
+        
+        .lang-divider {
+            color: var(--text-muted);
+        }
+        
+        @media (max-width: 992px) {
+            .language-switcher {
+                position: static;
+                justify-content: center;
+                margin-bottom: 10px;
+            }
+        }
 
         /* --- RESPONSIVE DESIGN --- */
         @media (max-width: 992px) {
@@ -522,6 +557,12 @@
     <!-- HEADER -->
     <header class="main-header">
         <div class="container">
+            <!-- Add this to your header section -->
+            <div class="language-switcher">
+                <button id="lang-en" class="lang-btn active">EN</button>
+                <span class="lang-divider">|</span>
+                <button id="lang-pl" class="lang-btn">PL</button>
+            </div>
             <nav class="main-nav">
                 <ul>
                     <li><a href="#hero">Home</a></li>
