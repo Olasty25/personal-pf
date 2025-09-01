@@ -144,6 +144,51 @@
             color: var(--text-light);
         }
 
+        /* --- PROFESSIONAL PROFILES SECTION --- */
+        .profile-links-section {
+            background-color: var(--dark-secondary);
+            padding: 50px 0;
+            text-align: center;
+        }
+        
+        .profile-links-section h2 {
+            color: var(--text-light);
+            margin-bottom: 25px;
+            font-weight: 600;
+        }
+        
+        .profile-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+        
+        .profile-link {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: var(--text-muted);
+            transition: transform 0.3s, color 0.3s;
+            padding: 15px;
+            border-radius: 8px;
+        }
+        
+        .profile-link:hover {
+            transform: translateY(-5px);
+            background-color: rgba(255, 255, 255, 0.05);
+            color: var(--text-light);
+        }
+        
+        .profile-link i {
+            font-size: 32px;
+            margin-bottom: 8px;
+        }
+        
+        .github:hover { color: #fff; }
+        .linkedin:hover { color: #0077b5; }
+        .freelancer:hover { color: #29b2fe; }
+
         /* --- HERO SECTION --- */
         .hero {
             padding: 100px 0;
@@ -295,7 +340,7 @@
         }
 
         .testimonial-card::before {
-            content: '“';
+            content: '"';
             font-size: 4rem;
             color: var(--text-light);
             position: absolute;
@@ -463,6 +508,7 @@
             .main-nav { display: none; } /* Simplified for mobile */
             .social-links { position: static; justify-content: center; padding-top: 10px; }
             .main-header .container { flex-direction: column; }
+            .profile-links { flex-direction: column; align-items: center; }
         }
 
         @media (max-width: 768px) {
@@ -494,6 +540,7 @@
     </header>
 
     <main>
+        
 
         <!-- HERO SECTION -->
         <section id="hero" class="hero">
@@ -665,6 +712,25 @@
                     </div>
                     <button type="submit" class="btn btn-green btn-submit">Submit &gt;</button>
                 </form>
+            </div>
+        </section>
+        <!-- PROFESSIONAL PROFILES SECTION -->
+        <section id="profiles" class="profile-links-section">
+            <div class="container">
+                <div class="profile-links">
+                    <a href="https://github.com/twój-username" class="profile-link github">
+                        <i class="fab fa-github"></i>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="https://linkedin.com/in/twój-profil" class="profile-link linkedin">
+                        <i class="fab fa-linkedin"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="https://freelancer.com/u/twój-profil" class="profile-link freelancer">
+                        <i class="fas fa-laptop-code"></i>
+                        <span>Freelancer</span>
+                    </a>
+                </div>
             </div>
         </section>
 
