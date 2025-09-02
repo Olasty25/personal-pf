@@ -1,6 +1,5 @@
-// Create a translations.js file with this content
 const translations = {
-    // Header Navigation
+    // Navigation
     'nav-home': {
         'en': 'Home',
         'pl': 'Strona główna'
@@ -20,12 +19,6 @@ const translations = {
     'nav-contact': {
         'en': 'Get In Touch',
         'pl': 'Kontakt'
-    },
-    
-    // Professional Profiles Section
-    'profiles-title': {
-        'en': 'My Professional Profiles',
-        'pl': 'Moje profile zawodowe'
     },
     
     // Hero Section
@@ -52,52 +45,96 @@ const translations = {
         'pl': 'Rozwiązuję problemy użytkowników i firm od ponad 15 lat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
     },
     
-    // Case study 1
+    // Case Studies
     'case1-tag': {
         'en': 'Pizza&Fire',
         'pl': 'Pizza&Fire'
     },
     'case1-title': {
-        'en': 'Landing Page for Small Business',
+        'en': 'Landing Page for Small Buisness',
         'pl': 'Strona internetowa dla małej firmy'
     },
     'case1-desc': {
         'en': 'A modern, responsive website designed for a local business. Optimized for SEO and mobile, ready to convert visitors into clients.',
         'pl': 'Nowoczesna, responsywna strona zaprojektowana dla lokalnego biznesu. Zoptymalizowana pod kątem SEO i urządzeń mobilnych, gotowa do konwersji odwiedzających w klientów.'
     },
+    'case-btn': {
+        'en': 'View case study >',
+        'pl': 'Zobacz studium przypadku >'
+    },
+    
     'case2-tag': {
-        'en': 'Edssistant',
-        'pl': 'Edsisstant'
+        'en': 'EdTech',
+        'pl': 'EdTech'
     },
     'case2-title': {
         'en': 'AI Automation Agent',
-        'pl': 'AI Automatyczny Agent'
+        'pl': 'Agent automatyzacji AI'
     },
     'case2-desc': {
         'en': 'A custom Python script that scrapes online data and organizes it into Excel sheets, saving hours of manual work.',
-        'pl': 'Customowy kod w Pythonie, który zbiera dane z internetu i zapisuje je w Excelu, szczędząc godziny manualnej roboty.'
+        'pl': 'Niestandardowy skrypt Python, który zbiera dane online i organizuje je w arkuszach Excel, oszczędzając godziny ręcznej pracy.'
     },
+    
     'case3-tag': {
-        'en': 'Pharmagent',
-        'pl': 'Pharmagent'
+        'en': 'Pharma',
+        'pl': 'Farmacja'
     },
     'case3-title': {
         'en': 'Trained AI Chatbot (PDF & Q/A)',
-        'pl': 'Wytrenowany Czatbot AI (PDFy & Q&A)'
+        'pl': 'Wytrenowany chatbot AI (PDF i Q/A)'
     },
     'case3-desc': {
         'en': 'A tool that can be tuned even more to focus on solving certain problems of one niche.',
-        'pl': 'Narzędze które można dostrajać (ćwiczyć) w rozwiązywaniu problemów konkretnej niszy.'
-    },
-    'case-btn': {
-        'en': 'View case study >',
-        'pl': 'Zobacz projekt >'
+        'pl': 'Narzędzie, które można jeszcze bardziej dostroić, aby skupić się na rozwiązywaniu określonych problemów jednej niszy.'
     },
     
-    // Recent Work Section
+    // Testimonials
+    'testimonials-title': {
+        'en': 'Testimonials',
+        'pl': 'Referencje'
+    },
+    'testimonials-subtitle': {
+        'en': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        'pl': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+    },
+    'testimonial1-text': {
+        'en': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        'pl': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+    },
+    'client1-name': {
+        'en': 'Client Name',
+        'pl': 'Nazwa Klienta'
+    },
+    'testimonial2-text': {
+        'en': 'Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        'pl': 'Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+    },
+    'client2-name': {
+        'en': 'Client Name',
+        'pl': 'Nazwa Klienta'
+    },
+    'testimonial3-text': {
+        'en': 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+        'pl': 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+    },
+    'client3-name': {
+        'en': 'Client Name',
+        'pl': 'Nazwa Klienta'
+    },
+    'testimonial4-text': {
+        'en': 'Ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.',
+        'pl': 'Ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.'
+    },
+    'client4-name': {
+        'en': 'Client Name',
+        'pl': 'Nazwa Klienta'
+    },
+    
+    // Recent Work
     'recent-work-title': {
         'en': 'Recent Work',
-        'pl': 'Ostatnie projekty'
+        'pl': 'Ostatnie prace'
     },
     'recent-work-subtitle': {
         'en': 'Projects, that i hope to make recognizeable one day.',
@@ -122,15 +159,16 @@ const translations = {
     'work-more-btn': {
         'en': 'Know more >',
         'pl': 'Dowiedz się więcej >'
-    }
-    // Contact form
+    },
+    
+    // Contact
     'contact-title': {
         'en': 'Get In Touch',
-        'pl': 'Kontakt do mnie'
+        'pl': 'Skontaktuj się'
     },
     'contact-subtitle': {
-        'en': 'I work on rates ranging from 5$ - 30$ / hour',
-        'pl': 'Pracuję na stawkach od 25 zł do 120 zł za godz..'
+        'en': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        'pl': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
     },
     'email-label': {
         'en': 'Email',
@@ -138,7 +176,7 @@ const translations = {
     },
     'email-placeholder': {
         'en': 'Please enter your email',
-        'pl': 'Twój adres email'
+        'pl': 'Wprowadź swój adres email'
     },
     'mobile-label': {
         'en': 'Mobile',
@@ -146,7 +184,7 @@ const translations = {
     },
     'mobile-placeholder': {
         'en': 'Enter mobile',
-        'pl': 'Twój telefon'
+        'pl': 'Wprowadź numer telefonu'
     },
     'message-label': {
         'en': 'Message',
@@ -161,59 +199,23 @@ const translations = {
         'pl': 'Wyślij >'
     },
     
+    // Professional Profiles
+    'github-text': {
+        'en': 'GitHub',
+        'pl': 'GitHub'
+    },
+    'linkedin-text': {
+        'en': 'LinkedIn',
+        'pl': 'LinkedIn'
+    },
+    'freelancer-text': {
+        'en': 'Freelancer',
+        'pl': 'Freelancer'
+    },
+    
     // Footer
     'footer-text': {
         'en': 'Made with ❤️',
         'pl': 'Stworzone z ❤️'
     }
 };
-
-// Add this script to your main JavaScript file or in a script tag at the bottom of your HTML
-document.addEventListener('DOMContentLoaded', function() {
-    // Default language
-    let currentLang = localStorage.getItem('preferredLanguage') || 'en';
-    
-    // Set initial language
-    setLanguage(currentLang);
-    
-    // Language switcher functionality
-    document.getElementById('lang-en').addEventListener('click', function() {
-        setLanguage('en');
-    });
-    
-    document.getElementById('lang-pl').addEventListener('click', function() {
-        setLanguage('pl');
-    });
-    
-    function setLanguage(lang) {
-        currentLang = lang;
-        
-        // Save preference
-        localStorage.setItem('preferredLanguage', lang);
-        
-        // Update active button
-        document.querySelectorAll('.lang-btn').forEach(btn => {
-            btn.classList.remove('active');
-        });
-        document.getElementById('lang-' + lang).classList.add('active');
-        
-        // Update all text elements with data-i18n attribute
-        document.querySelectorAll('[data-i18n]').forEach(element => {
-            const key = element.getAttribute('data-i18n');
-            if (translations[key] && translations[key][lang]) {
-                if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
-                    if (element.hasAttribute('placeholder')) {
-                        element.placeholder = translations[key][lang];
-                    } else {
-                        element.value = translations[key][lang];
-                    }
-                } else {
-                    element.innerHTML = translations[key][lang];
-                }
-            }
-        });
-        
-        // Update document lang attribute
-        document.documentElement.lang = lang;
-    }
-});
