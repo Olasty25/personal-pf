@@ -1,3 +1,11 @@
+<!-- Umieść tę zawartość tuż przed zamykającym tagiem </body> -->
+
+<!-- Najpierw załaduj FontAwesome z poprawnego źródła -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js" integrity="sha512-uKQ39gEGiyUJl4AI6L+ekBdGKpGw4xJ55+xyJG7YFlJokPNYegn9KwQ3P8A7aFQAUtUsAQHep+d/lrGqrbPIDQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- Wbuduj obiekt translations bezpośrednio w HTML -->
+<script>
+// Obiekt translations wbudowany bezpośrednio w HTML
 const translations = {
     // Navigation
     'nav-home': {
@@ -219,3 +227,76 @@ const translations = {
         'pl': 'Stworzone z ❤️'
     }
 };
+
+// Skrypt do przełączania języków (zaraz po definicji translations)
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('Script loaded');
+    
+    // Pobieramy przyciski
+    const enButton = document.getElementById('lang-en');
+    const plButton = document.getElementById('lang-pl');
+    
+    if (!enButton || !plButton) {
+        console.error('Language buttons not found!');
+        return;
+    }
+    
+    console.log('Buttons found, adding event listeners');
+    
+    // Default language
+    let currentLang = localStorage.getItem('preferredLanguage') || 'en';
+    
+    // Set initial language
+    setLanguage(currentLang);
+    
+    // Explicit onclick handlers
+    enButton.onclick = function() {
+        console.log('English button clicked');
+        setLanguage('en');
+    };
+    
+    plButton.onclick = function() {
+        console.log('Polish button clicked');
+        setLanguage('pl');
+    };
+    
+    function setLanguage(lang) {
+        console.log('Setting language to: ' + lang);
+        currentLang = lang;
+        
+        // Save preference
+        localStorage.setItem('preferredLanguage', lang);
+        
+        // Update active button
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+            btn.classList.remove('active');
+        });
+        
+        const activeButton = document.getElementById('lang-' + lang);
+        if (activeButton) {
+            activeButton.classList.add('active');
+        }
+        
+        // Update all text elements with data-i18n attribute
+        document.querySelectorAll('[data-i18n]').forEach(element => {
+            const key = element.getAttribute('data-i18n');
+            if (translations[key] && translations[key][lang]) {
+                if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                    if (element.getAttribute('placeholder')) {
+                        element.setAttribute('placeholder', translations[key][lang]);
+                    } else {
+                        element.value = translations[key][lang];
+                    }
+                } else {
+                    element.innerHTML = translations[key][lang];
+                }
+            } else {
+                console.warn('Missing translation for key: ' + key + ' in language: ' + lang);
+            }
+        });
+        
+        // Update document lang attribute
+        document.documentElement.lang = lang;
+    }
+});
+</script>
