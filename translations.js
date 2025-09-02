@@ -168,11 +168,11 @@ const translations = {
     // Contact
     'contact-title': {
         'en': 'Get In Touch',
-        'pl': 'Skontaktuj się'
+        'pl': 'Kontakt do mnie'
     },
     'contact-subtitle': {
-        'en': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-        'pl': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+        'en': 'If you are interested in hiring me, please leave a message',
+        'pl': 'Jeżeli jesteś zainteresowany współpracą ze mnią, zostaw mi wiadomość'
     },
     'email-label': {
         'en': 'Email',
