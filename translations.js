@@ -1,10 +1,6 @@
-<!-- Umieść tę zawartość tuż przed zamykającym tagiem </body> -->
 
-<!-- Najpierw załaduj FontAwesome z poprawnego źródła -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js" integrity="sha512-uKQ39gEGiyUJl4AI6L+ekBdGKpGw4xJ55+xyJG7YFlJokPNYegn9KwQ3P8A7aFQAUtUsAQHep+d/lrGqrbPIDQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+//<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js" integrity="sha512-uKQ39gEGiyUJl4AI6L+ekBdGKpGw4xJ55+xyJG7YFlJokPNYegn9KwQ3P8A7aFQAUtUsAQHep+d/lrGqrbPIDQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-<!-- Wbuduj obiekt translations bezpośrednio w HTML -->
-<script>
 // Obiekt translations wbudowany bezpośrednio w HTML
 const translations = {
     // Navigation
@@ -299,4 +295,3 @@ document.addEventListener('DOMContentLoaded', function() {
         document.documentElement.lang = lang;
     }
 });
-</script>
