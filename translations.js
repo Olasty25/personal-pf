@@ -94,7 +94,35 @@ const translations = {
         'pl': 'Zobacz projekt >'
     },
     
-    
+    // Recent Work Section
+    'recent-work-title': {
+        'en': 'Recent Work',
+        'pl': 'Ostatnie projekty'
+    },
+    'recent-work-subtitle': {
+        'en': 'Projects, that i hope to make recognizeable one day.',
+        'pl': 'Projekty, które mam nadzieję kiedyś uczynić rozpoznawalnymi.'
+    },
+    'work1-title': {
+        'en': 'Optedu AI',
+        'pl': 'Optedu AI'
+    },
+    'work1-desc': {
+        'en': 'An AI educational tutor for students to optimise and speed up their learning path.',
+        'pl': 'Tutor edukacyjny AI dla studentów, pomagający zoptymalizować i przyspieszyć ścieżkę nauki.'
+    },
+    'work2-title': {
+        'en': 'Forsenior AI',
+        'pl': 'Forsenior AI'
+    },
+    'work2-desc': {
+        'en': 'An AI mental caretaker for elderly people. 24/7 calling and texting to escape loneliness',
+        'pl': 'AI opiekun dla osób starszych. Dzwonienie i wysyłanie wiadomości 24/7, aby uniknąć samotności.'
+    },
+    'work-more-btn': {
+        'en': 'Know more >',
+        'pl': 'Dowiedz się więcej >'
+    }
     // Contact form
     'contact-title': {
         'en': 'Get In Touch',
