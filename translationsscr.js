@@ -1,6 +1,4 @@
-//<!-- Dodaj ten skrypt na końcu strony, tuż przed zamykającym tagiem </body> -->
-<script>
-// Skrypt do przełączania języków
+
 document.addEventListener('DOMContentLoaded', function() {
     console.log('Script loaded');
     
@@ -71,4 +69,4 @@ document.addEventListener('DOMContentLoaded', function() {
         document.documentElement.lang = lang;
     }
 });
-</script>
+
