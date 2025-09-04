@@ -219,8 +219,8 @@ const translations = {
     
     // Footer
     'footer-text': {
-        'en': 'Made with ❤️',
-        'pl': 'Stworzone z ❤️'
+        'en': 'ThoReSt 2026',
+        'pl': 'ThoReSt 2026'
     }
 };
 
