@@ -76,8 +76,8 @@ const translations = {
         'pl': 'Agent automatyzacji AI'
     },
     'case2-desc': {
-        'en': 'A custom Python script that scrapes online data and organizes it into Excel sheets, saving hours of manual work.',
-        'pl': 'Niestandardowy skrypt Python, który zbiera dane online i organizuje je w arkuszach Excel, oszczędzając godziny ręcznej pracy.'
+        'en': 'A custom n8n workflow that posts AI videos and sells courses.',
+        'pl': 'Niestandardowa automatyzacja n8 która postuje wideo AI i sprzedaje ludziom kursy'
     },
     
     'case3-tag': {
