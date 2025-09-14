@@ -51,12 +51,12 @@ const translations = {
     
     // Case Studies
     'case1-tag': {
-        'en': 'Pizza&Fire',
-        'pl': 'Pizza&Fire'
+        'en': 'Vaultlify',
+        'pl': 'Vaultlify'
     },
     'case1-title': {
-        'en': 'Landing Page for Small Buisness',
-        'pl': 'Strona internetowa dla małej firmy'
+        'en': 'A tool for safe locking large files and accessing them with vault ID and password',
+        'pl': 'Narzędzie do bezpiecznego skłądowania dużych plików za dostępem poprzez ID skrytki i hasło'
     },
     'case1-desc': {
         'en': 'A modern, responsive website designed for a local business. Optimized for SEO and mobile, ready to convert visitors into clients.',
