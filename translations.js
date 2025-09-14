@@ -56,7 +56,7 @@ const translations = {
     },
     'case1-title': {
         'en': 'Safe file transfer website',
-        'pl': 'Storna do bezpiecznego przesyłu plików'
+        'pl': 'Strona do bezpiecznego przesyłu plików'
     },
     'case1-desc': {
         'en': 'A tool for safe locking large files and accessing them with vault ID and password. Completely free',
