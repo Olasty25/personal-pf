@@ -55,12 +55,12 @@ const translations = {
         'pl': 'Vaultlify'
     },
     'case1-title': {
-        'en': 'A tool for safe locking large files and accessing them with vault ID and password',
-        'pl': 'Narzędzie do bezpiecznego skłądowania dużych plików za dostępem poprzez ID skrytki i hasło'
+        'en': 'Safe file transfer website',
+        'pl': 'Storna do bezpiecznego przesyłu plików'
     },
     'case1-desc': {
-        'en': 'A modern, responsive website designed for a local business. Optimized for SEO and mobile, ready to convert visitors into clients.',
-        'pl': 'Nowoczesna, responsywna strona zaprojektowana dla lokalnego biznesu. Zoptymalizowana pod kątem SEO i urządzeń mobilnych, gotowa do konwersji odwiedzających w klientów.'
+        'en': 'A tool for safe locking large files and accessing them with vault ID and password. Completely free',
+        'pl': 'Narzędzie do bezpiecznego skłądowania dużych plików za dostępem poprzez ID skrytki i hasło. Zupełnie bezpłatne'
     },
     'case-btn': {
         'en': 'View case study >',
