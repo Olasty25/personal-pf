@@ -81,8 +81,8 @@ const translations = {
     },
     
     'case3-tag': {
-        'en': 'Pharma',
-        'pl': 'Farmacja'
+        'en': 'uitocode',
+        'pl': 'uitocode'
     },
     'case3-title': {
         'en': 'Trained AI Chatbot (PDF & Q/A)',
