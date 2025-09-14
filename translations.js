@@ -68,16 +68,16 @@ const translations = {
     },
     
     'case2-tag': {
-        'en': 'EdTech',
-        'pl': 'EdTech'
+        'en': 'Remailify',
+        'pl': 'Remailify'
     },
     'case2-title': {
-        'en': 'AI Automation Agent',
-        'pl': 'Agent automatyzacji AI'
+        'en': 'AI E-mail corrector',
+        'pl': 'AI korektor E-maili'
     },
     'case2-desc': {
-        'en': 'A custom n8n workflow that posts AI videos and sells courses.',
-        'pl': 'Niestandardowa automatyzacja n8 która postuje wideo AI i sprzedaje ludziom kursy'
+        'en': 'A custom AI tool that can amend your e-mail',
+        'pl': 'Prościutkie narzędzie AI które może poprawić wygląd twoich e-maili'
     },
     
     'case3-tag': {
