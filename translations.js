@@ -153,12 +153,12 @@ const translations = {
         'pl': 'Tutor edukacyjny AI dla studentów, pomagający zoptymalizować i przyspieszyć ścieżkę nauki.'
     },
     'work2-title': {
-        'en': 'Forsenior AI',
-        'pl': 'Forsenior AI'
+        'en': 'Codequick AI',
+        'pl': 'Codequick AI'
     },
     'work2-desc': {
-        'en': 'An AI mental caretaker for elderly people. 24/7 calling and texting to escape loneliness',
-        'pl': 'AI opiekun dla osób starszych. Dzwonienie i wysyłanie wiadomości 24/7, aby uniknąć samotności.'
+        'en': 'An AI free code editor that runs LLM locally on your PC',
+        'pl': 'Darmowy AI edytor kodu który odpala LLMa lokalnie na twoim komputerze'
     },
     'work-more-btn': {
         'en': 'Know more >',
