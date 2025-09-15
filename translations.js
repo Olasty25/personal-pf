@@ -103,38 +103,22 @@ const translations = {
         'pl': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
     },
     'testimonial1-text': {
-        'en': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-        'pl': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+        'en': '',
+        'pl': 'Zleciłem stworzenie sklepu e-commerce dla mojej firmy produkującej słuchawki. Pan Aleksander wykonał świetną robotę, i w 3 dni miałem już w pełni działający stronę. Gorąco polecam'
     },
     'client1-name': {
-        'en': 'Client Name',
-        'pl': 'Nazwa Klienta'
+        'en': 'Danier02',
+        'pl': 'Danier02'
     },
     'testimonial2-text': {
-        'en': 'Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-        'pl': 'Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+        'en': '',
+        'pl': 'Potrzebowałem na szybko stronki www do bezpiecznego przesyłania dużych plików. Piszę maila do pana, i w zaledwie 2 godziny dostaje odpowiedź z linkiem do gotowej stronki. Świetna robota'
     },
     'client2-name': {
-        'en': 'Client Name',
-        'pl': 'Nazwa Klienta'
+        'en': 'Andrzej Sokołowski',
+        'pl': 'Andrzej Sokołowski'
     },
-    'testimonial3-text': {
-        'en': 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-        'pl': 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
-    },
-    'client3-name': {
-        'en': 'Client Name',
-        'pl': 'Nazwa Klienta'
-    },
-    'testimonial4-text': {
-        'en': 'Ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.',
-        'pl': 'Ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.'
-    },
-    'client4-name': {
-        'en': 'Client Name',
-        'pl': 'Nazwa Klienta'
-    },
-    
+   
     // Recent Work
     'recent-work-title': {
         'en': 'Recent Work',
