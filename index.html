@@ -735,21 +735,40 @@
                 <p data-i18n="contact-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             </div>
 
-            <form class="contact-form">
-                <div class="form-group">
-                    <label for="email" data-i18n="email-label">Email</label>
-                    <input type="email" id="email" name="email" placeholder="Please enter your email" data-i18n="email-placeholder">
-                </div>
+             <form class="contact-form">
                  <div class="form-group">
-                    <label for="mobile" data-i18n="mobile-label">Mobile</label>
-                    <input type="tel" id="mobile" name="mobile" placeholder="Enter mobile" data-i18n="mobile-placeholder">
-                </div>
+                     <label for="email" data-i18n="email-label">Email</label>
+                     <input type="email" id="email" name="email" placeholder="Please enter your email" data-i18n="email-placeholder">
+                 </div>
                  <div class="form-group">
-                    <label for="message" data-i18n="message-label">Message</label>
-                    <textarea id="message" name="message" placeholder="Enter your message" data-i18n="message-placeholder"></textarea>
-                </div>
-                <button type="submit" class="btn btn-green btn-submit" data-i18n="submit-btn">Submit &gt;</button>
-            </form>
+                     <label for="mobile" data-i18n="mobile-label">Mobile</label>
+                     <input type="tel" id="mobile" name="mobile" placeholder="Enter mobile" data-i18n="mobile-placeholder">
+                 </div>
+                 <div class="form-group">
+                     <label for="message" data-i18n="message-label">Message</label>
+                     <textarea id="message" name="message" placeholder="Enter your message" data-i18n="message-placeholder"></textarea>
+                 </div>
+                 <button type="submit" class="btn btn-green btn-submit" data-i18n="submit-btn">Submit &gt;</button>
+                 <script>
+                     (function () {
+                         emailjs.init("dEkhovEAQ6dOTHYhB"); // <-- Zmień na swój User ID z EmailJS
+
+                         document.querySelector('.contact-form').addEventListener('submit', function (e) {
+                             e.preventDefault();
+
+                             emailjs.send("service_o13wrdg", "template_xs0574p", {
+                                 from_email: document.getElementById('email').value,
+                                 message: document.getElementById('message').value,
+                             })
+                                 .then(function () {
+                                     alert('Wiadomość wysłana!');
+                                 }, function (error) {
+                                     alert('Błąd wysyłki: ' + JSON.stringify(error));
+                                 });
+                         });
+                     })();
+                 </script>
+             </form>
         </div>
     </section>
     

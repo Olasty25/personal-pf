@@ -50,6 +50,7 @@ const translations = {
     },
     
     // Case Studies
+    /*
     'case1-tag': {
         'en': 'Vaultlify',
         'pl': 'Vaultlify'
@@ -92,7 +93,7 @@ const translations = {
         'en': 'A tool that can be tuned even more to focus on solving certain problems of one niche.',
         'pl': 'Narzędzie, które można jeszcze bardziej dostroić, aby skupić się na rozwiązywaniu określonych problemów jednej niszy.'
     },
-    
+    */
     // Testimonials
     'testimonials-title': {
         'en': 'Testimonials',
