@@ -727,13 +727,18 @@
          </div>
     </section>
 
+
+    <!-- ...above code remains unchanged... -->
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script src="emailjs.js"></script>
     <!-- GET IN TOUCH SECTION -->
     <section id="contact" class="contact">
         <div class="container">
-             <div class="section-intro">
+            <div class="section-intro">
                 <h2 data-i18n="contact-title">Get In Touch</h2>
                 <p data-i18n="contact-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             </div>
+<<<<<<< HEAD
 
              <form class="contact-form">
                  <div class="form-group">
@@ -769,8 +774,28 @@
                      })();
                  </script>
              </form>
+=======
+            <form class="contact-form" id="contact-form">
+                <div class="form-group">
+                    <label for="name" data-i18n="name-label">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" data-i18n="name-placeholder">
+                </div>
+                <div class="form-group">
+                    <label for="email" data-i18n="email-label">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" data-i18n="email-placeholder">
+                </div>
+                <div class="form-group">
+                    <label for="message" data-i18n="message-label">Message</label>
+                    <textarea id="message" name="message" placeholder="Enter your message" data-i18n="message-placeholder"></textarea>
+                </div>
+                <button type="submit" class="btn btn-green btn-submit" data-i18n="submit-btn">Submit &gt;</button>
+            </form>
+            <div id="form-message" style="margin-top:10px;color:#6BCB3B;font-weight:bold;"></div>
+>>>>>>> 039b15169e7f7303b24d0af85b14d8b1eced8aea
         </div>
     </section>
+<!-- ...rest of code remains unchanged... -->
+    
     
     <!-- PROFESSIONAL PROFILES SECTION -->
     <section id="profiles" class="profile-links-section">

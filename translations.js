@@ -94,6 +94,49 @@ const translations = {
         'pl': 'Narzędzie, które można jeszcze bardziej dostroić, aby skupić się na rozwiązywaniu określonych problemów jednej niszy.'
     },
     */
+        //////////////////////////////////////////
+    'case1-tag': {
+        'en': 'Piea',
+        'pl': 'Vaultlify'
+    },
+    'case1-title': {
+        'en': 'Safe file transfer website',
+        'pl': 'Strona do bezpiecznego przesyłu plików'
+    },
+    'case1-desc': {
+        'en': 'A tool for safe locking large files and accessing them with vault ID and password. Completely free',
+        'pl': 'Narzędzie do bezpiecznego skłądowania dużych plików za dostępem poprzez ID skrytki i hasło. Zupełnie bezpłatne'
+    },
+    'case-btn': {
+        'en': 'View case study >',
+        'pl': 'Zobacz studium przypadku >'
+    },
+
+    'case2-tag': {
+        'en': 'Remailify',
+        'pl': 'Remailify'
+    },
+    'case2-title': {
+        'en': 'AI E-mail corrector',
+        'pl': 'AI korektor E-maili'
+    },
+    'case2-desc': {
+        'en': 'A custom AI tool that can amend your e-mail',
+        'pl': 'Prościutkie narzędzie AI które może poprawić wygląd twoich e-maili'
+    },
+
+    'case3-tag': {
+        'en': 'uitocode',
+        'pl': 'uitocode'
+    },
+    'case3-title': {
+        'en': 'Trained AI Chatbot (PDF & Q/A)',
+        'pl': 'Wytrenowany chatbot AI (PDF i Q/A)'
+    },
+    'case3-desc': {
+        'en': 'A tool that can be tuned even more to focus on solving certain problems of one niche.',
+        'pl': 'Narzędzie, które można jeszcze bardziej dostroić, aby skupić się na rozwiązywaniu określonych problemów jednej niszy.'
+        /////////////////////////////////
     // Testimonials
     'testimonials-title': {
         'en': 'Testimonials',
