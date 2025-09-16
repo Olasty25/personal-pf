@@ -1,11 +1,11 @@
 <script>
   (function(){
-    emailjs.init("YOUR_EMAILJS_USER_ID"); // TODO: Replace with your EmailJS User ID
+    emailjs.init("dEkhovEAQ6dOTHYhB"); // TODO: Replace with your EmailJS User ID
   })();
 
   document.getElementById('contact-form').addEventListener('submit', function(event) {
     event.preventDefault();
-    emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", {
+    emailjs.send("service_o13wrdg", "template_xs0574p", {
       from_name: this.name.value,
       from_email: this.email.value,
       message: this.message.value,
