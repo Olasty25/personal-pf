@@ -1,6 +1,5 @@
-// Initialize EmailJS
 (function () {
-    emailjs.init("dEkhovEAQ6dOTHYhB"); // Replace with your EmailJS User ID if different
+    emailjs.init("dEkhovEAQ6dOTHYhB"); // Your actual EmailJS user ID
 })();
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -15,10 +14,10 @@ document.addEventListener("DOMContentLoaded", function () {
             from_email: form.email.value,
             message: form.message.value,
             to_email: "thoughtrealstudio@gmail.com"
-        }).then(function (response) {
+        }).then(function () {
             document.getElementById('form-message').innerHTML = "Message sent!";
             form.reset();
-        }, function (error) {
+        }, function () {
             document.getElementById('form-message').innerHTML = "Failed to send message. Please try again later.";
         });
     });
