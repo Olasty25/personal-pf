@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         pl: {
             // Page Title
-            page_title: "Aleksander Tomczak - Portfolio Fotograficzne",
+            page_title: "Aleksander Tomczak - Portfolio Twórcze",
 
             // Navigation
             nav_home: "Strona Główna",
@@ -118,17 +118,17 @@ document.addEventListener('DOMContentLoaded', () => {
             about_btn_projects: "Moje Projekty",
 
             // Work Process Section
-            process_title: "Proces Pracy",
+            process_title: "Proces Realizacji Pomysłów Klienta",
             process_p1: "Kierując się designem i mocą kodu, tworzę cyfrowe interfejsy, które są intuicyjne i działają płynnie. Każdy układ, animacja i komponent są tworzone z intencją – łącząc użyteczność z wizualną klarownością.",
-            process_p2: "Łączę czysty design z wydajnym kodem, aby tworzyć angażujące, przyjazne dla użytkownika doświadczenia webowe, które się wyróżniają.",
-            step1_title: "1. Badanie",
-            step1_description: "Design spotyka funkcję w każdym pikselu, łącząc klarowność z intuicyjnym ruchem.",
-            step2_title: "2. Analiza",
-            step2_description: "Tworzenie czystych, przemyślanych interfejsów, gdzie forma płynnie przechodzi w funkcję i klarowność.",
-            step3_title: "3. Projektowanie",
-            step3_description: "Projektuję płynne doświadczenia cyfrowe z precyzją, celem i odrobiną elegancji.",
+            process_p2: "Łączę elegancki design z wydajnym kodem, aby tworzyć angażujące, przyjazne dla użytkownika doświadczenia webowe, które się wyróżniają.",
+            step1_title: "1. Rozpoznanie",
+            step1_description: "Staram się zrozumieć potzreby i żądanie klienta, aby ustalić z nim czytelny plan działania",
+            step2_title: "2. Projektowanie",
+            step2_description: "Tworzę czyste interfejsy, gdzie forma płynnie przechodzi w funkcję i klarowność.",
+            step3_title: "3. Oprogramowanie",
+            step3_description: "Ożywiam statycznego htmla w działający produkt",
             step4_title: "4. Uruchomienie",
-            step4_description: "Tworzę produkty cyfrowe, gdzie przemyślany design spotyka się z celowym dążeniem i responsywnym rozwojem.",
+            step4_description: "Prezentuję pracę klientowi, nanoszę poprawki i przekazuje mu kod strony.",
 
             // Portfolio Section
             portfolio_title: "Portfolio",
@@ -151,9 +151,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Testimonial Section
             testimonial_title: "Referencje",
-            testimonial_intro_p: "Współpraca z tym zespołem była fantastycznym doświadczeniem. Ich dbałość o szczegóły i zaangażowanie w jakość przerosło nasze oczekiwania.",
+            testimonial_intro_p: "Współpraca z ThoReSt była fantastycznym doświadczeniem. Ich dbałość o szczegóły i zaangażowanie w jakość przerosło nasze oczekiwania.",
             testimonial_quote: "„Od początkowych konsultacji do końcowej realizacji, każdy etap był prowadzony profesjonalnie. Efektem końcowym był produkt, który nie tylko spełnił nasze potrzeby, ale także zrobił wrażenie na naszych interesariuszach. Gorąco polecam!”",
-            testimonial_author_title: "Dyrektor Zarządzająca, Firma ABC",
+            testimonial_author_title: "Danier02",
 
             // Call to Action Section
             cta_title: "Masz pomysł na projekt? <br> Porozmawiajmy o nim!",
