@@ -1,835 +1,236 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aleksander Tomczak - Portfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> <!-- Przykładowy link do FontAwesome -->
-
-    <style>
-        /* --- RESET & GLOBAL STYLES --- */
-        :root {
-            --dark-bg: #121212;
-            --dark-secondary: #1A1A1A;
-            --text-light: #F5F5F5;
-            --text-muted: #A9A9A9;
-            --green: #6BCB3B;
-            --green-gradient: linear-gradient(90deg, #6BCB3B 0%, #4CAF50 100%);
-            --orange: #FFA500;
-            --blue: #4A6CFF;
-            --teal: #2EC4B6;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--dark-bg);
-            color: var(--text-light);
-            line-height: 1.6;
-        }
-
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        section {
-            padding: 80px 0;
-        }
-
-        h1, h2, h3 {
-            font-weight: 700;
-            line-height: 1.2;
-        }
-
-        h1 {
-            font-size: 4rem;
-        }
-
-        h2 {
-            font-size: 2.5rem;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        p {
-            color: var(--text-muted);
-        }
-        
-        .section-intro {
-            text-align: center;
-            max-width: 600px;
-            margin: 0 auto 50px auto;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 12px 28px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 500;
-            transition: transform 0.3s ease;
-        }
-
-        .btn:hover {
-            transform: translateY(-3px);
-        }
-
-        .btn-green {
-            background: var(--green-gradient);
-            color: white;
-        }
-        
-        img {
-            max-width: 100%;
-            display: block;
-        }
-
-        /* --- HEADER --- */
-        .main-header {
-            background-color: var(--dark-secondary);
-            padding: 20px 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .main-header .container {
-            display: flex;
-            justify-content: center; /* Centered navigation */
-            align-items: center;
-            position: relative;
-        }
-
-        .main-nav ul {
-            list-style: none;
-            display: flex;
-            gap: 40px;
-        }
-
-        .main-nav a {
-            color: var(--text-muted);
-            text-decoration: none;
-            font-size: 1rem;
-            transition: color 0.3s ease;
-        }
-
-        .main-nav a:hover {
-            color: var(--text-light);
-        }
-
-        .social-links {
-            position: absolute; /* Positioned to the right */
-            right: 20px;
-            display: flex;
-            gap: 20px;
-            font-size: 1.2rem;
-        }
-
-        .social-links a {
-            color: var(--text-muted);
-            transition: color 0.3s ease;
-        }
-        
-        .social-links a:hover {
-            color: var(--text-light);
-        }
-
-        /* --- PROFESSIONAL PROFILES SECTION --- */
-        .profile-links-section {
-            background-color: var(--dark-secondary);
-            padding: 50px 0;
-            text-align: center;
-        }
-        
-        .profile-links-section h2 {
-            color: var(--text-light);
-            margin-bottom: 25px;
-            font-weight: 600;
-        }
-        
-        .profile-links {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-        }
-        
-        .profile-link {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-decoration: none;
-            color: var(--text-muted);
-            transition: transform 0.3s, color 0.3s;
-            padding: 15px;
-            border-radius: 8px;
-        }
-        
-        .profile-link:hover {
-            transform: translateY(-5px);
-            background-color: rgba(255, 255, 255, 0.05);
-            color: var(--text-light);
-        }
-        
-        .profile-link i {
-            font-size: 32px;
-            margin-bottom: 8px;
-        }
-        
-        .github:hover { color: #fff; }
-        .linkedin:hover { color: #0077b5; }
-        .freelancer:hover { color: #29b2fe; }
-
-        /* --- HERO SECTION --- */
-        .hero {
-            padding: 100px 0;
-        }
-
-        .hero-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            align-items: center;
-            gap: 60px;
-        }
-
-        .hero-text h1 {
-            margin-bottom: 20px;
-        }
-
-        .hero-text p {
-            font-size: 1.1rem;
-            max-width: 450px;
-            margin-bottom: 30px;
-        }
-
-        .hero-image img {
-            width: 350px;
-            height: 350px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin: 0 auto;
-        }
-        
-        /* --- WORKED WITH --- */
-        .worked-with {
-            text-align: center;
-            margin-top: 100px;
-        }
-        
-        .worked-with p {
-            margin-bottom: 30px;
-            color: var(--text-muted);
-        }
-
-        .logos {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-
-        .logo-item {
-            border: 1px solid #333;
-            border-radius: 8px;
-            padding: 15px 30px;
-            min-width: 150px;
-            text-align: center;
-        }
-        
-        /* I will use text for logos, but you should replace them with <img> or <svg> */
-        .logo-item {
-            font-size: 1.2rem;
-            color: var(--text-muted);
-            font-weight: 500;
-        }
-
-        /* --- CASE STUDIES --- */
-        .case-studies {
-            background-color: #fff;
-            color: #333;
-        }
-
-        .case-studies h2 {
-            color: #111;
-        }
-        
-        .case-studies .section-intro p {
-            color: #666;
-        }
-
-        .case-study-item {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-            margin-bottom: 80px;
-        }
-        
-        /* Alternating layout */
-        .case-study-item:nth-child(even) .case-study-text {
-            order: 2;
-        }
-
-        .case-study-item:nth-child(even) .case-study-image {
-            order: 1;
-        }
-        
-        .case-study-image img {
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        }
-
-        .case-study-tag {
-            display: inline-block;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            font-weight: 500;
-            margin-bottom: 15px;
-        }
-        
-        .tag-fintech { background-color: #FFF1E3; color: #D97706; }
-        .tag-edtech { background-color: #E3E7FF; color: #4A6CFF; }
-        .tag-pharma { background-color: #E3FFF1; color: #10B981; }
-
-        .case-study-text h3 {
-            font-size: 2rem;
-            margin-bottom: 15px;
-            color: #111;
-        }
-
-        .case-study-text p {
-            color: #555;
-            margin-bottom: 25px;
-        }
-
-        .btn-case-study {
-            color: #fff;
-        }
-
-        .btn-fintech { background-color: #F97316; }
-        .btn-edtech { background-color: #3B82F6; }
-        .btn-pharma { background-color: #10B981; }
-        
-        /* --- TESTIMONIALS --- */
-        .testimonials {
-            background-color: var(--dark-bg);
-        }
-
-        .testimonial-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 30px;
-        }
-
-        .testimonial-card {
-            border: 1px solid #333;
-            border-radius: 12px;
-            padding: 30px;
-            position: relative;
-        }
-
-        .testimonial-card::before {
-            content: '"';
-            font-size: 4rem;
-            color: var(--text-light);
-            position: absolute;
-            top: 15px;
-            left: 25px;
-            opacity: 0.8;
-        }
-
-        .testimonial-card p {
-            margin-top: 30px;
-            margin-bottom: 30px;
-            font-size: 1rem;
-        }
-        
-        .client-info {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-        
-        .client-info img {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            object-fit: cover;
-        }
-        
-        .client-info .client-name {
-            font-weight: 500;
-            color: var(--text-light);
-        }
-
-        /* --- RECENT WORK --- */
-        .recent-work {
-            background-color: #fff;
-            color: #333;
-            position: relative;
-        }
-        
-        .recent-work h2 { color: #111; }
-        .recent-work .section-intro p { color: #666; }
-
-        .work-slider {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 30px;
-        }
-        
-        .work-item img {
-            border-radius: 12px;
-            margin-bottom: 20px;
-        }
-
-        .work-item h3 {
-            font-size: 1.5rem;
-            color: #111;
-            margin-bottom: 10px;
-        }
-
-        .work-item p {
-            color: #555;
-            margin-bottom: 20px;
-        }
-        
-        .slider-nav {
-            position: absolute;
-            top: 50%;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            transform: translateY(-50%);
-            left: 0;
-            padding: 0 -20px; /* To push arrows outside container */
-        }
-        
-        .slider-nav button {
-            background: #fff;
-            border: 1px solid #ddd;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            cursor: pointer;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            font-size: 1.2rem;
-            color: #555;
-            transition: all 0.3s;
-        }
-        
-        .slider-nav button:hover {
-             background: #f5f5f5;
-             transform: scale(1.1);
-        }
-        
-        .nav-prev { margin-left: -50px; }
-        .nav-next { margin-right: -50px; }
-        
-
-        /* --- GET IN TOUCH --- */
-        .contact {
-            background-color: var(--dark-bg);
-        }
-
-        .contact-form {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        
-        .form-group {
-            margin-bottom: 20px;
-        }
-        
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            color: var(--text-muted);
-        }
-
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 12px;
-            background-color: var(--dark-secondary);
-            border: 1px solid #333;
-            border-radius: 8px;
-            color: var(--text-light);
-            font-family: 'Inter', sans-serif;
-            font-size: 1rem;
-        }
-        
-        .form-group textarea {
-            min-height: 150px;
-            resize: vertical;
-        }
-        
-        .btn-submit {
-            width: 100%;
-            font-size: 1.1rem;
-        }
-
-        /* --- FOOTER --- */
-        .main-footer {
-            background-color: var(--dark-secondary);
-            padding: 25px 0;
-            text-align: center;
-        }
-
-        .main-footer p {
-            color: var(--text-muted);
-        }
-        /* Add this to your CSS */
-        .language-switcher {
-            position: absolute;
-            left: 20px;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-        
-        .lang-btn {
-            background: none;
-            border: none;
-            color: var(--text-muted);
-            cursor: pointer;
-            font-size: 0.9rem;
-            font-weight: 500;
-            padding: 5px;
-            transition: color 0.3s ease;
-        }
-        
-        .lang-btn:hover, .lang-btn.active {
-            color: var(--text-light);
-        }
-        
-        .lang-divider {
-            color: var(--text-muted);
-        }
-        
-        @media (max-width: 992px) {
-            .language-switcher {
-                position: static;
-                justify-content: center;
-                margin-bottom: 10px;
-            }
-        }
-
-        /* --- RESPONSIVE DESIGN --- */
-        @media (max-width: 992px) {
-            h1 { font-size: 3rem; }
-            h2 { font-size: 2rem; }
-            .hero-content { grid-template-columns: 1fr; text-align: center; }
-            .hero-text p { margin-left: auto; margin-right: auto; }
-            .hero-image { order: -1; margin-bottom: 40px; }
-            .case-study-item { grid-template-columns: 1fr; }
-            .case-study-item:nth-child(even) .case-study-text,
-            .case-study-item .case-study-text { order: 2; text-align: center; }
-            .case-study-item:nth-child(even) .case-study-image,
-            .case-study-item .case-study-image { order: 1; }
-            .testimonial-grid { grid-template-columns: 1fr; }
-            .slider-nav { display: none; }
-            .main-nav { display: none; } /* Simplified for mobile */
-            .social-links { position: static; justify-content: center; padding-top: 10px; }
-            .main-header .container { flex-direction: column; }
-            .profile-links { flex-direction: column; align-items: center; }
-        }
-
-        @media (max-width: 768px) {
-            section { padding: 60px 0; }
-            .work-slider { grid-template-columns: 1fr; }
-        }
-    </style>
+    <title>Picto - Photography Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
-    <!-- HEADER -->
-    <header class="main-header">
+    <!-- Navigation -->
+    <nav class="navbar">
         <div class="container">
-            <!-- Add this to your header section -->
-            <div class="language-switcher">
-                <button id="lang-en" class="lang-btn active">EN</button>
-                <span class="lang-divider">|</span>
-                <button id="lang-pl" class="lang-btn">PL</button>
-            </div>
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="#hero" data-i18n="nav-home">Home</a></li>
-                    <li><a href="#case-studies" data-i18n="nav-projects">Project Showcase</a></li>
-                    <li><a href="#testimonials" data-i18n="testimonials-title"></a></li>
-                    <li><a href="#recent-work" data-i18n="recent-work-title">Recent work</a></li>
-                    <li><a href="#contact" data-i18n="contact-title">Get In Touch</a></li>
+            <div class="nav-wrapper">
+                <a href="#" class="logo">PICTO</a>
+                <ul class="nav-menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
-            </nav>
-            <div class="social-links">
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#"><i class="fab fa-behance"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
         </div>
-    </header>
+    </nav>
 
-    <main>
-    <!-- HERO SECTION -->
-    <section id="hero" class="hero">
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Capturing Moments</h1>
+            <p class="hero-subtitle">Professional Photography Services</p>
+            <a href="#portfolio" class="btn-primary">View Portfolio</a>
+        </div>
+        <div class="hero-overlay"></div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
         <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1>Aleksander Tomczak</h1>
-                    <p data-i18n="hero-subtitle">I build landing pages, trained AI chatbots and automation tools that save businesses time and bring new clients.</p>
-                    <a href="#contact" class="btn btn-green" data-i18n="hero-cta">Let's get started &gt;</a>
-                </div>
-                <div class="hero-image">
-                    <img src="assets/smile" alt="Your Name">
-                </div>
+            <div class="section-header">
+                <h2>About Me</h2>
+                <p>Passionate photographer with 10+ years of experience</p>
             </div>
-
-            <div class="worked-with">
-                <p data-i18n="works-using">Works using</p>
-                <div class="logos">
-                    <div class="logo-item">next.js</div>
-                    <div class="logo-item">React</div>
-                    <div class="logo-item">API Dev</div>
-                    <div class="logo-item">Tailwind CSS</div>
-                    <div class="logo-item">Vercel</div>
-                    <div class="logo-item">GitHub</div>
-                    <div class="logo-item">Python Auto&Script</div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>John Doe - Professional Photographer</h3>
+                    <p>With over a decade of experience in photography, I specialize in capturing life's most precious moments. From weddings to corporate events, my goal is to tell your story through stunning visuals.</p>
+                    <div class="stats">
+                        <div class="stat-item">
+                            <h4>500+</h4>
+                            <p>Happy Clients</p>
+                        </div>
+                        <div class="stat-item">
+                            <h4>1000+</h4>
+                            <p>Photos Taken</p>
+                        </div>
+                        <div class="stat-item">
+                            <h4>10+</h4>
+                            <p>Years Experience</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="https://via.placeholder.com/500x600" alt="Photographer">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CASE STUDIES SECTION -->
-    <section id="case-studies" class="case-studies">
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
         <div class="container">
-            <div class="section-intro">
-                <h2 data-i18n="projects-title">Projects Showcase</h2>
-                <p data-i18n="projects-subtitle">Solving user & business problems since last 15+ years. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <div class="section-header">
+                <h2>Portfolio</h2>
+                <p>Explore my recent work</p>
             </div>
-            
-            <div class="case-study-item">
-                <div class="case-study-text">
-                    <span class="case-study-tag tag-fintech" data-i18n="case1-tag">Pizza&Fire</span>
-                    <h3 data-i18n="case1-title">Landing Page for Small Buisness</h3>
-                    <p data-i18n="case1-desc">A modern, responsive website designed for a local business. Optimized for SEO and mobile, ready to convert visitors into clients.</p>
-                    <a href="https://vaultlify.base44.app" class="btn btn-case-study btn-fintech" data-i18n="case-btn">View case study &gt;</a>
-                </div>
-                <div class="case-study-image">
-                    <img src="https://i.imgur.com/8Qp4kL4.jpeg" alt="Case Study 1">
-                </div>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="wedding">Wedding</button>
+                <button class="filter-btn" data-filter="portrait">Portrait</button>
+                <button class="filter-btn" data-filter="nature">Nature</button>
+                <button class="filter-btn" data-filter="event">Event</button>
             </div>
-
-            <div class="case-study-item">
-                 <div class="case-study-image">
-                    <img src="https://i.imgur.com/5lV5Yqg.jpeg" alt="Case Study 2">
+            <div class="portfolio-grid">
+                <div class="portfolio-item" data-category="wedding">
+                    <img src="https://via.placeholder.com/400x300" alt="Wedding Photo">
+                    <div class="portfolio-overlay">
+                        <h3>Wedding Ceremony</h3>
+                        <p>Beautiful moments captured</p>
+                    </div>
                 </div>
-                <div class="case-study-text">
-                    <span class="case-study-tag tag-edtech" data-i18n="case2-tag">EdTech</span>
-                    <h3 data-i18n="case2-title">AI Automation Agent</h3>
-                    <p data-i18n="case2-desc">A custom Python script that scrapes online data and organizes it into Excel sheets, saving hours of manual work.</p>
-                    <a href="#" class="btn btn-case-study btn-edtech" data-i18n="case-btn">View case study &gt;</a>
+                <div class="portfolio-item" data-category="portrait">
+                    <img src="https://via.placeholder.com/400x300" alt="Portrait">
+                    <div class="portfolio-overlay">
+                        <h3>Portrait Session</h3>
+                        <p>Professional headshots</p>
+                    </div>
                 </div>
-            </div>
-
-            <div class="case-study-item">
-                <div class="case-study-text">
-                    <span class="case-study-tag tag-pharma" data-i18n="case3-tag">Pharma</span>
-                    <h3 data-i18n="case3-title">Trained AI Chatbot (PDF & Q/A)</h3>
-                    <p data-i18n="case3-desc">A tool that can be tuned even more to focus on solving certain problems of one niche.</p>
-                    <a href="#" class="btn btn-case-study btn-pharma" data-i18n="case-btn">View case study &gt;</a>
+                <div class="portfolio-item" data-category="nature">
+                    <img src="https://via.placeholder.com/400x300" alt="Nature">
+                    <div class="portfolio-overlay">
+                        <h3>Nature Photography</h3>
+                        <p>Capturing natural beauty</p>
+                    </div>
                 </div>
-                <div class="case-study-image">
-                    <img src="https://i.imgur.com/M6LgDEK.jpeg" alt="Case Study 3">
+                <div class="portfolio-item" data-category="event">
+                    <img src="https://via.placeholder.com/400x300" alt="Event">
+                    <div class="portfolio-overlay">
+                        <h3>Corporate Event</h3>
+                        <p>Professional event coverage</p>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="wedding">
+                    <img src="https://via.placeholder.com/400x300" alt="Wedding">
+                    <div class="portfolio-overlay">
+                        <h3>Wedding Reception</h3>
+                        <p>Joyful celebrations</p>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="portrait">
+                    <img src="https://via.placeholder.com/400x300" alt="Portrait">
+                    <div class="portfolio-overlay">
+                        <h3>Family Portrait</h3>
+                        <p>Cherished memories</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- TESTIMONIALS SECTION -->
-    <section id="testimonials" class="testimonials">
+    <!-- Services Section -->
+    <section id="services" class="services">
         <div class="container">
-            <div class="section-intro">
-                <h2 data-i18n="testimonials-title">Testimonials</h2>
-                <p data-i18n="testimonials-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <div class="section-header">
+                <h2>Services</h2>
+                <p>What I offer</p>
             </div>
-
-            <div class="testimonial-grid">
-                <div class="testimonial-card">
-                    <p data-i18n="testimonial1-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    <div class="client-info">
-                        <img src="https://i.imgur.com/gko8QJj.jpeg" alt="Client 1">
-                        <span class="client-name" data-i18n="client1-name">Client Name</span>
-                    </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">📷</div>
+                    <h3>Wedding Photography</h3>
+                    <p>Capture your special day with stunning wedding photography that tells your love story.</p>
                 </div>
-                <div class="testimonial-card">
-                    <p data-i18n="testimonial2-text">Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    <div class="client-info">
-                        <img src="https://i.imgur.com/rOshwR4.jpeg" alt="Client 2">
-                        <span class="client-name" data-i18n="client2-name">Client Name</span>
-                    </div>
+                <div class="service-card">
+                    <div class="service-icon">👤</div>
+                    <h3>Portrait Sessions</h3>
+                    <p>Professional portrait photography for individuals, families, and corporate headshots.</p>
                 </div>
-                <div class="testimonial-card">
-                    <p data-i18n="testimonial3-text">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    <div class="client-info">
-                        <img src="https://i.imgur.com/8xWX3vR.jpeg" alt="Client 3">
-                        <span class="client-name" data-i18n="client3-name">Client Name</span>
-                    </div>
+                <div class="service-card">
+                    <div class="service-icon">🎉</div>
+                    <h3>Event Coverage</h3>
+                    <p>Comprehensive event photography for corporate events, parties, and special occasions.</p>
                 </div>
-                <div class="testimonial-card">
-                    <p data-i18n="testimonial4-text">Ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-                    <div class="client-info">
-                        <img src="https://i.imgur.com/X4JgEzk.jpeg" alt="Client 4">
-                        <span class="client-name" data-i18n="client4-name">Client Name</span>
-                    </div>
+                <div class="service-card">
+                    <div class="service-icon">🌿</div>
+                    <h3>Nature & Landscape</h3>
+                    <p>Breathtaking nature and landscape photography for commercial and artistic purposes.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- RECENT WORK SECTION -->
-    <section id="recent-work" class="recent-work">
-         <div class="container">
-            <div class="section-intro">
-                <h2 data-i18n="recent-work-title">Recent Work</h2>
-                <p data-i18n="recent-work-subtitle">Projects, that i hope to make recognizeable one day.</p>
-            </div>
-            
-            <div class="work-slider">
-                <div class="work-item">
-                    <img src="assets/opteduai.png" alt="Recent Work 1">
-                    <h3 data-i18n="work1-title">Optedu AI</h3>
-                    <p data-i18n="work1-desc">An AI educational tutor for students to optimise and speed up their learning path.</p>
-                    <a href="#" class="btn btn-green" data-i18n="work-more-btn">Know more &gt;</a>
-                </div>
-                <div class="work-item">
-                    <img src="assets/codequickai.png" alt="Recent Work 2">
-                    <h3 data-i18n="work2-title">Codequick AI</h3>
-                    <p data-i18n="work2-desc">An AI mental caretaker for elderly people. 24/7 calling and texting to escape loneliness</p>
-                    <a href="https://github.com/Olasty25/codequick-ai" class="btn btn-green" data-i18n="work-more-btn">Know more &gt;</a>
-                </div>
-            </div>
-
-            <div class="slider-nav">
-                <button class="nav-prev">&lt;</button>
-                <button class="nav-next">&gt;</button>
-            </div>
-         </div>
-    </section>
-
-
-    <!-- ...above code remains unchanged... -->
-    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-    <script src="emailjs.js"></script>
-    <!-- GET IN TOUCH SECTION -->
+    <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
-            <div class="section-intro">
-                <h2 data-i18n="contact-title">Get In Touch</h2>
-                <p data-i18n="contact-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <div class="section-header">
+                <h2>Get In Touch</h2>
+                <p>Let's discuss your photography needs</p>
             </div>
-<<<<<<< HEAD
-
-             <form class="contact-form">
-                 <div class="form-group">
-                     <label for="email" data-i18n="email-label">Email</label>
-                     <input type="email" id="email" name="email" placeholder="Please enter your email" data-i18n="email-placeholder">
-                 </div>
-                 <div class="form-group">
-                     <label for="mobile" data-i18n="mobile-label">Mobile</label>
-                     <input type="tel" id="mobile" name="mobile" placeholder="Enter mobile" data-i18n="mobile-placeholder">
-                 </div>
-                 <div class="form-group">
-                     <label for="message" data-i18n="message-label">Message</label>
-                     <textarea id="message" name="message" placeholder="Enter your message" data-i18n="message-placeholder"></textarea>
-                 </div>
-                 <button type="submit" class="btn btn-green btn-submit" data-i18n="submit-btn">Submit &gt;</button>
-                 <script>
-                     (function () {
-                         emailjs.init("dEkhovEAQ6dOTHYhB"); // <-- Zmień na swój User ID z EmailJS
-
-                         document.querySelector('.contact-form').addEventListener('submit', function (e) {
-                             e.preventDefault();
-
-                             emailjs.send("service_o13wrdg", "template_xs0574p", {
-                                 from_email: document.getElementById('email').value,
-                                 message: document.getElementById('message').value,
-                             })
-                                 .then(function () {
-                                     alert('Wiadomość wysłana!');
-                                 }, function (error) {
-                                     alert('Błąd wysyłki: ' + JSON.stringify(error));
-                                 });
-                         });
-                     })();
-                 </script>
-             </form>
-=======
-            <form class="contact-form" id="contact-form">
-                <div class="form-group">
-                    <label for="name" data-i18n="name-label">Name</label>
-                    <input type="text" id="name" name="name" placeholder="Enter your name" data-i18n="name-placeholder">
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <h3>📧 Email</h3>
+                        <p>hello@picto.com</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>📱 Phone</h3>
+                        <p>+1 (555) 123-4567</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>📍 Location</h3>
+                        <p>New York, NY</p>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="email" data-i18n="email-label">Email</label>
-                    <input type="email" id="email" name="email" placeholder="Enter your email" data-i18n="email-placeholder">
-                </div>
-                <div class="form-group">
-                    <label for="message" data-i18n="message-label">Message</label>
-                    <textarea id="message" name="message" placeholder="Enter your message" data-i18n="message-placeholder"></textarea>
-                </div>
-                <button type="submit" class="btn btn-green btn-submit" data-i18n="submit-btn">Submit &gt;</button>
-            </form>
-            <div id="form-message" style="margin-top:10px;color:#6BCB3B;font-weight:bold;"></div>
->>>>>>> 039b15169e7f7303b24d0af85b14d8b1eced8aea
+                <form class="contact-form">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <input type="text" placeholder="Subject">
+                    <textarea placeholder="Your Message" rows="5" required></textarea>
+                    <button type="submit" class="btn-primary">Send Message</button>
+                </form>
+            </div>
         </div>
     </section>
-<!-- ...rest of code remains unchanged... -->
-    
-    
-    <!-- PROFESSIONAL PROFILES SECTION -->
-    <section id="profiles" class="profile-links-section">
-    <div class="container">
-        <div class="profile-links">
-            <!-- GitHub -->
-            <a href="https://github.com/Olasty25" class="profile-link github" target="_blank" rel="noopener">
-                <i class="fab fa-github"></i>
-                <span>GitHub</span>
-            </a>
 
-            <!-- LinkedIn -->
-            <a href="https://www.linkedin.com/in/aleksander-tomczak-74807935b/" class="profile-link linkedin" target="_blank" rel="noopener">
-                <i class="fab fa-linkedin"></i>
-                <span>LinkedIn</span>
-            </a>
-
-            <!-- Freelancer (with official logo) -->
-            <a href="https://www.freelancer.com/u/alextomczak" class="profile-link freelancer" target="_blank" rel="noopener">
-               
-                <span>Freelancer</span>
-            </a>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>PICTO</h3>
+                    <p>Professional Photography Services</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#services">Services</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Follow Me</h4>
+                    <div class="social-links">
+                        <a href="#">📘</a>
+                        <a href="#">📷</a>
+                        <a href="#">🐦</a>
+                        <a href="#">💼</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Picto. All rights reserved.</p>
+            </div>
         </div>
-    </div>
-</section>
-        
-    <script src="translations.js"></script>
-</main>
+    </footer>
 
-<!-- FOOTER -->
-<footer class="main-footer">
-    <div class="container">
-        <p data-i18n="footer-text">ThoReSt 2026</p>
-    </div>
-</footer>
-
-
+    <script src="script.js"></script>
+</body>
+</html>
