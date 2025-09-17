@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
             stat_happy_clients: "Happy Clients",
 
             // About Section
-            about_title: "I am Professional <br> Photographer",
+            about_title: "I am Professional <br> Website Creator",
             about_p1: "I design and develop services for customers specializing creating stylish, modern websites, web services and online stores. My passion is to design digital user experiences.",
             about_p2: "I design and develop services for customers specializing creating stylish, modern websites, web services and online stores. My passion is to design digital user experiences.",
             about_btn_projects: "My Projects",
@@ -112,7 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
             stat_happy_clients: "Zadowoleni Klienci",
 
             // About Section
-            about_title: "Jestem Profesjonalnym <br> Fotografem",
+            about_title: "Jestem Profesjonalnym <br> Twórcą Stron www",
             about_p1: "Projektuję i rozwijam usługi dla klientów, specjalizując się w tworzeniu stylowych, nowoczesnych stron internetowych, usług webowych i sklepów online. Moją pasją jest projektowanie cyfrowych doświadczeń użytkownika.",
             about_p2: "Projektuję i rozwijam usługi dla klientów, specjalizując się w tworzeniu stylowych, nowoczesnych stron internetowych, usług webowych i sklepów online. Moją pasją jest projektowanie cyfrowych doświadczeń użytkownika.",
             about_btn_projects: "Moje Projekty",
