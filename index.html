@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aleksander Tomczak - Photography Portfolio</title>
+    <title data-translate-key="page_title">Aleksander Tomczak - Photography Portfolio</title>
     <link rel="stylesheet" href="styles.css">
-    <!-- You might link to Google Fonts here, e.g., Poppins -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <!-- For icons, consider Font Awesome: <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> -->
 </head>
@@ -20,17 +19,20 @@
             </div>
             <nav class="nav-menu">
                 <ul>
-                    <li><a href="#hero" class="active">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#process">Process</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#blog">Blog</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#hero" class="active" data-translate-key="nav_home">Home</a></li>
+                    <li><a href="#about" data-translate-key="nav_about">About</a></li>
+                    <li><a href="#process" data-translate-key="nav_process">Process</a></li>
+                    <li><a href="#portfolio" data-translate-key="nav_portfolio">Portfolio</a></li>
+                    <li><a href="#blog" data-translate-key="nav_blog">Blog</a></li>
+                    <li><a href="#services" data-translate-key="nav_services">Services</a></li>
+                    <li><a href="#contact" data-translate-key="nav_contact">Contact</a></li>
                 </ul>
             </nav>
+            <div class="language-switcher">
+                <button data-lang="en" class="lang-btn active">EN</button>
+                <button data-lang="pl" class="lang-btn">PL</button>
+            </div>
             <div class="hamburger-menu">
-                <!-- Hamburger icon goes here for mobile -->
                 <span></span>
                 <span></span>
                 <span></span>
@@ -42,26 +44,26 @@
     <section id="hero" class="hero-section">
         <div class="container hero-content-wrapper">
             <div class="hero-text-content">
-                <p class="greeting">Hello, I'm</p>
-                <h1>Aleksander Tomczak</h1>
-                <p class="intro-description">
+                <p class="greeting" data-translate-key="hero_greeting">Hello, I'm</p>
+                <h1 data-translate-key="hero_name">Aleksander Tomczak</h1>
+                <p class="intro-description" data-translate-key="hero_description">
                     I'm a Freelance <span class="highlight">Photographer</span>, based in London,
                     England. I strive to build immersive and beautiful web applications
                     through carefully crafted code and user-centric design.
                 </p>
-                <button class="btn btn-primary">Say Hello!</button>
+                <button class="btn btn-primary" data-translate-key="hero_btn">Say Hello!</button>
                 <div class="stats-grid">
                     <div class="stat-item">
                         <span class="stat-number">15 Y.</span>
-                        <span class="stat-label">Experience</span>
+                        <span class="stat-label" data-translate-key="stat_experience">Experience</span>
                     </div>
                     <div class="stat-item">
                         <span class="stat-number">250+</span>
-                        <span class="stat-label">Projects Completed</span>
+                        <span class="stat-label" data-translate-key="stat_projects_completed">Projects Completed</span>
                     </div>
                     <div class="stat-item">
                         <span class="stat-number">58</span>
-                        <span class="stat-label">Happy Clients</span>
+                        <span class="stat-label" data-translate-key="stat_happy_clients">Happy Clients</span>
                     </div>
                 </div>
             </div>
@@ -78,26 +80,26 @@
                 <img src="https://via.placeholder.com/400x500" alt="Aleksander Tomczak">
             </div>
             <div class="about-text">
-                <h2>I am Professional <br> Photographer</h2>
-                <p>
+                <h2 data-translate-key="about_title">I am Professional <br> Photographer</h2>
+                <p data-translate-key="about_p1">
                     I design and develop services for customers specializing
                     creating stylish, modern websites, web services and online
                     stores. My passion is to design digital user experiences.
                 </p>
-                <p>
+                <p data-translate-key="about_p2">
                     I design and develop services for customers specializing
                     creating stylish, modern websites, web services and online
                     stores. My passion is to design digital user experiences.
                 </p>
                 <div class="about-buttons">
-                    <button class="btn btn-primary">My Projects</button>
-                    <button class="btn btn-secondary">Download CV</button>
+                    <button class="btn btn-primary" data-translate-key="about_btn_projects">My Projects</button>
+                    <button class="btn btn-secondary" data-translate-key="about_btn_cv">Download CV</button>
                 </div>
                 <div class="social-links">
-                    <a href="#" aria-label="Facebook">📘</a> <!-- Replace with Font Awesome icon -->
-                    <a href="#" aria-label="Instagram">📷</a> <!-- Replace with Font Awesome icon -->
-                    <a href="#" aria-label="LinkedIn">💼</a> <!-- Replace with Font Awesome icon -->
-                    <a href="#" aria-label="Behance">🎨</a> <!-- Replace with Font Awesome icon -->
+                    <a href="#" aria-label="Facebook">📘</a>
+                    <a href="#" aria-label="Instagram">📷</a>
+                    <a href="#" aria-label="LinkedIn">💼</a>
+                    <a href="#" aria-label="Behance">🎨</a>
                 </div>
             </div>
         </div>
@@ -107,38 +109,38 @@
     <section id="process" class="process-section">
         <div class="container process-wrapper">
             <div class="process-intro">
-                <h2>Work Process</h2>
-                <p>
+                <h2 data-translate-key="process_title">Work Process</h2>
+                <p data-translate-key="process_p1">
                     Driven by design and powered by code, I create digital
                     interfaces that feel intuitive and perform seamlessly.
                     Every layout, animation, and component is crafted with
                     intention — merging usability with visual clarity.
                 </p>
-                <p>
+                <p data-translate-key="process_p2">
                     I blend clean design with efficient code to build
                     engaging, user-friendly web experiences that stand out.
                 </p>
             </div>
             <div class="process-steps-grid">
                 <div class="step-card">
-                    <div class="step-icon">&#128196;</div> <!-- Placeholder icon -->
-                    <h3>1. Research</h3>
-                    <p>Design meets function in every pixel, blending clarity with intuitive motion.</p>
+                    <div class="step-icon">&#128196;</div>
+                    <h3 data-translate-key="step1_title">1. Research</h3>
+                    <p data-translate-key="step1_description">Design meets function in every pixel, blending clarity with intuitive motion.</p>
                 </div>
                 <div class="step-card">
-                    <div class="step-icon">&#128200;</div> <!-- Placeholder icon -->
-                    <h3>2. Analyze</h3>
-                    <p>Crafting clean, thoughtful interfaces where form flows seamlessly into function and clarity.</p>
+                    <div class="step-icon">&#128200;</div>
+                    <h3 data-translate-key="step2_title">2. Analyze</h3>
+                    <p data-translate-key="step2_description">Crafting clean, thoughtful interfaces where form flows seamlessly into function and clarity.</p>
                 </div>
                 <div class="step-card">
-                    <div class="step-icon">&#9999;&#xFE0F;</div> <!-- Placeholder icon -->
-                    <h3>3. Design</h3>
-                    <p>I design seamless digital experiences with precision, purpose, and a touch of elegance.</p>
+                    <div class="step-icon">&#9999;&#xFE0F;</div>
+                    <h3 data-translate-key="step3_title">3. Design</h3>
+                    <p data-translate-key="step3_description">I design seamless digital experiences with precision, purpose, and a touch of elegance.</p>
                 </div>
                 <div class="step-card">
-                    <div class="step-icon">&#128187;</div> <!-- Placeholder icon -->
-                    <h3>4. Launch</h3>
-                    <p>I craft digital products where thoughtful design meets purposeful drive and responsive development.</p>
+                    <div class="step-icon">&#128187;</div>
+                    <h3 data-translate-key="step4_title">4. Launch</h3>
+                    <p data-translate-key="step4_description">I craft digital products where thoughtful design meets purposeful drive and responsive development.</p>
                 </div>
             </div>
         </div>
@@ -148,67 +150,73 @@
     <section id="portfolio" class="portfolio-section">
         <div class="container">
             <div class="section-header">
-                <h2>Portfolio</h2>
-                <p>Here's a selection of my recent work, showcasing my skills in creating user-centric and visually appealing interfaces.</p>
+                <h2 data-translate-key="portfolio_title">Portfolio</h2>
+                <p data-translate-key="portfolio_description">Here's a selection of my recent work, showcasing my skills in creating user-centric and visually appealing interfaces.</p>
             </div>
             <div class="portfolio-grid">
+                <!-- Portfolio Item 1 -->
                 <div class="portfolio-item">
                     <img src="https://via.placeholder.com/400x300/F08080/FFFFFF?text=Project+Image+1" alt="Product Admin Dashboard">
                     <div class="item-details">
-                        <span class="category">UI-UX DESIGN</span>
-                        <h3>Product Admin Dashboard</h3>
-                        <p>I focus on crafting smooth, responsive interfaces that deliver aesthetic appeal with practical functionality.</p>
-                        <a href="#" class="case-study-link">Case Study &#8594;</a>
+                        <span class="category" data-translate-key="portfolio_category_uiux">UI-UX DESIGN</span>
+                        <h3 data-translate-key="portfolio_item1_title">Product Admin Dashboard</h3>
+                        <p data-translate-key="portfolio_item1_description">I focus on crafting smooth, responsive interfaces that deliver aesthetic appeal with practical functionality.</p>
+                        <a href="#" class="case-study-link" data-translate-key="portfolio_case_study_link">Case Study &#8594;</a>
                     </div>
                 </div>
+                <!-- Portfolio Item 2 -->
                 <div class="portfolio-item">
                     <img src="https://via.placeholder.com/400x300/36454F/FFFFFF?text=Project+Image+2" alt="Product Admin Dashboard">
                     <div class="item-details">
-                        <span class="category">UI-UX DESIGN</span>
-                        <h3>Product Admin Dashboard</h3>
-                        <p>Designed an intuitive dashboard for product management, emphasizing clarity and user efficiency.</p>
-                        <a href="#" class="case-study-link">Case Study &#8594;</a>
+                        <span class="category" data-translate-key="portfolio_category_uiux">UI-UX DESIGN</span>
+                        <h3 data-translate-key="portfolio_item2_title">Product Admin Dashboard</h3>
+                        <p data-translate-key="portfolio_item2_description">Designed an intuitive dashboard for product management, emphasizing clarity and user efficiency.</p>
+                        <a href="#" class="case-study-link" data-translate-key="portfolio_case_study_link">Case Study &#8594;</a>
                     </div>
                 </div>
+                <!-- Portfolio Item 3 -->
                 <div class="portfolio-item">
                     <img src="https://via.placeholder.com/400x300/A9A9A9/FFFFFF?text=Project+Image+3" alt="Product Admin Dashboard">
                     <div class="item-details">
-                        <span class="category">UI-UX DESIGN</span>
-                        <h3>Product Admin Dashboard</h3>
-                        <p>Developed a modern admin panel with a focus on usability and seamless navigation for end users and so on.</p>
-                        <a href="#" class="case-study-link">Case Study &#8594;</a>
+                        <span class="category" data-translate-key="portfolio_category_uiux">UI-UX DESIGN</span>
+                        <h3 data-translate-key="portfolio_item3_title">Product Admin Dashboard</h3>
+                        <p data-translate-key="portfolio_item3_description">Developed a modern admin panel with a focus on usability and seamless navigation for end users and so on.</p>
+                        <a href="#" class="case-study-link" data-translate-key="portfolio_case_study_link">Case Study &#8594;</a>
                     </div>
                 </div>
+                <!-- Portfolio Item 4 -->
                 <div class="portfolio-item">
                     <img src="https://via.placeholder.com/400x300/87CEEB/FFFFFF?text=Project+Image+4" alt="Responsive Dashboard Layout">
                     <div class="item-details">
-                        <span class="category">UI-UX DESIGN</span>
-                        <h3>Product Admin Dashboard</h3>
-                        <p>Created a responsive dashboard layout that adapts smoothly across devices and screen sizes and so on.</p>
-                        <a href="#" class="case-study-link">Case Study &#8594;</a>
+                        <span class="category" data-translate-key="portfolio_category_uiux">UI-UX DESIGN</span>
+                        <h3 data-translate-key="portfolio_item4_title">Product Admin Dashboard</h3>
+                        <p data-translate-key="portfolio_item4_description">Created a responsive dashboard layout that adapts smoothly across devices and screen sizes and so on.</p>
+                        <a href="#" class="case-study-link" data-translate-key="portfolio_case_study_link">Case Study &#8594;</a>
                     </div>
                 </div>
+                <!-- Portfolio Item 5 -->
                 <div class="portfolio-item">
                     <img src="https://via.placeholder.com/400x300/98FB98/FFFFFF?text=Project+Image+5" alt="Interactive Charts & Widgets">
                     <div class="item-details">
-                        <span class="category">UI-UX DESIGN</span>
-                        <h3>Product Admin Dashboard</h3>
-                        <p>Implemented interactive charts and widgets to visualize product data effectively for stakeholders.</p>
-                        <a href="#" class="case-study-link">Case Study &#8594;</a>
+                        <span class="category" data-translate-key="portfolio_category_uiux">UI-UX DESIGN</span>
+                        <h3 data-translate-key="portfolio_item5_title">Product Admin Dashboard</h3>
+                        <p data-translate-key="portfolio_item5_description">Implemented interactive charts and widgets to visualize product data effectively for stakeholders.</p>
+                        <a href="#" class="case-study-link" data-translate-key="portfolio_case_study_link">Case Study &#8594;</a>
                     </div>
                 </div>
+                <!-- Portfolio Item 6 -->
                 <div class="portfolio-item">
                     <img src="https://via.placeholder.com/400x300/E6E6FA/FFFFFF?text=Project+Image+6" alt="Enhanced User Experience">
                     <div class="item-details">
-                        <span class="category">UI-UX DESIGN</span>
-                        <h3>Product Admin Dashboard</h3>
-                        <p>Enhanced user experience by streamlining workflows and optimizing interface components and so on.</p>
-                        <a href="#" class="case-study-link">Case Study &#8594;</a>
+                        <span class="category" data-translate-key="portfolio_category_uiux">UI-UX DESIGN</span>
+                        <h3 data-translate-key="portfolio_item6_title">Product Admin Dashboard</h3>
+                        <p data-translate-key="portfolio_item6_description">Enhanced user experience by streamlining workflows and optimizing interface components and so on.</p>
+                        <a href="#" class="case-study-link" data-translate-key="portfolio_case_study_link">Case Study &#8594;</a>
                     </div>
                 </div>
             </div>
             <div class="text-center mt-5">
-                <button class="btn btn-primary">More Project</button>
+                <button class="btn btn-primary" data-translate-key="portfolio_more_projects_btn">More Project</button>
             </div>
         </div>
     </section>
@@ -217,14 +225,14 @@
     <section class="testimonial-section">
         <div class="container">
             <div class="section-header">
-                <h2>Testimonial</h2>
-                <p>Working with this team was a fantastic experience. Their attention to detail and commitment to quality exceeded our expectations.</p>
+                <h2 data-translate-key="testimonial_title">Testimonial</h2>
+                <p data-translate-key="testimonial_intro_p">Working with this team was a fantastic experience. Their attention to detail and commitment to quality exceeded our expectations.</p>
             </div>
             <div class="testimonial-slider">
                 <div class="testimonial-item">
-                    <p class="quote">"From the initial consultation to the final delivery, every step was handled professionally. The end result was a product that not only met our needs but also impressed our stakeholders. Highly recommended!"</p>
-                    <p class="author">Esther Howard</p>
-                    <p class="title">Managing Director, ABC Company</p>
+                    <p class="quote" data-translate-key="testimonial_quote">"From the initial consultation to the final delivery, every step was handled professionally. The end result was a product that not only met our needs but also impressed our stakeholders. Highly recommended!"</p>
+                    <p class="author">Esther Howard</p> <!-- Name, usually not translated -->
+                    <p class="title" data-translate-key="testimonial_author_title">Managing Director, ABC Company</p>
                 </div>
                 <!-- Add more testimonial items here for a real slider -->
             </div>
@@ -239,9 +247,9 @@
     <!-- Call to Action Section -->
     <section class="cta-section">
         <div class="container text-center">
-            <h2>Do you have a Project Idea? <br> Let's discuss your project!</h2>
-            <p>I'm always open to discussing new projects and creative ideas. Let's <br> connect and build something amazing together.</p>
-            <button class="btn btn-primary cta-btn">Let's work Together &#8594;</button>
+            <h2 data-translate-key="cta_title">Do you have a Project Idea? <br> Let's discuss your project!</h2>
+            <p data-translate-key="cta_description">I'm always open to discussing new projects and creative ideas. Let's <br> connect and build something amazing together.</p>
+            <button class="btn btn-primary cta-btn" data-translate-key="cta_btn">Let's work Together &#8594;</button>
         </div>
     </section>
 
@@ -250,58 +258,58 @@
         <div class="container">
             <div class="contact-card">
                 <div class="contact-info-block">
-                    <h2>Let's discuss your Project</h2>
-                    <p>I'm available for freelance work. Drop me a line if you have a project you think I'd be a good fit for.</p>
+                    <h2 data-translate-key="contact_info_title">Let's discuss your Project</h2>
+                    <p data-translate-key="contact_info_p">I'm available for freelance work. Drop me a line if you have a project you think I'd be a good fit for.</p>
                     <div class="info-list">
                         <div class="info-item">
-                            <span class="icon">&#x1F4CD;</span> <!-- Location icon -->
+                            <span class="icon">&#x1F4CD;</span>
                             <div>
-                                <h3>Address:</h3>
-                                <p>New Mexico, 31134</p>
+                                <h3 data-translate-key="contact_address_heading">Address:</h3>
+                                <p>New Mexico, 31134</p> <!-- Address value, typically not translated -->
                             </div>
                         </div>
                         <div class="info-item">
-                            <span class="icon">&#9993;</span> <!-- Email icon -->
+                            <span class="icon">&#9993;</span>
                             <div>
-                                <h3>My Email:</h3>
-                                <p>mymali@mail.com</p>
+                                <h3 data-translate-key="contact_email_heading">My Email:</h3>
+                                <p>mymali@mail.com</p> <!-- Email value, typically not translated -->
                             </div>
                         </div>
                         <div class="info-item">
-                            <span class="icon">&#x1F4DE;</span> <!-- Phone icon -->
+                            <span class="icon">&#x1F4DE;</span>
                             <div>
-                                <h3>Call Me Now:</h3>
-                                <p>00-123 00000</p>
+                                <h3 data-translate-key="contact_phone_heading">Call Me Now:</h3>
+                                <p>00-123 00000</p> <!-- Phone value, typically not translated -->
                             </div>
                         </div>
                     </div>
                     <div class="social-links">
-                        <a href="#" aria-label="Facebook">📘</a> <!-- Replace with Font Awesome icon -->
-                        <a href="#" aria-label="Instagram">📷</a> <!-- Replace with Font Awesome icon -->
-                        <a href="#" aria-label="LinkedIn">💼</a> <!-- Replace with Font Awesome icon -->
-                        <a href="#" aria-label="Behance">🎨</a> <!-- Replace with Font Awesome icon -->
+                        <a href="#" aria-label="Facebook">📘</a>
+                        <a href="#" aria-label="Instagram">📷</a>
+                        <a href="#" aria-label="LinkedIn">💼</a>
+                        <a href="#" aria-label="Behance">🎨</a>
                     </div>
                 </div>
                 <div class="contact-form-block">
-                    <p class="form-intro-text">I'm always open to discussing product design work or partnership opportunities.</p>
+                    <p class="form-intro-text" data-translate-key="contact_form_intro_p">I'm always open to discussing product design work or partnership opportunities.</p>
                     <form class="contact-form">
                         <div class="form-group">
-                            <input type="text" id="name" placeholder="Name*" required>
+                            <input type="text" id="name" data-translate-placeholder="contact_form_name_placeholder" required>
                         </div>
                         <div class="form-group">
-                            <input type="email" id="email" placeholder="Email*" required>
+                            <input type="email" id="email" data-translate-placeholder="contact_form_email_placeholder" required>
                         </div>
                         <div class="form-group">
-                            <input type="text" id="location" placeholder="Location*">
+                            <input type="text" id="location" data-translate-placeholder="contact_form_location_placeholder">
                         </div>
                         <div class="form-group two-columns">
-                            <input type="text" id="budget" placeholder="Budget*">
-                            <input type="text" id="subject" placeholder="Subject*">
+                            <input type="text" id="budget" data-translate-placeholder="contact_form_budget_placeholder">
+                            <input type="text" id="subject" data-translate-placeholder="contact_form_subject_placeholder">
                         </div>
                         <div class="form-group">
-                            <textarea id="message" rows="5" placeholder="Message*" required></textarea>
+                            <textarea id="message" rows="5" data-translate-placeholder="contact_form_message_placeholder" required></textarea>
                         </div>
-                        <button type="submit" class="btn btn-submit">Submit &#8594;</button>
+                        <button type="submit" class="btn btn-submit" data-translate-key="contact_form_submit_btn">Submit &#8594;</button>
                     </form>
                 </div>
             </div>
@@ -317,19 +325,21 @@
             </div>
             <nav class="footer-nav">
                 <ul>
-                    <li><a href="#hero">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#process">Process</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#blog">Blog</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#hero" data-translate-key="nav_home">Home</a></li>
+                    <li><a href="#about" data-translate-key="nav_about">About</a></li>
+                    <li><a href="#process" data-translate-key="nav_process">Process</a></li>
+                    <li><a href="#portfolio" data-translate-key="nav_portfolio">Portfolio</a></li>
+                    <li><a href="#blog" data-translate-key="nav_blog">Blog</a></li>
+                    <li><a href="#services" data-translate-key="nav_services">Services</a></li>
+                    <li><a href="#contact" data-translate-key="nav_contact">Contact</a></li>
                 </ul>
             </nav>
-            <p class="copyright">Copyright © 2025 Picto.</p>
+            <p class="copyright"><span data-translate-key="footer_copyright">Copyright</span> © 2025 Picto.</p>
         </div>
     </footer>
 
+    <!-- Link to the translations.js file -->
+    <script src="translations.js"></script>
     <script>
         // Basic JavaScript for hamburger menu toggle (optional)
         document.querySelector('.hamburger-menu').addEventListener('click', () => {
