@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const translations = {
         en: {
             // Page Title
-            page_title: "Aleksander Tomczak - Photography Portfolio",
+            page_title: "Aleksander Tomczak - Design Portfolio",
 
             // Navigation
             nav_home: "Home",
@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Hero Section
             hero_greeting: "Hello, I'm",
             hero_name: "Aleksander Tomczak",
-            hero_description: "I'm a Freelance <span class='highlight'>Photographer</span>, based in London, England. I strive to build immersive and beautiful web applications through carefully crafted code and user-centric design.",
+            hero_description: "I'm a Freelance <span class='highlight'>Website Creator</span>, based in Wrocław, Poland. I strive to build immersive and beautiful web applications through carefully crafted code and user-centric design.",
             hero_btn: "Say Hello!",
             stat_experience: "Experience",
             stat_projects_completed: "Projects Completed",
@@ -27,7 +27,6 @@ document.addEventListener('DOMContentLoaded', () => {
             about_p1: "I design and develop services for customers specializing creating stylish, modern websites, web services and online stores. My passion is to design digital user experiences.",
             about_p2: "I design and develop services for customers specializing creating stylish, modern websites, web services and online stores. My passion is to design digital user experiences.",
             about_btn_projects: "My Projects",
-            about_btn_cv: "Download CV",
 
             // Work Process Section
             process_title: "Work Process",
@@ -104,9 +103,9 @@ document.addEventListener('DOMContentLoaded', () => {
             nav_contact: "Kontakt",
 
             // Hero Section
-            hero_greeting: "Witaj, jestem",
+            hero_greeting: "Witaj, mam na imię",
             hero_name: "Aleksander Tomczak",
-            hero_description: "Jestem niezależnym <span class='highlight'>Fotografem</span>, mieszkającym w Londynie, w Anglii. Staram się tworzyć wciągające i piękne strony internetowe poprzez starannie wykonany kod i projektowanie skoncentrowane na użytkowniku.",
+            hero_description: "Jestem niezależnym <span class='highlight'>Twórcą Stron www</span>, mieszkającym we Wrocławiu, w Polsce. Staram się tworzyć wciągające i piękne strony internetowe poprzez starannie wykonany kod i projektowanie skoncentrowane na użytkowniku.",
             hero_btn: "Przywitaj się!",
             stat_experience: "Doświadczenie",
             stat_projects_completed: "Zrealizowane Projekty",
@@ -117,7 +116,6 @@ document.addEventListener('DOMContentLoaded', () => {
             about_p1: "Projektuję i rozwijam usługi dla klientów, specjalizując się w tworzeniu stylowych, nowoczesnych stron internetowych, usług webowych i sklepów online. Moją pasją jest projektowanie cyfrowych doświadczeń użytkownika.",
             about_p2: "Projektuję i rozwijam usługi dla klientów, specjalizując się w tworzeniu stylowych, nowoczesnych stron internetowych, usług webowych i sklepów online. Moją pasją jest projektowanie cyfrowych doświadczeń użytkownika.",
             about_btn_projects: "Moje Projekty",
-            about_btn_cv: "Pobierz CV",
 
             // Work Process Section
             process_title: "Proces Pracy",
