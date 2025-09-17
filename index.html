@@ -3,234 +3,339 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Picto - Photography Portfolio</title>
+    <title>Brooklyn Gilbert - Portfolio</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- You might link to Google Fonts here, e.g., Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- For icons, consider Font Awesome: <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> -->
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-wrapper">
-                <a href="#" class="logo">PICTO</a>
-                <ul class="nav-menu">
-                    <li><a href="#home">Home</a></li>
+
+    <!-- Header / Navbar -->
+    <header class="header">
+        <div class="container navbar-container">
+            <div class="logo">
+                <span class="logo-icon">B</span>
+                Brooklyn
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="#hero" class="active">Home</a></li>
                     <li><a href="#about">About</a></li>
+                    <li><a href="#process">Process</a></li>
                     <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#blog">Blog</a></li>
                     <li><a href="#services">Services</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
-                <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
+            </nav>
+            <div class="hamburger-menu">
+                <!-- Hamburger icon goes here for mobile -->
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
         </div>
-    </nav>
+    </header>
 
     <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1 class="hero-title">Capturing Moments</h1>
-            <p class="hero-subtitle">Professional Photography Services</p>
-            <a href="#portfolio" class="btn-primary">View Portfolio</a>
+    <section id="hero" class="hero-section">
+        <div class="container hero-content-wrapper">
+            <div class="hero-text-content">
+                <p class="greeting">Hello, I'm</p>
+                <h1>Brooklyn Gilbert</h1>
+                <p class="intro-description">
+                    I'm a Freelance <span class="highlight">UI/UX Designer</span> and <span class="highlight">Developer</span>, based in London,
+                    England. I strives to build immersive and beautiful web applications
+                    through carefully crafted code and user-centric design.
+                </p>
+                <button class="btn btn-primary">Say Hello!</button>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <span class="stat-number">15 Y.</span>
+                        <span class="stat-label">Experience</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">250+</span>
+                        <span class="stat-label">Projects Completed</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">58</span>
+                        <span class="stat-label">Happy Clients</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image-content">
+                <img src="https://via.placeholder.com/400x500" alt="Brooklyn Gilbert" class="profile-img">
+            </div>
         </div>
-        <div class="hero-overlay"></div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="section-header">
-                <h2>About Me</h2>
-                <p>Passionate photographer with 10+ years of experience</p>
+    <section id="about" class="about-section">
+        <div class="container about-wrapper">
+            <div class="about-image">
+                <img src="https://via.placeholder.com/400x500" alt="Brooklyn Gilbert">
             </div>
-            <div class="about-content">
-                <div class="about-text">
-                    <h3>John Doe - Professional Photographer</h3>
-                    <p>With over a decade of experience in photography, I specialize in capturing life's most precious moments. From weddings to corporate events, my goal is to tell your story through stunning visuals.</p>
-                    <div class="stats">
-                        <div class="stat-item">
-                            <h4>500+</h4>
-                            <p>Happy Clients</p>
-                        </div>
-                        <div class="stat-item">
-                            <h4>1000+</h4>
-                            <p>Photos Taken</p>
-                        </div>
-                        <div class="stat-item">
-                            <h4>10+</h4>
-                            <p>Years Experience</p>
-                        </div>
-                    </div>
+            <div class="about-text">
+                <h2>I am Professional User <br> Experience Designer</h2>
+                <p>
+                    I design and develop services for customers specializing
+                    creating stylish, modern websites, web services and online
+                    stores. My passion is to design digital user experiences.
+                </p>
+                <p>
+                    I design and develop services for customers specializing
+                    creating stylish, modern websites, web services and online
+                    stores. My passion is to design digital user experiences.
+                </p>
+                <div class="about-buttons">
+                    <button class="btn btn-primary">My Projects</button>
+                    <button class="btn btn-secondary">Download CV</button>
                 </div>
-                <div class="about-image">
-                    <img src="https://via.placeholder.com/500x600" alt="Photographer">
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook">📘</a> <!-- Replace with Font Awesome icon -->
+                    <a href="#" aria-label="Instagram">📷</a> <!-- Replace with Font Awesome icon -->
+                    <a href="#" aria-label="LinkedIn">💼</a> <!-- Replace with Font Awesome icon -->
+                    <a href="#" aria-label="Behance">🎨</a> <!-- Replace with Font Awesome icon -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Process Section -->
+    <section id="process" class="process-section">
+        <div class="container process-wrapper">
+            <div class="process-intro">
+                <h2>Work Process</h2>
+                <p>
+                    Driven by design and powered by code, I create digital
+                    interfaces that feel intuitive and perform seamlessly.
+                    Every layout, animation, and component is crafted with
+                    intention — merging usability with visual clarity.
+                </p>
+                <p>
+                    I blend clean design with efficient code to build
+                    engaging, user-friendly web experiences that stand out.
+                </p>
+            </div>
+            <div class="process-steps-grid">
+                <div class="step-card">
+                    <div class="step-icon">&#128196;</div> <!-- Placeholder icon -->
+                    <h3>1. Research</h3>
+                    <p>Design meets function in every pixel, blending clarity with intuitive motion.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-icon">&#128200;</div> <!-- Placeholder icon -->
+                    <h3>2. Analyze</h3>
+                    <p>Crafting clean, thoughtful interfaces where form flows seamlessly into function and clarity.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-icon">&#9999;&#xFE0F;</div> <!-- Placeholder icon -->
+                    <h3>3. Design</h3>
+                    <p>I design seamless digital experiences with precision, purpose, and a touch of elegance.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-icon">&#128187;</div> <!-- Placeholder icon -->
+                    <h3>4. Launch</h3>
+                    <p>I craft digital products where thoughtful design meets purposeful drive and responsive development.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio">
+    <section id="portfolio" class="portfolio-section">
         <div class="container">
             <div class="section-header">
                 <h2>Portfolio</h2>
-                <p>Explore my recent work</p>
-            </div>
-            <div class="filter-buttons">
-                <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="wedding">Wedding</button>
-                <button class="filter-btn" data-filter="portrait">Portrait</button>
-                <button class="filter-btn" data-filter="nature">Nature</button>
-                <button class="filter-btn" data-filter="event">Event</button>
+                <p>Here's a selection of my recent work, showcasing my skills in creating user-centric and visually appealing interfaces.</p>
             </div>
             <div class="portfolio-grid">
-                <div class="portfolio-item" data-category="wedding">
-                    <img src="https://via.placeholder.com/400x300" alt="Wedding Photo">
-                    <div class="portfolio-overlay">
-                        <h3>Wedding Ceremony</h3>
-                        <p>Beautiful moments captured</p>
+                <div class="portfolio-item">
+                    <img src="https://via.placeholder.com/400x300/F08080/FFFFFF?text=Project+Image+1" alt="Product Admin Dashboard">
+                    <div class="item-details">
+                        <span class="category">UI-UX DESIGN</span>
+                        <h3>Product Admin Dashboard</h3>
+                        <p>I focus on crafting smooth, responsive interfaces that deliver aesthetic appeal with practical functionality.</p>
+                        <a href="#" class="case-study-link">Case Study &#8594;</a>
                     </div>
                 </div>
-                <div class="portfolio-item" data-category="portrait">
-                    <img src="https://via.placeholder.com/400x300" alt="Portrait">
-                    <div class="portfolio-overlay">
-                        <h3>Portrait Session</h3>
-                        <p>Professional headshots</p>
+                <div class="portfolio-item">
+                    <img src="https://via.placeholder.com/400x300/36454F/FFFFFF?text=Project+Image+2" alt="Product Admin Dashboard">
+                    <div class="item-details">
+                        <span class="category">UI-UX DESIGN</span>
+                        <h3>Product Admin Dashboard</h3>
+                        <p>Designed an intuitive dashboard for product management, emphasizing clarity and user efficiency.</p>
+                        <a href="#" class="case-study-link">Case Study &#8594;</a>
                     </div>
                 </div>
-                <div class="portfolio-item" data-category="nature">
-                    <img src="https://via.placeholder.com/400x300" alt="Nature">
-                    <div class="portfolio-overlay">
-                        <h3>Nature Photography</h3>
-                        <p>Capturing natural beauty</p>
+                <div class="portfolio-item">
+                    <img src="https://via.placeholder.com/400x300/A9A9A9/FFFFFF?text=Project+Image+3" alt="Product Admin Dashboard">
+                    <div class="item-details">
+                        <span class="category">UI-UX DESIGN</span>
+                        <h3>Product Admin Dashboard</h3>
+                        <p>Developed a modern admin panel with a focus on usability and seamless navigation for end users and so on.</p>
+                        <a href="#" class="case-study-link">Case Study &#8594;</a>
                     </div>
                 </div>
-                <div class="portfolio-item" data-category="event">
-                    <img src="https://via.placeholder.com/400x300" alt="Event">
-                    <div class="portfolio-overlay">
-                        <h3>Corporate Event</h3>
-                        <p>Professional event coverage</p>
+                <div class="portfolio-item">
+                    <img src="https://via.placeholder.com/400x300/87CEEB/FFFFFF?text=Project+Image+4" alt="Responsive Dashboard Layout">
+                    <div class="item-details">
+                        <span class="category">UI-UX DESIGN</span>
+                        <h3>Product Admin Dashboard</h3>
+                        <p>Created a responsive dashboard layout that adapts smoothly across devices and screen sizes and so on.</p>
+                        <a href="#" class="case-study-link">Case Study &#8594;</a>
                     </div>
                 </div>
-                <div class="portfolio-item" data-category="wedding">
-                    <img src="https://via.placeholder.com/400x300" alt="Wedding">
-                    <div class="portfolio-overlay">
-                        <h3>Wedding Reception</h3>
-                        <p>Joyful celebrations</p>
+                <div class="portfolio-item">
+                    <img src="https://via.placeholder.com/400x300/98FB98/FFFFFF?text=Project+Image+5" alt="Interactive Charts & Widgets">
+                    <div class="item-details">
+                        <span class="category">UI-UX DESIGN</span>
+                        <h3>Product Admin Dashboard</h3>
+                        <p>Implemented interactive charts and widgets to visualize product data effectively for stakeholders.</p>
+                        <a href="#" class="case-study-link">Case Study &#8594;</a>
                     </div>
                 </div>
-                <div class="portfolio-item" data-category="portrait">
-                    <img src="https://via.placeholder.com/400x300" alt="Portrait">
-                    <div class="portfolio-overlay">
-                        <h3>Family Portrait</h3>
-                        <p>Cherished memories</p>
+                <div class="portfolio-item">
+                    <img src="https://via.placeholder.com/400x300/E6E6FA/FFFFFF?text=Project+Image+6" alt="Enhanced User Experience">
+                    <div class="item-details">
+                        <span class="category">UI-UX DESIGN</span>
+                        <h3>Product Admin Dashboard</h3>
+                        <p>Enhanced user experience by streamlining workflows and optimizing interface components and so on.</p>
+                        <a href="#" class="case-study-link">Case Study &#8594;</a>
                     </div>
                 </div>
+            </div>
+            <div class="text-center mt-5">
+                <button class="btn btn-primary">More Project</button>
             </div>
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="services">
+    <!-- Testimonial Section -->
+    <section class="testimonial-section">
         <div class="container">
             <div class="section-header">
-                <h2>Services</h2>
-                <p>What I offer</p>
+                <h2>Testimonial</h2>
+                <p>Working with this team was a fantastic experience. Their attention to detail and commitment to quality exceeded our expectations.</p>
             </div>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">📷</div>
-                    <h3>Wedding Photography</h3>
-                    <p>Capture your special day with stunning wedding photography that tells your love story.</p>
+            <div class="testimonial-slider">
+                <div class="testimonial-item">
+                    <p class="quote">"From the initial consultation to the final delivery, every step was handled professionally. The end result was a product that not only met our needs but also impressed our stakeholders. Highly recommended!"</p>
+                    <p class="author">Esther Howard</p>
+                    <p class="title">Managing Director, ABC Company</p>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">👤</div>
-                    <h3>Portrait Sessions</h3>
-                    <p>Professional portrait photography for individuals, families, and corporate headshots.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🎉</div>
-                    <h3>Event Coverage</h3>
-                    <p>Comprehensive event photography for corporate events, parties, and special occasions.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🌿</div>
-                    <h3>Nature & Landscape</h3>
-                    <p>Breathtaking nature and landscape photography for commercial and artistic purposes.</p>
-                </div>
+                <!-- Add more testimonial items here for a real slider -->
             </div>
+            <div class="slider-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta-section">
+        <div class="container text-center">
+            <h2>Do you have a Project Idea? <br> Let's discuss your project!</h2>
+            <p>I'm always open to discussing new projects and creative ideas. Let's <br> connect and build something amazing together.</p>
+            <button class="btn btn-primary cta-btn">Let's work Together &#8594;</button>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact">
+    <section id="contact" class="contact-section">
         <div class="container">
-            <div class="section-header">
-                <h2>Get In Touch</h2>
-                <p>Let's discuss your photography needs</p>
-            </div>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="info-item">
-                        <h3>📧 Email</h3>
-                        <p>hello@picto.com</p>
+            <div class="contact-card">
+                <div class="contact-info-block">
+                    <h2>Let's discuss your Project</h2>
+                    <p>I'm available for freelance work. Drop me a line if you have a project you think I'd be a good fit for.</p>
+                    <div class="info-list">
+                        <div class="info-item">
+                            <span class="icon">&#x1F4CD;</span> <!-- Location icon -->
+                            <div>
+                                <h3>Address:</h3>
+                                <p>New Mexico, 31134</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <span class="icon">&#9993;</span> <!-- Email icon -->
+                            <div>
+                                <h3>My Email:</h3>
+                                <p>mymali@mail.com</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <span class="icon">&#x1F4DE;</span> <!-- Phone icon -->
+                            <div>
+                                <h3>Call Me Now:</h3>
+                                <p>00-123 00000</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="info-item">
-                        <h3>📱 Phone</h3>
-                        <p>+1 (555) 123-4567</p>
-                    </div>
-                    <div class="info-item">
-                        <h3>📍 Location</h3>
-                        <p>New York, NY</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">📘</a> <!-- Replace with Font Awesome icon -->
+                        <a href="#" aria-label="Instagram">📷</a> <!-- Replace with Font Awesome icon -->
+                        <a href="#" aria-label="LinkedIn">💼</a> <!-- Replace with Font Awesome icon -->
+                        <a href="#" aria-label="Behance">🎨</a> <!-- Replace with Font Awesome icon -->
                     </div>
                 </div>
-                <form class="contact-form">
-                    <input type="text" placeholder="Your Name" required>
-                    <input type="email" placeholder="Your Email" required>
-                    <input type="text" placeholder="Subject">
-                    <textarea placeholder="Your Message" rows="5" required></textarea>
-                    <button type="submit" class="btn-primary">Send Message</button>
-                </form>
+                <div class="contact-form-block">
+                    <p class="form-intro-text">I'm always open to discussing product design work or partnership opportunities.</p>
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <input type="text" id="name" placeholder="Name*" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" placeholder="Email*" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="location" placeholder="Location*">
+                        </div>
+                        <div class="form-group two-columns">
+                            <input type="text" id="budget" placeholder="Budget*">
+                            <input type="text" id="subject" placeholder="Subject*">
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" rows="5" placeholder="Message*" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-submit">Submit &#8594;</button>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <h3>PICTO</h3>
-                    <p>Professional Photography Services</p>
-                </div>
-                <div class="footer-links">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#portfolio">Portfolio</a></li>
-                        <li><a href="#services">Services</a></li>
-                    </ul>
-                </div>
-                <div class="footer-social">
-                    <h4>Follow Me</h4>
-                    <div class="social-links">
-                        <a href="#">📘</a>
-                        <a href="#">📷</a>
-                        <a href="#">🐦</a>
-                        <a href="#">💼</a>
-                    </div>
-                </div>
+        <div class="container footer-content">
+            <div class="footer-logo">
+                <span class="logo-icon">B</span>
+                Brooklyn
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Picto. All rights reserved.</p>
-            </div>
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#process">Process</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <p class="copyright">Copyright © 2025 Picto.</p>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        // Basic JavaScript for hamburger menu toggle (optional)
+        document.querySelector('.hamburger-menu').addEventListener('click', () => {
+            document.querySelector('.nav-menu').classList.toggle('active');
+            document.querySelector('.hamburger-menu').classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
