@@ -1,325 +1,233 @@
-7
-//<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js" integrity="sha512-uKQ39gEGiyUJl4AI6L+ekBdGKpGw4xJ55+xyJG7YFlJokPNYegn9KwQ3P8A7aFQAUtUsAQHep+d/lrGqrbPIDQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+document.addEventListener('DOMContentLoaded', () => {
+    const translations = {
+        en: {
+            // Page Title
+            page_title: "Aleksander Tomczak - Photography Portfolio",
 
-// Obiekt translations wbudowany bezpośrednio w HTML
-const translations = {
-    // Navigation
-    'nav-home': {
-        'en': 'Home',
-        'pl': 'Strona główna'
-    },
-    'nav-projects': {
-        'en': 'Project Showcase',
-        'pl': 'Projekty'
-    },
-    'nav-testimonials': {
-        'en': 'Testimonials',
-        'pl': 'Referencje'
-    },
-    'nav-recent': {
-        'en': 'Recent work',
-        'pl': 'Ostatnie prace'
-    },
-    'nav-contact': {
-        'en': 'Get In Touch',
-        'pl': 'Kontakt'
-    },
-    
-    // Hero Section
-    'hero-subtitle': {
-        'en': 'I build landing pages, trained AI chatbots and automation tools that save businesses time and bring new clients.',
-        'pl': 'Tworzę strony internetowe, chatboty AI i narzędzia automatyzacji, które oszczędzają czas firm i przyciągają nowych klientów.'
-    },
-    'hero-cta': {
-        'en': 'Let\'s get started >',
-        'pl': 'Rozpocznijmy współpracę >'
-    },
-    'works-using': {
-        'en': 'Works using',
-        'pl': 'Pracuję używając'
-    },
-    
-    // Projects Showcase
-    'projects-title': {
-        'en': 'Projects Showcase',
-        'pl': 'Prezentacja projektów'
-    },
-    'projects-subtitle': {
-        'en': 'Solving user & business problems since last 15+ years. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-        'pl': 'Rozwiązuję problemy użytkowników i firm od ponad 15 lat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-    },
-    
-    // Case Studies
-    /*
-    'case1-tag': {
-        'en': 'Vaultlify',
-        'pl': 'Vaultlify'
-    },
-    'case1-title': {
-        'en': 'Safe file transfer website',
-        'pl': 'Strona do bezpiecznego przesyłu plików'
-    },
-    'case1-desc': {
-        'en': 'A tool for safe locking large files and accessing them with vault ID and password. Completely free',
-        'pl': 'Narzędzie do bezpiecznego skłądowania dużych plików za dostępem poprzez ID skrytki i hasło. Zupełnie bezpłatne'
-    },
-    'case-btn': {
-        'en': 'View case study >',
-        'pl': 'Zobacz studium przypadku >'
-    },
-    
-    'case2-tag': {
-        'en': 'Remailify',
-        'pl': 'Remailify'
-    },
-    'case2-title': {
-        'en': 'AI E-mail corrector',
-        'pl': 'AI korektor E-maili'
-    },
-    'case2-desc': {
-        'en': 'A custom AI tool that can amend your e-mail',
-        'pl': 'Prościutkie narzędzie AI które może poprawić wygląd twoich e-maili'
-    },
-    
-    'case3-tag': {
-        'en': 'uitocode',
-        'pl': 'uitocode'
-    },
-    'case3-title': {
-        'en': 'Trained AI Chatbot (PDF & Q/A)',
-        'pl': 'Wytrenowany chatbot AI (PDF i Q/A)'
-    },
-    'case3-desc': {
-        'en': 'A tool that can be tuned even more to focus on solving certain problems of one niche.',
-        'pl': 'Narzędzie, które można jeszcze bardziej dostroić, aby skupić się na rozwiązywaniu określonych problemów jednej niszy.'
-    },
-    */
-        //////////////////////////////////////////
-    'case1-tag': {
-        'en': 'Piea',
-        'pl': 'Vaultlify'
-    },
-    'case1-title': {
-        'en': 'Safe file transfer website',
-        'pl': 'Strona do bezpiecznego przesyłu plików'
-    },
-    'case1-desc': {
-        'en': 'A tool for safe locking large files and accessing them with vault ID and password. Completely free',
-        'pl': 'Narzędzie do bezpiecznego skłądowania dużych plików za dostępem poprzez ID skrytki i hasło. Zupełnie bezpłatne'
-    },
-    'case-btn': {
-        'en': 'View case study >',
-        'pl': 'Zobacz studium przypadku >'
-    },
+            // Navigation
+            nav_home: "Home",
+            nav_about: "About",
+            nav_process: "Process",
+            nav_portfolio: "Portfolio",
+            nav_blog: "Blog",
+            nav_services: "Services",
+            nav_contact: "Contact",
 
-    'case2-tag': {
-        'en': 'Remailify',
-        'pl': 'Remailify'
-    },
-    'case2-title': {
-        'en': 'AI E-mail corrector',
-        'pl': 'AI korektor E-maili'
-    },
-    'case2-desc': {
-        'en': 'A custom AI tool that can amend your e-mail',
-        'pl': 'Prościutkie narzędzie AI które może poprawić wygląd twoich e-maili'
-    },
+            // Hero Section
+            hero_greeting: "Hello, I'm",
+            hero_name: "Aleksander Tomczak",
+            hero_description: "I'm a Freelance <span class='highlight'>Photographer</span>, based in London, England. I strive to build immersive and beautiful web applications through carefully crafted code and user-centric design.",
+            hero_btn: "Say Hello!",
+            stat_experience: "Experience",
+            stat_projects_completed: "Projects Completed",
+            stat_happy_clients: "Happy Clients",
 
-    'case3-tag': {
-        'en': 'uitocode',
-        'pl': 'uitocode'
-    },
-    'case3-title': {
-        'en': 'Trained AI Chatbot (PDF & Q/A)',
-        'pl': 'Wytrenowany chatbot AI (PDF i Q/A)'
-    },
-    'case3-desc': {
-        'en': 'A tool that can be tuned even more to focus on solving certain problems of one niche.',
-        'pl': 'Narzędzie, które można jeszcze bardziej dostroić, aby skupić się na rozwiązywaniu określonych problemów jednej niszy.'
-        /////////////////////////////////
-    // Testimonials
-    'testimonials-title': {
-        'en': 'Testimonials',
-        'pl': 'Referencje'
-    },
-    'testimonials-subtitle': {
-        'en': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-        'pl': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-    },
-    'testimonial1-text': {
-        'en': '',
-        'pl': 'Zleciłem stworzenie sklepu e-commerce dla mojej firmy produkującej słuchawki. Pan Aleksander wykonał świetną robotę, i w 3 dni miałem już w pełni działający stronę. Gorąco polecam'
-    },
-    'client1-name': {
-        'en': 'Danier02',
-        'pl': 'Danier02'
-    },
-    'testimonial2-text': {
-        'en': '',
-        'pl': 'Potrzebowałem na szybko stronki www do bezpiecznego przesyłania dużych plików. Piszę maila do pana, i w zaledwie 2 godziny dostaje odpowiedź z linkiem do gotowej stronki. Świetna robota'
-    },
-    'client2-name': {
-        'en': 'Andrzej Sokołowski',
-        'pl': 'Andrzej Sokołowski'
-    },
-   
-    // Recent Work
-    'recent-work-title': {
-        'en': 'Recent Work',
-        'pl': 'Ostatnie prace'
-    },
-    'recent-work-subtitle': {
-        'en': 'Projects, that i hope to make recognizeable one day.',
-        'pl': 'Projekty, które mam nadzieję kiedyś uczynić rozpoznawalnymi.'
-    },
-    'work1-title': {
-        'en': 'Optedu AI',
-        'pl': 'Optedu AI'
-    },
-    'work1-desc': {
-        'en': 'An AI educational tutor for students to optimise and speed up their learning path.',
-        'pl': 'Tutor edukacyjny AI dla studentów, pomagający zoptymalizować i przyspieszyć ścieżkę nauki.'
-    },
-    'work2-title': {
-        'en': 'Codequick AI',
-        'pl': 'Codequick AI'
-    },
-    'work2-desc': {
-        'en': 'An AI free code editor that runs LLM locally on your PC',
-        'pl': 'Darmowy AI edytor kodu który odpala LLMa lokalnie na twoim komputerze'
-    },
-    'work-more-btn': {
-        'en': 'Know more >',
-        'pl': 'Dowiedz się więcej >'
-    },
-    
-    // Contact
-    'contact-title': {
-        'en': 'Get In Touch',
-        'pl': 'Kontakt do mnie'
-    },
-    'contact-subtitle': {
-        'en': 'If you are interested in hiring me, please leave a message',
-        'pl': 'Jeżeli jesteś zainteresowany współpracą ze mnią, zostaw mi wiadomość'
-    },
-    'email-label': {
-        'en': 'Email',
-        'pl': 'Email'
-    },
-    'email-placeholder': {
-        'en': 'Please enter your email',
-        'pl': 'Twój adres email'
-    },
-    'mobile-label': {
-        'en': 'Mobile',
-        'pl': 'Telefon'
-    },
-    'mobile-placeholder': {
-        'en': 'Enter mobile',
-        'pl': 'Twój numer tel'
-    },
-    'message-label': {
-        'en': 'Message',
-        'pl': 'Wiadomość'
-    },
-    'message-placeholder': {
-        'en': 'Enter your message',
-        'pl': 'Wprowadź swoją wiadomość'
-    },
-    'submit-btn': {
-        'en': 'Submit >',
-        'pl': 'Wyślij >'
-    },
-    
-    // Professional Profiles
-    'github-text': {
-        'en': 'GitHub',
-        'pl': 'GitHub'
-    },
-    'linkedin-text': {
-        'en': 'LinkedIn',
-        'pl': 'LinkedIn'
-    },
-    'freelancer-text': {
-        'en': 'Freelancer',
-        'pl': 'Freelancer'
-    },
-    
-    // Footer
-    'footer-text': {
-        'en': 'ThoReSt 2026',
-        'pl': 'ThoReSt 2026'
-    }
-};
+            // About Section
+            about_title: "I am Professional <br> Photographer",
+            about_p1: "I design and develop services for customers specializing creating stylish, modern websites, web services and online stores. My passion is to design digital user experiences.",
+            about_p2: "I design and develop services for customers specializing creating stylish, modern websites, web services and online stores. My passion is to design digital user experiences.",
+            about_btn_projects: "My Projects",
+            about_btn_cv: "Download CV",
 
-// Skrypt do przełączania języków (zaraz po definicji translations)
-document.addEventListener('DOMContentLoaded', function() {
-    console.log('Script loaded');
-    
-    // Pobieramy przyciski
-    const enButton = document.getElementById('lang-en');
-    const plButton = document.getElementById('lang-pl');
-    
-    if (!enButton || !plButton) {
-        console.error('Language buttons not found!');
-        return;
-    }
-    
-    console.log('Buttons found, adding event listeners');
-    
-    // Default language
-    let currentLang = localStorage.getItem('preferredLanguage') || 'en';
-    
-    // Set initial language
-    setLanguage(currentLang);
-    
-    // Explicit onclick handlers
-    enButton.onclick = function() {
-        console.log('English button clicked');
-        setLanguage('en');
-    };
-    
-    plButton.onclick = function() {
-        console.log('Polish button clicked');
-        setLanguage('pl');
-    };
-    
-    function setLanguage(lang) {
-        console.log('Setting language to: ' + lang);
-        currentLang = lang;
-        
-        // Save preference
-        localStorage.setItem('preferredLanguage', lang);
-        
-        // Update active button
-        document.querySelectorAll('.lang-btn').forEach(btn => {
-            btn.classList.remove('active');
-        });
-        
-        const activeButton = document.getElementById('lang-' + lang);
-        if (activeButton) {
-            activeButton.classList.add('active');
+            // Work Process Section
+            process_title: "Work Process",
+            process_p1: "Driven by design and powered by code, I create digital interfaces that feel intuitive and perform seamlessly. Every layout, animation, and component is crafted with intention — merging usability with visual clarity.",
+            process_p2: "I blend clean design with efficient code to build engaging, user-friendly web experiences that stand out.",
+            step1_title: "1. Research",
+            step1_description: "Design meets function in every pixel, blending clarity with intuitive motion.",
+            step2_title: "2. Analyze",
+            step2_description: "Crafting clean, thoughtful interfaces where form flows seamlessly into function and clarity.",
+            step3_title: "3. Design",
+            step3_description: "I design seamless digital experiences with precision, purpose, and a touch of elegance.",
+            step4_title: "4. Launch",
+            step4_description: "I craft digital products where thoughtful design meets purposeful drive and responsive development.",
+
+            // Portfolio Section
+            portfolio_title: "Portfolio",
+            portfolio_description: "Here's a selection of my recent work, showcasing my skills in creating user-centric and visually appealing interfaces.",
+            portfolio_category_uiux: "UI-UX DESIGN", // Kept original as per the image
+            portfolio_item1_title: "Product Admin Dashboard",
+            portfolio_item1_description: "I focus on crafting smooth, responsive interfaces that deliver aesthetic appeal with practical functionality.",
+            portfolio_item2_title: "Product Admin Dashboard",
+            portfolio_item2_description: "Designed an intuitive dashboard for product management, emphasizing clarity and user efficiency.",
+            portfolio_item3_title: "Product Admin Dashboard",
+            portfolio_item3_description: "Developed a modern admin panel with a focus on usability and seamless navigation for end users and so on.",
+            portfolio_item4_title: "Product Admin Dashboard",
+            portfolio_item4_description: "Created a responsive dashboard layout that adapts smoothly across devices and screen sizes and so on.",
+            portfolio_item5_title: "Product Admin Dashboard",
+            portfolio_item5_description: "Implemented interactive charts and widgets to visualize product data effectively for stakeholders.",
+            portfolio_item6_title: "Product Admin Dashboard",
+            portfolio_item6_description: "Enhanced user experience by streamlining workflows and optimizing interface components and so on.",
+            portfolio_case_study_link: "Case Study →",
+            portfolio_more_projects_btn: "More Project",
+
+            // Testimonial Section
+            testimonial_title: "Testimonial",
+            testimonial_intro_p: "Working with this team was a fantastic experience. Their attention to detail and commitment to quality exceeded our expectations.",
+            testimonial_quote: "\"From the initial consultation to the final delivery, every step was handled professionally. The end result was a product that not only met our needs but also impressed our stakeholders. Highly recommended!\"",
+            testimonial_author_title: "Managing Director, ABC Company",
+
+            // Call to Action Section
+            cta_title: "Do you have a Project Idea? <br> Let's discuss your project!",
+            cta_description: "I'm always open to discussing new projects and creative ideas. Let's <br> connect and build something amazing together.",
+            cta_btn: "Let's work Together →",
+
+            // Contact Section
+            contact_info_title: "Let's discuss your Project",
+            contact_info_p: "I'm available for freelance work. Drop me a line if you have a project you think I'd be a good fit for.",
+            contact_address_heading: "Address:",
+            contact_email_heading: "My Email:",
+            contact_phone_heading: "Call Me Now:",
+            contact_form_intro_p: "I'm always open to discussing product design work or partnership opportunities.",
+            contact_form_name_placeholder: "Name*",
+            contact_form_email_placeholder: "Email*",
+            contact_form_location_placeholder: "Location*",
+            contact_form_budget_placeholder: "Budget*",
+            contact_form_subject_placeholder: "Subject*",
+            contact_form_message_placeholder: "Message*",
+            contact_form_submit_btn: "Submit →",
+
+            // Footer
+            footer_copyright: "Copyright"
+        },
+        pl: {
+            // Page Title
+            page_title: "Aleksander Tomczak - Portfolio Fotograficzne",
+
+            // Navigation
+            nav_home: "Strona Główna",
+            nav_about: "O Mnie",
+            nav_process: "Proces",
+            nav_portfolio: "Portfolio",
+            nav_blog: "Blog",
+            nav_services: "Usługi",
+            nav_contact: "Kontakt",
+
+            // Hero Section
+            hero_greeting: "Witaj, jestem",
+            hero_name: "Aleksander Tomczak",
+            hero_description: "Jestem niezależnym <span class='highlight'>Fotografem</span>, mieszkającym w Londynie, w Anglii. Staram się tworzyć wciągające i piękne strony internetowe poprzez starannie wykonany kod i projektowanie skoncentrowane na użytkowniku.",
+            hero_btn: "Przywitaj się!",
+            stat_experience: "Doświadczenie",
+            stat_projects_completed: "Zrealizowane Projekty",
+            stat_happy_clients: "Zadowoleni Klienci",
+
+            // About Section
+            about_title: "Jestem Profesjonalnym <br> Fotografem",
+            about_p1: "Projektuję i rozwijam usługi dla klientów, specjalizując się w tworzeniu stylowych, nowoczesnych stron internetowych, usług webowych i sklepów online. Moją pasją jest projektowanie cyfrowych doświadczeń użytkownika.",
+            about_p2: "Projektuję i rozwijam usługi dla klientów, specjalizując się w tworzeniu stylowych, nowoczesnych stron internetowych, usług webowych i sklepów online. Moją pasją jest projektowanie cyfrowych doświadczeń użytkownika.",
+            about_btn_projects: "Moje Projekty",
+            about_btn_cv: "Pobierz CV",
+
+            // Work Process Section
+            process_title: "Proces Pracy",
+            process_p1: "Kierując się designem i mocą kodu, tworzę cyfrowe interfejsy, które są intuicyjne i działają płynnie. Każdy układ, animacja i komponent są tworzone z intencją – łącząc użyteczność z wizualną klarownością.",
+            process_p2: "Łączę czysty design z wydajnym kodem, aby tworzyć angażujące, przyjazne dla użytkownika doświadczenia webowe, które się wyróżniają.",
+            step1_title: "1. Badanie",
+            step1_description: "Design spotyka funkcję w każdym pikselu, łącząc klarowność z intuicyjnym ruchem.",
+            step2_title: "2. Analiza",
+            step2_description: "Tworzenie czystych, przemyślanych interfejsów, gdzie forma płynnie przechodzi w funkcję i klarowność.",
+            step3_title: "3. Projektowanie",
+            step3_description: "Projektuję płynne doświadczenia cyfrowe z precyzją, celem i odrobiną elegancji.",
+            step4_title: "4. Uruchomienie",
+            step4_description: "Tworzę produkty cyfrowe, gdzie przemyślany design spotyka się z celowym dążeniem i responsywnym rozwojem.",
+
+            // Portfolio Section
+            portfolio_title: "Portfolio",
+            portfolio_description: "Oto wybór moich ostatnich prac, prezentujących moje umiejętności w tworzeniu interfejsów skoncentrowanych na użytkowniku i atrakcyjnych wizualnie.",
+            portfolio_category_uiux: "PROJEKTOWANIE UI-UX",
+            portfolio_item1_title: "Panel Administracyjny Produktu",
+            portfolio_item1_description: "Skupiam się na tworzeniu płynnych, responsywnych interfejsów, które zapewniają estetyczny wygląd z praktyczną funkcjonalnością.",
+            portfolio_item2_title: "Panel Administracyjny Produktu",
+            portfolio_item2_description: "Zaprojektowano intuicyjny pulpit nawigacyjny do zarządzania produktem, z naciskiem na klarowność i efektywność użytkownika.",
+            portfolio_item3_title: "Panel Administracyjny Produktu",
+            portfolio_item3_description: "Opracowano nowoczesny panel administracyjny z naciskiem na użyteczność i płynną nawigację dla użytkowników końcowych i tak dalej.",
+            portfolio_item4_title: "Panel Administracyjny Produktu",
+            portfolio_item4_description: "Stworzono responsywny układ pulpitu nawigacyjnego, który płynnie dostosowuje się do różnych urządzeń i rozmiarów ekranów i tak dalej.",
+            portfolio_item5_title: "Panel Administracyjny Produktu",
+            portfolio_item5_description: "Wdrożono interaktywne wykresy i widżety do efektywnej wizualizacji danych produktu dla interesariuszy.",
+            portfolio_item6_title: "Panel Administracyjny Produktu",
+            portfolio_item6_description: "Ulepszono doświadczenie użytkownika poprzez usprawnienie przepływu pracy i optymalizację komponentów interfejsu i tak dalej.",
+            portfolio_case_study_link: "Studium Przypadku →",
+            portfolio_more_projects_btn: "Więcej Projektów",
+
+            // Testimonial Section
+            testimonial_title: "Referencje",
+            testimonial_intro_p: "Współpraca z tym zespołem była fantastycznym doświadczeniem. Ich dbałość o szczegóły i zaangażowanie w jakość przerosło nasze oczekiwania.",
+            testimonial_quote: "„Od początkowych konsultacji do końcowej realizacji, każdy etap był prowadzony profesjonalnie. Efektem końcowym był produkt, który nie tylko spełnił nasze potrzeby, ale także zrobił wrażenie na naszych interesariuszach. Gorąco polecam!”",
+            testimonial_author_title: "Dyrektor Zarządzająca, Firma ABC",
+
+            // Call to Action Section
+            cta_title: "Masz pomysł na projekt? <br> Porozmawiajmy o nim!",
+            cta_description: "Zawsze jestem otwarty na dyskusję o nowych projektach i kreatywnych pomysłach. Skontaktujmy się i stwórzmy coś niesamowitego razem.",
+            cta_btn: "Pracujmy Razem →",
+
+            // Contact Section
+            contact_info_title: "Porozmawiajmy o Twoim Projekcie",
+            contact_info_p: "Jestem dostępny do pracy jako freelancer. Napisz do mnie, jeśli masz projekt, do którego mógłbym pasować.",
+            contact_address_heading: "Adres:",
+            contact_email_heading: "Mój E-mail:",
+            contact_phone_heading: "Zadzwoń Teraz:",
+            contact_form_intro_p: "Zawsze jestem otwarty na rozmowy o projektowaniu produktów lub możliwościach partnerstwa.",
+            contact_form_name_placeholder: "Imię*",
+            contact_form_email_placeholder: "E-mail*",
+            contact_form_location_placeholder: "Lokalizacja*",
+            contact_form_budget_placeholder: "Budżet*",
+            contact_form_subject_placeholder: "Temat*",
+            contact_form_message_placeholder: "Wiadomość*",
+            contact_form_submit_btn: "Wyślij →",
+
+            // Footer
+            footer_copyright: "Prawa autorskie"
         }
-        
-        // Update all text elements with data-i18n attribute
-        document.querySelectorAll('[data-i18n]').forEach(element => {
-            const key = element.getAttribute('data-i18n');
-            if (translations[key] && translations[key][lang]) {
-                if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
-                    if (element.getAttribute('placeholder')) {
-                        element.setAttribute('placeholder', translations[key][lang]);
-                    } else {
-                        element.value = translations[key][lang];
-                    }
-                } else {
-                    element.innerHTML = translations[key][lang];
-                }
-            } else {
-                console.warn('Missing translation for key: ' + key + ' in language: ' + lang);
+    };
+
+    const langButtons = document.querySelectorAll('.lang-btn');
+    let currentLanguage = localStorage.getItem('lang') || 'en'; // Get saved language or default to English
+
+    // Function to apply translations
+    function applyTranslations(lang) {
+        // Translate elements with data-translate-key
+        document.querySelectorAll('[data-translate-key]').forEach(element => {
+            const key = element.getAttribute('data-translate-key');
+            if (translations[lang] && translations[lang][key]) {
+                // Use innerHTML for text that might contain HTML tags (like <br> or <span>)
+                element.innerHTML = translations[lang][key];
             }
         });
-        
-        // Update document lang attribute
-        document.documentElement.lang = lang;
+
+        // Translate placeholders
+        document.querySelectorAll('[data-translate-placeholder]').forEach(element => {
+            const key = element.getAttribute('data-translate-placeholder');
+            if (translations[lang] && translations[lang][key]) {
+                element.placeholder = translations[lang][key];
+            }
+        });
+
+        // Translate the page title specifically
+        const pageTitleElement = document.querySelector('title[data-translate-key="page_title"]');
+        if (pageTitleElement && translations[lang] && translations[lang].page_title) {
+            document.title = translations[lang].page_title;
+        }
+
+        // Update active class on language buttons
+        langButtons.forEach(button => {
+            button.classList.remove('active');
+            if (button.dataset.lang === lang) {
+                button.classList.add('active');
+            }
+        });
     }
+
+    // Event listeners for language switcher buttons
+    langButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            currentLanguage = button.dataset.lang;
+            localStorage.setItem('lang', currentLanguage); // Save preferred language
+            applyTranslations(currentLanguage);
+        });
+    });
+
+    // Apply translations on page load
+    applyTranslations(currentLanguage);
 });
