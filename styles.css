@@ -1,532 +1,338 @@
-/* 
-    --- CSS for Aleksander Tomczak's Portfolio ---
-    Inspired by the provided image, with added elegance for new sections.
-*/
+/* --- Google Font Import --- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
-/* 1. Global Resets and Variables */
+/* --- CSS Variables for Theme Colors --- */
 :root {
-    --primary-font: 'Manrope', sans-serif;
-    --color-dark: #1a1a1a;
-    --color-light: #ffffff;
-    --color-grey: #6b7280; /* A slightly darker grey for secondary text */
-    --color-light-grey: #f8f8f8; /* Background for some sections */
-
-    /* Gradient colors for H1 text - inspired by the original image */
-    --gradient-1-start: #8e2de2; /* Purple */
-    --gradient-1-end: #4a00e0;   /* Deeper Purple */
-    --gradient-2-start: #f83600; /* Red-Orange */
-    --gradient-2-end: #f9d423;   /* Yellow-Orange */
-
-    --button-primary-bg: #1a1a1a;
-    --button-primary-text: #ffffff;
-    --button-hover-bg: #000000;
-
-    --border-radius-default: 8px;
-    --spacing-xs: 8px;
-    --spacing-sm: 16px;
-    --spacing-md: 32px;
-    --spacing-lg: 64px;
-    --spacing-xl: 96px;
+    --bg-dark: #1E2028;
+    --bg-card: #2C2F3A;
+    --primary-yellow: #FFC83B;
+    --text-white: #FFFFFF;
+    --text-gray: #A9ADB8;
+    --border-color: #3a3e4c;
 }
 
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
+/* --- General Body & Reset Styles --- */
+* {
     margin: 0;
     padding: 0;
-}
-
-html {
-    scroll-behavior: smooth;
+    box-sizing: border-box;
 }
 
 body {
-    font-family: var(--primary-font);
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-gray);
     line-height: 1.6;
-    color: var(--color-dark);
-    background-color: var(--color-light);
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
 }
 
-/* 2. Base Typography */
-h1, h2, h3, h4, h5, h6 {
-    font-weight: 800; /* Extra bold for headings */
-    margin-bottom: var(--spacing-sm);
-    line-height: 1.2;
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 30px;
 }
 
-h1 { font-size: 3.5rem; }
-h2 { font-size: 2.5rem; }
-h3 { font-size: 1.75rem; }
-p {
-    font-size: 1.125rem;
-    margin-bottom: var(--spacing-sm);
-    color: var(--color-dark); /* Default paragraph color */
+h1, h2, h3 {
+    color: var(--text-white);
+    font-weight: 600;
 }
 
 a {
     text-decoration: none;
-    color: var(--color-dark);
+    color: var(--text-gray);
     transition: color 0.3s ease;
 }
 
-a:hover {
-    color: var(--gradient-1-start); /* Subtle hover effect */
-}
-
-/* Utility Classes */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 var(--spacing-sm); /* Padding on sides for smaller screens */
-}
-
-.section-title {
-    text-align: center;
-    margin-bottom: var(--spacing-lg);
-    font-weight: 800;
-    font-size: 3rem;
-}
-
-/* 3. Buttons */
-.btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem 2rem;
-    border-radius: var(--border-radius-default);
-    font-size: 1.1rem;
-    font-weight: 700;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    border: none;
-}
-
-.btn-primary {
-    background-color: var(--button-primary-bg);
-    color: var(--button-primary-text);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
-
-.btn-primary:hover {
-    background-color: var(--button-hover-bg);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-}
-
-.btn-secondary {
-    background-color: transparent;
-    color: var(--color-dark);
-    border: 1px solid transparent; /* To maintain spacing consistency with btn-primary */
-    padding: 1rem 1.5rem; /* Slightly less padding */
-    font-weight: 500;
-}
-
-.btn-secondary:hover {
-    color: var(--gradient-1-start);
-    transform: translateY(-2px);
-}
-
-.btn-secondary svg {
-    margin-left: var(--spacing-xs);
-}
-
-.btn-nav {
-    background-color: transparent;
-    color: var(--color-dark);
-    padding: 0.75rem 1.5rem;
-    font-size: 1rem;
-    font-weight: 600;
-    border: 1px solid var(--color-dark);
-}
-
-.btn-nav:hover {
-    background-color: var(--color-dark);
-    color: var(--color-light);
-    transform: none; /* Override primary button hover */
-    box-shadow: none;
-}
-
-.btn-outline {
-    background-color: transparent;
-    color: var(--color-dark);
-    border: 1px solid var(--color-dark);
-    font-size: 1rem;
-    padding: 0.75rem 1.5rem;
-}
-
-.btn-outline:hover {
-    background-color: var(--color-dark);
-    color: var(--color-light);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* 4. Header & Navigation */
-.header {
-    background-color: var(--color-light);
-    padding: var(--spacing-sm) 0;
-    border-bottom: 1px solid var(--color-light-grey);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05); /* Subtle shadow for elegance */
-}
-
-.navbar {
+/* --- Header & Navigation --- */
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 30px 0;
 }
 
-.logo {
-    font-size: 1.5rem;
-    font-weight: 800;
-    color: var(--color-dark);
+.logo a {
+    font-size: 24px;
+    font-weight: 700;
+    background-color: var(--primary-yellow);
+    color: var(--bg-dark);
+    padding: 8px 14px;
+    border-radius: 8px;
 }
 
-.nav-links {
+nav ul {
     list-style: none;
     display: flex;
-    align-items: center;
-    gap: var(--spacing-md);
+    gap: 40px;
 }
 
-.nav-links a {
-    font-size: 1.05rem;
+nav a {
     font-weight: 500;
-    padding: 0.5rem 0; /* Make links clickable in a larger area */
 }
 
-.nav-links a:not(.btn):hover {
-    color: var(--gradient-1-start);
+nav a:hover,
+nav a.active {
+    color: var(--text-white);
 }
 
-/* 5. Hero Section */
-.hero-section {
-    padding: var(--spacing-xl) 0;
-    min-height: 80vh;
+/* --- Hero Section --- */
+.hero {
     display: flex;
     align-items: center;
-}
-
-.hero-content-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: var(--spacing-lg);
+    gap: 60px;
+    padding: 60px 0;
+    border-bottom: 1px solid var(--border-color);
 }
 
 .hero-text-content {
     flex: 1;
-    max-width: 60%;
 }
 
-.hero-text-content h1 {
-    font-size: 4.5rem; /* Larger font for main heading */
-    margin-bottom: var(--spacing-md);
-    font-weight: 800;
+.hero h1 {
+    font-size: 64px;
+    line-height: 1.1;
+    margin-bottom: 15px;
 }
 
-.gradient-text-1, .gradient-text-2 {
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    display: inline-block; /* Essential for background-clip to work correctly */
-    line-height: 1.2;
+.short-line {
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: var(--primary-yellow);
+    margin-bottom: 30px;
 }
 
-.gradient-text-1 {
-    background-image: linear-gradient(to right, var(--gradient-1-start), var(--gradient-1-end));
+.hero h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
 }
 
-.gradient-text-2 {
-    background-image: linear-gradient(to right, var(--gradient-2-start), var(--gradient-2-end));
+.hero p {
+    margin-bottom: 30px;
+    max-width: 500px;
 }
 
-.hero-description {
-    font-size: 1.25rem;
-    color: var(--color-grey);
-    max-width: 80%;
-    margin-bottom: var(--spacing-lg);
+.cta-link {
+    color: var(--primary-yellow);
+    font-weight: 500;
 }
 
-.hero-cta-buttons {
-    display: flex;
-    gap: var(--spacing-sm);
-    align-items: center;
+.cta-link i {
+    margin-left: 5px;
 }
 
 .hero-image-container {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    position: relative;
-    padding-bottom: 50px; /* Space for the fade effect */
+    flex-basis: 40%;
 }
 
-.hero-image {
+.hero-image-container img {
     max-width: 100%;
     height: auto;
-    filter: grayscale(100%); /* Grayscale effect */
-    border-radius: var(--border-radius-default);
-    object-fit: cover; /* Ensures image covers its area well */
-    transition: filter 0.5s ease;
-
-    /* Elegant bottom fade effect */
-    mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
-    -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+    border-radius: 20px;
 }
 
-.hero-image:hover {
-    filter: grayscale(0%); /* Color on hover */
-}
-
-
-/* 6. My Showcase Web Projects Section */
-.projects-section {
-    background-color: var(--color-light-grey);
-    padding: var(--spacing-xl) 0;
-}
-
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: var(--spacing-md);
-}
-
-.project-card {
-    background-color: var(--color-light);
-    border-radius: var(--border-radius-default);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-    overflow: hidden;
-    text-align: center;
-    padding-bottom: var(--spacing-md);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
-}
-
-.project-thumbnail {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    margin-bottom: var(--spacing-sm);
-    border-top-left-radius: var(--border-radius-default);
-    border-top-right-radius: var(--border-radius-default);
-}
-
-.project-card h3 {
-    font-size: 1.5rem;
-    margin-bottom: var(--spacing-xs);
-    padding: 0 var(--spacing-sm);
-}
-
-.project-card p {
-    font-size: 0.95rem;
-    color: var(--color-grey);
-    margin-bottom: var(--spacing-md);
-    padding: 0 var(--spacing-sm);
-}
-
-/* 7. Elegant Social Links Section */
-.social-links-section {
-    padding: var(--spacing-xl) 0;
-    text-align: center;
-}
-
-.social-icons {
+/* --- Info & Stats Section --- */
+.info-stats-section {
     display: flex;
-    justify-content: center;
-    gap: var(--spacing-lg);
-    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    gap: 60px;
+    padding: 60px 0;
 }
 
-.social-link {
-    display: flex;
-    flex-direction: column; /* Stack icon and text */
-    align-items: center;
-    gap: var(--spacing-xs);
-    color: var(--color-dark);
-    font-size: 1rem;
+.info-block {
+    flex: 1;
+}
+
+.info-block h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.info-block p {
+    margin-bottom: 20px;
+}
+
+.info-block a {
+    color: var(--primary-yellow);
     font-weight: 500;
-    transition: transform 0.3s ease, color 0.3s ease;
 }
 
-.social-link:hover {
-    transform: translateY(-5px);
-    color: var(--gradient-1-start); /* Change text color on hover */
+.info-block blockquote {
+    font-size: 22px;
+    color: var(--text-white);
+    line-height: 1.4;
+    border-left: 3px solid var(--primary-yellow);
+    padding-left: 20px;
+    margin-bottom: 30px;
 }
 
-.social-icon-img {
-    width: 60px; /* Larger icons for prominence */
-    height: 60px;
-    filter: grayscale(100%); /* Grayscale by default */
-    transition: filter 0.3s ease;
+.stats {
+    display: flex;
+    gap: 40px;
 }
 
-.social-link:hover .social-icon-img {
-    filter: grayscale(0%) drop-shadow(0 5px 15px rgba(0,0,0,0.1)); /* Color on hover with shadow */
+.stat-item span {
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--text-white);
 }
 
-.social-text {
-    margin-top: var(--spacing-xs);
-    font-size: 0.9rem;
-    color: var(--color-grey); /* Lighter text color */
+.stat-item p {
+    margin: 0;
 }
 
-.social-link:hover .social-text {
-    color: var(--gradient-1-start);
+/* --- Services Showcase Section --- */
+.services-showcase {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 60px 0;
+    border-top: 1px solid var(--border-color);
 }
 
-
-/* 8. Placeholder Sections */
-.placeholder-section {
-    padding: var(--spacing-lg) 0;
-    text-align: center; /* Example alignment */
+.service-card {
+    background-color: var(--bg-card);
+    padding: 40px;
+    border-radius: 12px;
+    text-align: left;
+    transition: transform 0.3s ease;
 }
 
-.placeholder-section:nth-of-type(odd) {
-    background-color: var(--color-light-grey);
+.service-card:hover {
+    transform: translateY(-10px);
 }
 
-.placeholder-section p, .placeholder-section ul {
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-    color: var(--color-grey);
+.service-card i {
+    font-size: 28px;
+    color: var(--primary-yellow);
+    margin-bottom: 20px;
 }
 
-.placeholder-section ul {
-    list-style: none; /* Remove default bullet points */
-    padding: 0;
-    margin-top: var(--spacing-md);
-    text-align: left; /* Align list items left */
+.service-card h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
 }
 
-.placeholder-section ul li {
-    margin-bottom: var(--spacing-xs);
-    position: relative;
-    padding-left: var(--spacing-md); /* Space for custom bullet */
+.service-card p {
+    font-size: 14px;
 }
 
-.placeholder-section ul li::before {
-    content: "•"; /* Custom bullet point */
-    color: var(--gradient-1-start);
-    font-size: 1.2rem;
-    position: absolute;
-    left: 0;
-    top: -2px;
+/* The active state for the yellow card */
+.service-card.active {
+    background-color: var(--primary-yellow);
 }
 
-
-/* 9. Footer */
-.footer {
-    background-color: var(--color-dark);
-    color: var(--color-light);
-    text-align: center;
-    padding: var(--spacing-md) 0;
-    font-size: 0.9rem;
+.service-card.active h3 {
+    color: var(--bg-dark);
 }
 
-/* 10. Responsive Design */
-@media (max-width: 1024px) {
-    .hero-text-content h1 {
-        font-size: 3.5rem;
-    }
-    .hero-description {
-        font-size: 1.125rem;
-    }
-    .hero-image {
-        max-width: 80%; /* Adjust image size for tablets */
-    }
+.service-card.active p,
+.service-card.active i {
+    color: var(--bg-card);
 }
 
-@media (max-width: 768px) {
-    h1 { font-size: 2.8rem; }
-    h2 { font-size: 2rem; }
-    h3 { font-size: 1.5rem; }
-    p { font-size: 1rem; }
-    .section-title { font-size: 2.5rem; }
+/* --- Recent Works Section --- */
+.recent-works {
+    padding: 60px 0;
+    border-top: 1px solid var(--border-color);
+}
 
-    .navbar {
+.section-header {
+    text-align: left;
+    margin-bottom: 40px;
+}
+
+.section-header h2 {
+    font-size: 36px;
+    margin-bottom: 5px;
+}
+
+.works-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.work-item {
+    background-color: var(--bg-card);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.work-item img {
+    width: 100%;
+    display: block;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+}
+
+.work-item h3 {
+    font-size: 20px;
+    padding: 20px 20px 5px 20px;
+}
+
+.work-item p {
+    padding: 0 20px 20px 20px;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 992px) {
+    .hero {
         flex-direction: column;
-        gap: var(--spacing-sm);
-    }
-    .nav-links {
-        gap: var(--spacing-sm);
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    .btn-nav {
-        margin-top: var(--spacing-sm); /* Add space if nav wraps */
-    }
-
-    .hero-content-wrapper {
-        flex-direction: column-reverse; /* Image above text on mobile */
         text-align: center;
     }
-    .hero-text-content {
-        max-width: 100%;
-    }
-    .hero-description {
-        max-width: 90%;
+
+    .short-line {
         margin-left: auto;
         margin-right: auto;
     }
-    .hero-cta-buttons {
-        justify-content: center;
-        flex-wrap: wrap; /* Allow buttons to wrap */
+
+    .hero-text-content {
+        order: 2;
     }
+
     .hero-image-container {
-        justify-content: center;
-        padding-bottom: 0; /* Remove bottom padding as fade might not be as critical here */
-    }
-    .hero-image {
-        max-width: 100%;
-        margin-bottom: var(--spacing-md);
-        mask-image: none; /* Remove fade for smaller screens if preferred */
-        -webkit-mask-image: none;
+        order: 1;
+        margin-bottom: 30px;
+        flex-basis: auto;
+        width: 60%;
     }
 
-    .projects-grid {
-        grid-template-columns: 1fr; /* Single column on mobile */
+    .info-stats-section {
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .services-showcase {
+        grid-template-columns: 1fr;
     }
 
-    .social-icons {
-        gap: var(--spacing-md);
-    }
-    .social-icon-img {
-        width: 50px;
-        height: 50px;
+    .works-grid {
+        grid-template-columns: 1fr;
     }
 }
 
-@media (max-width: 480px) {
-    h1 { font-size: 2.2rem; }
-    h2 { font-size: 1.8rem; }
-    .section-title { font-size: 2rem; }
-    .nav-links {
-        gap: var(--spacing-xs);
+@media (max-width: 576px) {
+    .container {
+        padding: 0 15px;
     }
-    .btn {
-        padding: 0.8rem 1.5rem;
-        font-size: 1rem;
-    }
-    .btn-secondary {
-        padding: 0.8rem 1.2rem;
-    }
-    .hero-cta-buttons {
+    
+    header {
         flex-direction: column;
-        gap: var(--spacing-xs);
+        gap: 20px;
     }
-    .social-links-section {
-        padding: var(--spacing-lg) 0;
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .hero h2 {
+        font-size: 20px;
+    }
+
+    .stats {
+        gap: 30px;
+    }
+
+    .stat-item span {
+        font-size: 36px;
     }
 }
