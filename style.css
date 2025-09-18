@@ -411,3 +411,30 @@ nav a.active {
     transform: translateY(-8px);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
+/* --- Styling for Contact Details in Info Section --- */
+
+.contact-details {
+    margin-top: 15px; /* Add some space above the links */
+    display: flex;
+    flex-direction: column; /* Stack links vertically */
+    gap: 10px; /* Add space between the links */
+}
+
+.contact-details a {
+    color: var(--primary-yellow);
+    font-weight: 500;
+    display: inline-flex; /* Helps align icon and text */
+    align-items: center;
+    gap: 10px; /* Space between icon and text */
+    width: fit-content; /* Prevent link from taking full width */
+}
+
+.contact-details a:hover {
+    color: var(--text-white);
+}
+
+.contact-details a i {
+    font-size: 16px;
+    width: 20px; /* Give icon a fixed width for alignment */
+    text-align: center;
+}
