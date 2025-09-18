@@ -336,3 +336,55 @@ nav a.active {
         font-size: 36px;
     }
 }
+/* --- Added Styles for Social Links & Contact Section --- */
+
+/* --- Social Links in Hero Section --- */
+.social-links {
+    margin-top: 40px;
+    display: flex;
+    gap: 25px;
+}
+
+.social-links a {
+    color: var(--text-gray);
+    font-size: 24px;
+}
+
+.social-links a:hover {
+    color: var(--primary-yellow);
+    transform: translateY(-3px); /* Add a subtle hover effect */
+}
+
+
+/* --- Contact Section --- */
+.contact {
+    padding: 80px 0;
+    text-align: center;
+    border-top: 1px solid var(--border-color);
+}
+
+.contact h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.contact p {
+    max-width: 500px;
+    margin: 0 auto 30px auto; /* Center the paragraph */
+}
+
+.contact-button {
+    display: inline-block;
+    background-color: var(--primary-yellow);
+    color: var(--bg-dark);
+    padding: 15px 40px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 18px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-button:hover {
+    transform: translateY(-5px);
+    background-color: #ffd466; /* A slightly lighter yellow on hover */
+}
