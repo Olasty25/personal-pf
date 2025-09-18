@@ -4,157 +4,119 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aleksander Tomczak - Website Creator & AI Dev</title>
-    <!-- Link to Google Fonts for a modern, clean look. I've chosen 'Manrope' as an example. -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
-    <!-- Link to your CSS file (style.css) which will be provided in the next message -->
-    <link rel="stylesheet" href="styles.css">
+    <!-- The CSS file will be linked here later -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Adding Font Awesome for icons, similar to the design -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
-    <header class="header">
-        <div class="container">
-            <nav class="navbar">
-                <a href="#" class="logo">Aleksander Tomczak</a>
-                <ul class="nav-links">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#blog">Blog</a></li>
-                    <li><a href="#contact" class="btn btn-nav">Book a call &rarr;</a></li>
+
+    <div class="container">
+        <!-- HEADER SECTION -->
+        <header>
+            <div class="logo">
+                <!-- A simple text logo, can be replaced with an SVG or image -->
+                <a href="#">AT</a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#" class="active">Works</a></li>
+                    <li><a href="#">Blog</a></li>
                 </ul>
             </nav>
-        </div>
-    </header>
+        </header>
 
-    <main>
-        <section class="hero-section">
-            <div class="container hero-content-wrapper">
+        <main>
+            <!-- HERO SECTION -->
+            <section class="hero">
                 <div class="hero-text-content">
-                    <h1>
-                        I create <span class="gradient-text-1">engaging websites</span><br>
-                        and <span class="gradient-text-2">smart AI solutions</span>.
-                    </h1>
-                    <p class="hero-description">
-                        Hi! I'm Aleksander Tomczak, a website creator and AI developer based in Poland.
-                        I craft innovative digital experiences and intelligent AI applications that solve real-world problems and bring ideas to life.
-                    </p>
-                    <div class="hero-cta-buttons">
-                        <a href="#contact" class="btn btn-primary">Book a call</a>
-                        <a href="/path/to/your/cv.pdf" download class="btn btn-secondary">Download CV &rarr;</a>
-                    </div>
+                    <h1>Aleksander Tomczak.</h1>
+                    <span class="short-line"></span>
+                    
+                    <h2>Website Creator & AI Dev, based in Poland.</h2>
+                    <p>I build elegant, responsive websites and intelligent AI solutions that solve real-world problems. Passionate about clean code and user-centric design.</p>
+                    <a href="#about" class="cta-link">My Story <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
                 <div class="hero-image-container">
-                    <!-- 
-                        Replace 'https://via.placeholder.com/600x600/f0f0f0/333?text=Aleksander+Tomczak' 
-                        with the path to your actual professional photo (e.g., 'images/aleksander-tomczak.jpg').
-                        The grayscale effect and bottom fade will be applied with CSS.
-                    -->
-                    <img src="https://via.placeholder.com/600x600/f0f0f0/333?text=Aleksander+Tomczak" alt="Aleksander Tomczak - Website Creator & AI Dev" class="hero-image">
+                    <!-- Placeholder for the portrait image -->
+                    <img src="https://i.imgur.com/8QtmPby.png" alt="Portrait of Aleksander Tomczak">
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- My Showcase Web Projects Section -->
-        <section id="projects" class="projects-section">
-            <div class="container">
-                <h2 class="section-title">My Showcase Web Projects</h2>
-                <div class="projects-grid">
-                    <div class="project-card">
-                        <!-- Replace with your project image -->
-                        <img src="https://via.placeholder.com/400x250/f5f5f5/333?text=Project+1+Image" alt="E-commerce Store Development Thumbnail" class="project-thumbnail">
-                        <h3>E-commerce Store Development</h3>
-                        <p>Developed a responsive e-commerce platform with a custom backend and secure payment gateway integrations for a fashion brand.</p>
-                        <a href="#" class="btn btn-outline">View Project &rarr;</a>
-                    </div>
-                    <div class="project-card">
-                        <!-- Replace with your project image -->
-                        <img src="https://via.placeholder.com/400x250/f5f5f5/333?text=Project+2+Image" alt="AI-Powered Chatbot Integration Thumbnail" class="project-thumbnail">
-                        <h3>AI-Powered Chatbot Integration</h3>
-                        <p>Implemented an intelligent chatbot using natural language processing (NLP) to enhance customer support for a SaaS company.</p>
-                        <a href="#" class="btn btn-outline">View Project &rarr;</a>
-                    </div>
-                    <div class="project-card">
-                        <!-- Replace with your project image -->
-                        <img src="https://via.placeholder.com/400x250/f5f5f5/333?text=Project+3+Image" alt="Personal Portfolio Redesign Thumbnail" class="project-thumbnail">
-                        <h3>Personal Portfolio Redesign</h3>
-                        <p>Refreshed a developer's portfolio website with a modern, minimalist design and improved user experience across all devices.</p>
-                        <a href="#" class="btn btn-outline">View Project &rarr;</a>
+            <!-- INFO & STATS SECTION -->
+            <section class="info-stats-section">
+                <div class="info-block">
+                    <h3>Have a Project in Mind?</h3>
+                    <p>Let's turn your idea into reality.</p>
+                    <a href="mailto:hello@aleks.dev">hello@aleks.dev <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <div class="info-block">
+                    <blockquote>"You can't use up creativity. The more you use, the more you have."</blockquote>
+                    <div class="stats">
+                        <div class="stat-item">
+                            <span>8</span>
+                            <p>Years of Experience</p>
+                        </div>
+                        <div class="stat-item">
+                            <span>120+</span>
+                            <p>Projects Completed</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- Elegant Social Links Section -->
-        <section id="social-links" class="social-links-section">
-            <div class="container">
-                <h2 class="section-title">Connect With Me</h2>
-                <div class="social-icons">
-                    <a href="https://www.freelancer.com/u/your-freelancer-username" target="_blank" rel="noopener noreferrer" class="social-link">
-                        <img src="https://www.svgrepo.com/show/305542/freelancer-logo.svg" alt="Freelancer.com Logo" class="social-icon-img">
-                        <span class="social-text">Freelancer.com</span>
-                    </a>
-                    <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank" rel="noopener noreferrer" class="social-link">
-                        <img src="https://www.svgrepo.com/show/305544/linkedin-logo.svg" alt="LinkedIn Logo" class="social-icon-img">
-                        <span class="social-text">LinkedIn</span>
-                    </a>
-                    <a href="https://www.instagram.com/your-instagram-handle" target="_blank" rel="noopener noreferrer" class="social-link">
-                        <img src="https://www.svgrepo.com/show/305537/instagram-logo.svg" alt="Instagram Logo" class="social-icon-img">
-                        <span class="social-text">Instagram</span>
-                    </a>
+            <!-- PROJECTS SHOWCASE / SERVICES SECTION (as per the yellow rectangle) -->
+            <section class="services-showcase">
+                <div class="service-card active">
+                    <i class="fa-solid fa-code"></i>
+                    <h3>Website Creator</h3>
+                    <p>Full-Stack Development</p>
                 </div>
-            </div>
-        </section>
+                <div class="service-card">
+                    <i class="fa-solid fa-robot"></i>
+                    <h3>AI Development</h3>
+                    <p>Machine Learning Models</p>
+                </div>
+                <div class="service-card">
+                    <i class="fa-solid fa-pen-ruler"></i>
+                    <h3>UI/UX Design</h3>
+                    <p>Figma & Webflow</p>
+                </div>
+            </section>
 
-        <!-- Placeholder Sections (Expand these with your content) -->
-        <section id="about" class="placeholder-section">
-            <div class="container">
-                <h2 class="section-title">About Me</h2>
-                <p>This is where you can tell your story! Expand on your skills, experience, and what drives you as a website creator and AI developer. Share your passion, unique approach, and what makes you stand out.</p>
-            </div>
-        </section>
+             <!-- RECENT WORKS SECTION -->
+            <section class="recent-works">
+                <div class="section-header">
+                    <h2>All Creative Works</h2>
+                    <p>A selection of my favorite projects.</p>
+                </div>
+                <div class="works-grid">
+                    <div class="work-item">
+                        <img src="https://i.imgur.com/d9T25Pj.png" alt="Project 1 Screenshot">
+                        <h3>E-commerce Platform</h3>
+                        <p>Web Development</p>
+                    </div>
+                    <div class="work-item">
+                        <img src="https://i.imgur.com/tHqgR9u.png" alt="Project 2 Screenshot">
+                        <h3>AI Chatbot Integration</h3>
+                        <p>AI Development</p>
+                    </div>
+                    <div class="work-item">
+                        <img src="https://i.imgur.com/G55cSRP.png" alt="Project 3 Screenshot">
+                        <h3>Portfolio Website Redesign</h3>
+                        <p>UI/UX Design</p>
+                    </div>
+                    <div class="work-item">
+                        <img src="https://i.imgur.com/nJ2uDV3.png" alt="Project 4 Screenshot">
+                        <h3>SaaS Dashboard</h3>
+                        <p>Full-Stack Development</p>
+                    </div>
+                </div>
+            </section>
 
-        <section id="services" class="placeholder-section">
-            <div class="container">
-                <h2 class="section-title">My Services</h2>
-                <p>Detail the specific services you offer. For example:</p>
-                <ul>
-                    <li>Custom Website Development (Frontend & Backend)</li>
-                    <li>Responsive UI/UX Design</li>
-                    <li>AI Model Development & Integration</li>
-                    <li>Data Analysis & Machine Learning Solutions</li>
-                    <li>Website Maintenance & Optimization</li>
-                </ul>
-            </div>
-        </section>
+        </main>
+    </div>
 
-        <section id="blog" class="placeholder-section">
-            <div class="container">
-                <h2 class="section-title">My Blog</h2>
-                <p>A section where you can share your insights, tutorials, case studies, and experiences in web development and AI. This is great for demonstrating your expertise and attracting clients.</p>
-                <a href="#" class="btn btn-outline">Read Latest Posts &rarr;</a>
-            </div>
-        </section>
-
-        <section id="contact" class="placeholder-section">
-            <div class="container">
-                <h2 class="section-title">Get in Touch</h2>
-                <p>Ready to start a project or just want to chat about AI and web development? Feel free to reach out!</p>
-                <a href="mailto:your.email@example.com" class="btn btn-primary">Send an Email</a>
-                <!-- You could also add a simple contact form here -->
-            </div>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; <span id="currentYear"></span> Aleksander Tomczak. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <!-- Basic JavaScript to dynamically update the copyright year -->
-    <script>
-        document.getElementById('currentYear').textContent = new Date().getFullYear();
-    </script>
 </body>
 </html>
