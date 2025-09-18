@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aleksander Tomczak - Website Creator & AI Dev</title>
-    <!-- Link to your CSS file -->
     <link rel="stylesheet" href="style.css">
-    <!-- Link to Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
@@ -19,35 +17,35 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#works" class="active">Works</a></li>
-                    <li><a href="https://www.linkedin.com/in/aleksander-tomczak-75529a385/">Blog</a></li>
+                    <li><a href="#services" data-translate-key="navServices">Services</a></li>
+                    <li><a href="#works" class="active" data-translate-key="navWorks">Works</a></li>
+                    <li><a href="https://www.linkedin.com/in/aleksander-tomczak-75529a385/" data-translate-key="navBlog">Blog</a></li>
                 </ul>
             </nav>
+            <!-- ADDED: Language Switcher -->
+            <div class="lang-switcher">
+                <button id="lang-en">EN</button>
+                <button id="lang-pl">PL</button>
+            </div>
         </header>
 
         <main>
             <!-- HERO SECTION -->
             <section class="hero">
                 <div class="hero-text-content">
-                    <h1>Aleksander Tomczak.</h1>
+                    <h1 data-translate-key="heroTitle">Aleksander Tomczak.</h1>
                     <span class="short-line"></span>
-                    
-                    <h2>Website Creator & AI Dev, based in Poland.</h2>
-                    <p>I build elegant, responsive websites and intelligent AI solutions that solve real-world problems. Passionate about clean code and user-centric design.</p>
-                    <a href="#about" class="cta-link">My Story <i class="fa-solid fa-arrow-right"></i></a>
-
-                    <!-- SOCIAL LINKS -->
+                    <h2 data-translate-key="heroSubtitle">Website Creator & AI Dev, based in Poland.</h2>
+                    <p data-translate-key="heroDescription">I build elegant, responsive websites and intelligent AI solutions that solve real-world problems. Passionate about clean code and user-centric design.</p>
+                    <a href="#about" class="cta-link"><span data-translate-key="heroStoryLink">My Story</span> <i class="fa-solid fa-arrow-right"></i></a>
                     <div class="social-links">
                         <a href="https://github.com/Olasty25" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
                         <a href="https://www.linkedin.com/in/aleksander-tomczak-75529a385" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
                         <a href="https://www.instagram.com/thoughtrealstudio" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
                         <a href="https://www.freelancer.com/u/Olasty25" target="_blank" aria-label="Freelancer"><i class="fa-solid fa-briefcase"></i></a>
                     </div>
-                    
                 </div>
                 <div class="hero-image-container">
-                    <!-- Placeholder for your portrait image -->
                     <img src="assets/olek.jpeg" alt="Portrait of Aleksander Tomczak">
                 </div>
             </section>
@@ -55,26 +53,23 @@
             <!-- INFO & STATS SECTION -->
             <section id="about" class="info-stats-section">
                 <div class="info-block">
-                    <h3>Have a Project in Mind?</h3>
-                    <p>Let's turn your idea into reality.</p>
-                    <!-- WRAPPED CONTACT DETAILS IN A DIV FOR BETTER STYLING -->
+                    <h3 data-translate-key="infoTitle">Have a Project in Mind?</h3>
+                    <p data-translate-key="infoSubtitle">Let's turn your idea into reality.</p>
                     <div class="contact-details">
-                        <!-- This mailto: link will open the default email client -->
                         <a href="mailto:thoughtrealstudio@gmail.com"><i class="fa-solid fa-envelope"></i> thoughtrealstudio@gmail.com</a>
-                        <!-- ADDED: Clickable telephone link -->
                         <a href="tel:+48574610138"><i class="fa-solid fa-phone"></i> +48 574 610 138</a>
                     </div>
                 </div>
                 <div class="info-block">
-                    <blockquote>"You can't use up creativity. The more you use, the more you have."</blockquote>
+                    <blockquote data-translate-key="quote">"You can't use up creativity. The more you use, the more you have."</blockquote>
                     <div class="stats">
                         <div class="stat-item">
                             <span>2</span>
-                            <p>Years of Experience</p>
+                            <p data-translate-key="statsYears">Years of Experience</p>
                         </div>
                         <div class="stat-item">
                             <span>10+</span>
-                            <p>Projects Completed</p>
+                            <p data-translate-key="statsProjects">Projects Completed</p>
                         </div>
                     </div>
                 </div>
@@ -84,58 +79,54 @@
             <section id="services" class="services-showcase">
                 <div class="service-card active">
                     <i class="fa-solid fa-code"></i>
-                    <h3>Website Creator</h3>
-                    <p>Full-Stack Development</p>
+                    <h3 data-translate-key="service1Title">Website Creator</h3>
+                    <p data-translate-key="service1Desc">Full-Stack Development</p>
                 </div>
                 <div class="service-card">
                     <i class="fa-solid fa-robot"></i>
-                    <h3>AI Development</h3>
-                    <p>Machine Learning Models</p>
+                    <h3 data-translate-key="service2Title">AI Development</h3>
+                    <p data-translate-key="service2Desc">Machine Learning Models</p>
                 </div>
                 <div class="service-card">
                     <i class="fa-solid fa-pen-ruler"></i>
-                    <h3>UI/UX Design</h3>
-                    <p>Figma & Webflow</p>
+                    <h3 data-translate-key="service3Title">UI/UX Design</h3>
+                    <p data-translate-key="service3Desc">Figma & Webflow</p>
                 </div>
             </section>
 
              <!-- RECENT WORKS SECTION -->
             <section id="works" class="recent-works">
                 <div class="section-header">
-                    <h2>All Creative Works</h2>
-                    <p>A selection of my favorite projects. Click to see the live preview.</p>
+                    <h2 data-translate-key="worksTitle">All Creative Works</h2>
+                    <p data-translate-key="worksSubtitle">A selection of my favorite projects. Click to see the live preview.</p>
                 </div>
                 <div class="works-grid">
-                    <!-- Project 1 -->
                     <div class="work-item">
                         <a href="https://example.com/ecommerce-project" target="_blank">
                             <img src="https://i.imgur.com/d9T25Pj.png" alt="E-commerce Platform Screenshot">
-                            <h3>E-commerce Platform</h3>
-                            <p>Web Development</p>
+                            <h3 data-translate-key="project1Title">E-commerce Platform</h3>
+                            <p data-translate-key="project1Desc">Web Development</p>
                         </a>
                     </div>
-                    <!-- Project 2 -->
                     <div class="work-item">
                         <a href="https://example.com/ai-chatbot" target="_blank">
                             <img src="assets/opt.png" alt="AI Chatbot Screenshot">
-                            <h3>AI Chatbot Integration</h3>
-                            <p>AI Development</p>
+                            <h3 data-translate-key="project2Title">AI Chatbot Integration</h3>
+                            <p data-translate-key="project2Desc">AI Development</p>
                         </a>
                     </div>
-                    <!-- Project 3 -->
                     <div class="work-item">
                         <a href="https://example.com/portfolio-redesign" target="_blank">
                             <img src="assets/port.png" alt="Portfolio Redesign Screenshot">
-                            <h3>Portfolio Website Redesign</h3>
-                            <p>UI/UX Design</p>
+                            <h3 data-translate-key="project3Title">Portfolio Website Redesign</h3>
+                            <p data-translate-key="project3Desc">UI/UX Design</p>
                         </a>
                     </div>
-                    <!-- Project 4 -->
                     <div class="work-item">
                         <a href="https://vaultlify.base44.app" target="_blank">
                             <img src="assets/vault.png" alt="SaaS Dashboard Screenshot">
-                            <h3>SaaS For File Transfer</h3>
-                            <p>Full-Stack Development</p>
+                            <h3 data-translate-key="project4Title">SaaS For File Transfer</h3>
+                            <p data-translate-key="project4Desc">Full-Stack Development</p>
                         </a>
                     </div>
                 </div>
@@ -143,14 +134,16 @@
 
             <!-- CONTACT SECTION -->
             <section id="contact" class="contact">
-                <h2>Get In Touch</h2>
-                <p>Have a project for me, or just want to say hi? My inbox is always open. I'll get back to you as soon as I can.</p>
-                <!-- MODIFIED: This link now also points to your Gmail address -->
-                <a href="mailto:thoughtrealstudio@gmail.com" class="contact-button">Say Hello</a>
+                <h2 data-translate-key="contactTitle">Get In Touch</h2>
+                <p data-translate-key="contactDescription">Have a project for me, or just want to say hi? My inbox is always open. I'll get back to you as soon as I can.</p>
+                <a href="mailto:thoughtrealstudio@gmail.com" class="contact-button" data-translate-key="contactButton">Say Hello</a>
             </section>
-
         </main>
     </div>
+
+    <!-- ADDED: Link to JS files -->
+    <script src="translations.js"></script>
+    <script src="app.js"></script>
 
 </body>
 </html>
