@@ -45,7 +45,7 @@ const translations = {
     navBlog: "Blog",
     // Hero Section
     heroTitle: "Aleksander Tomczak.",
-    heroSubtitle: "Twórca Stron & AI Dev, z siedzibą w Polsce.",
+    heroSubtitle: "Twórca Stron & AI Dev, Polak.",
     heroDescription: "Buduję eleganckie, responsywne strony internetowe i inteligentne rozwiązania AI, które rozwiązują realne problemy. Pasjonuję się czystym kodem i projektowaniem zorientowanym na użytkownika.",
     heroStoryLink: "Moja Historia",
     // Info & Stats Section
@@ -57,7 +57,7 @@ const translations = {
     // Services Section
     service1Title: "Twórca Stron",
     service1Desc: "Full-Stack Development",
-    service2Title: "Rozwój AI",
+    service2Title: "Rozwój i Wykorzystanie AI",
     service2Desc: "Modele Uczenia Maszynowego",
     service3Title: "Projektowanie UI/UX",
     service3Desc: "Figma & Webflow",
