@@ -1,6 +1,5 @@
-/* Root Variables */
+/* --- Root Variables --- */
 :root {
-    /* Colors */
     --dark-bg: #1A1C2E;
     --light-bg: #F8F8F8;
     --card-bg: #FFFFFF;
@@ -15,10 +14,9 @@
 
     --border-light: #E0E0E0;
 
-    --shadow-light: rgba(0, 0, 0, 0.05);
-    --shadow-medium: rgba(0, 0, 0, 0.1);
+    --shadow-light: 0 4px 20px rgba(0, 0, 0, 0.05);
+    --shadow-medium: 0 8px 25px rgba(0, 0, 0, 0.12);
 
-    /* Spacing */
     --spacing-xs: 0.5rem;
     --spacing-sm: 1rem;
     --spacing-md: 1.5rem;
@@ -26,54 +24,45 @@
     --spacing-xl: 3rem;
     --spacing-xxl: 5rem;
 
-    /* Border Radius */
     --radius-sm: 0.5rem;
     --radius-md: 1rem;
     --radius-lg: 1.5rem;
 }
 
-/* Base Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* --- Base Styles --- */
+* { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 
 body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
+    background: var(--light-bg);
     color: var(--text-medium);
-    background-color: var(--light-bg);
 }
 
 a { text-decoration: none; color: inherit; }
 ul { list-style: none; }
-h1, h2, h3, h4, h5, h6 { color: var(--text-dark); line-height: 1.2; }
+h1,h2,h3,h4,h5,h6 { color: var(--text-dark); line-height: 1.2; }
 
-/* Layout Container */
+/* --- Layout --- */
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 var(--spacing-md);
 }
 
-/* --- Utilities --- */
-.text-center { text-align: center; }
-.highlight { color: var(--primary-purple); font-weight: 600; }
-
 /* --- Buttons --- */
 .btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 0.8rem 1.8rem;
-    border-radius: var(--radius-sm);
     font-weight: 500;
-    cursor: pointer;
     border: none;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+    border-radius: var(--radius-sm);
+    padding: 0.85rem 1.8rem;
+    transition: all 0.3s ease;
+    box-shadow: none;
 }
 
 .btn-primary {
@@ -97,10 +86,17 @@ h1, h2, h3, h4, h5, h6 { color: var(--text-dark); line-height: 1.2; }
     color: var(--text-white);
 }
 
-.btn-lg {
-    padding: 1rem 2.5rem;
-    border-radius: var(--radius-md);
-    font-size: 1.1rem;
+.btn-submit {
+    /* Now inherits from btn-primary but slightly larger */
+    @extend .btn;
+    background: var(--primary-purple);
+    color: var(--text-white);
+    padding: 0.8rem 2.5rem;
+    font-weight: 600;
+}
+
+.btn-submit:hover {
+    background: var(--secondary-purple);
 }
 
 /* --- Section Headers --- */
@@ -122,88 +118,91 @@ h1, h2, h3, h4, h5, h6 { color: var(--text-dark); line-height: 1.2; }
     margin: 0 auto;
 }
 
-/* --- Header / Navbar --- */
-.header {
-    background: var(--dark-bg);
-    padding: var(--spacing-md) 0;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 10px var(--shadow-medium);
-}
-
-.navbar-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--text-white);
-}
-
-.logo-icon {
-    background: var(--primary-purple);
-    color: var(--text-white);
-    width: 2.5rem;
-    height: 2.5rem;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    margin-right: var(--spacing-sm);
-    font-size: 1.3rem;
-    font-weight: 600;
-}
-
-.nav-menu ul {
-    display: flex;
-    gap: var(--spacing-xl);
-}
-
-.nav-menu a {
-    color: var(--text-white);
-    font-weight: 500;
+/* --- Hero Section --- */
+.hero-section {
+    padding: 8rem 0 var(--spacing-xxl);
+    background: var(--card-bg);
     position: relative;
-    padding-bottom: 5px;
-    transition: color 0.3s ease;
+    overflow: hidden;
 }
 
-.nav-menu a::after {
+.hero-content-wrapper {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xxl);
+    padding-top: var(--spacing-xxl);
+}
+
+.hero-text-content {
+    flex: 1;
+    max-width: 600px;
+}
+
+.hero-text-content .greeting {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--primary-purple);
+    margin-bottom: var(--spacing-sm);
+}
+
+.hero-text-content h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: var(--spacing-md);
+}
+
+.hero-text-content .intro-description {
+    font-size: 1.1rem;
+    margin-bottom: var(--spacing-xl);
+    color: var(--text-medium);
+}
+
+.hero-section .btn {
+    border-radius: var(--radius-md);
+    font-size: 1.1rem;
+    padding: 1rem 2.5rem;
+}
+
+/* Hero Image */
+.hero-image-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+}
+
+.hero-image-content .profile-img {
+    max-width: 100%;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-medium);
+    transform: translateY(20px);
+    position: relative;
+    z-index: 2;
+}
+
+.hero-image-content::before {
     content: '';
     position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 0;
-    height: 2px;
-    background: var(--primary-purple);
-    transition: width 0.3s ease;
+    bottom: -10px;
+    right: 0;
+    width: 90%;
+    height: 90%;
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.2), rgba(255, 107, 107, 0.2));
+    border-radius: var(--radius-lg);
+    z-index: 1;
+    transform: rotate(-5deg);
 }
 
-.nav-menu a:hover,
-.nav-menu a.active {
-    color: var(--primary-purple);
+/* --- Card / Grid Utility Classes --- */
+.card {
+    background: var(--card-bg);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-light);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.nav-menu a:hover::after,
-.nav-menu a.active::after {
-    width: 100%;
-}
-
-.hamburger-menu {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-}
-
-.hamburger-menu span {
-    width: 25px;
-    height: 3px;
-    background: var(--text-white);
-    margin: 3px 0;
-    transition: 0.3s;
+.card-hover:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-medium);
 }
