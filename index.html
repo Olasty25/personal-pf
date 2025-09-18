@@ -3,221 +3,158 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-translate-key="page_title">Aleksander Tomczak - Photography Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Aleksander Tomczak - Website Creator & AI Dev</title>
+    <!-- Link to Google Fonts for a modern, clean look. I've chosen 'Manrope' as an example. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <!-- Link to your CSS file (style.css) which will be provided in the next message -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <!-- Header / Navbar -->
     <header class="header">
-        <div class="container navbar-container">
-            <div class="logo">
-                <span class="logo-icon">A</span>
-                ThoReSt
-            </div>
-            <nav class="nav-menu">
-                <ul>
-                    <li><a href="#hero" class="active" data-translate-key="nav_home">Home</a></li>
-                    <li><a href="#about" data-translate-key="nav_about">About</a></li>
-                    <li><a href="#process" data-translate-key="nav_process">Process</a></li>
-                    <li><a href="#portfolio" data-translate-key="nav_portfolio">Portfolio</a></li>
-                    <li><a href="#blog" data-translate-key="nav_blog">Blog</a></li>
-                    <li><a href="#services" data-translate-key="nav_services">Services</a></li>
-                    <li><a href="#contact" data-translate-key="nav_contact">Contact</a></li>
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="logo">Aleksander Tomczak</a>
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#contact" class="btn btn-nav">Book a call &rarr;</a></li>
                 </ul>
             </nav>
-            <div class="language-switcher">
-                <button data-lang="en" class="lang-btn active">EN</button>
-                <button data-lang="pl" class="lang-btn">PL</button>
-            </div>
-            <button class="hamburger-menu" aria-label="Toggle navigation">
-                <span></span><span></span><span></span>
-            </button>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section id="hero" class="hero-section">
-        <div class="container hero-content-wrapper">
-            <div class="hero-text-content">
-                <p class="greeting" data-translate-key="hero_greeting">Hello, I'm</p>
-                <h1 data-translate-key="hero_name">Aleksander Tomczak</h1>
-                <p class="intro-description" data-translate-key="hero_description">
-                    I'm a Freelance <span class="highlight">Photographer</span>, based in London,
-                    England. I strive to build immersive and beautiful web applications
-                    through carefully crafted code and user-centric design.
-                </p>
-                <button class="btn btn-primary" data-translate-key="hero_btn">Say Hello!</button>
-                <div class="stats-grid">
-                    <div class="stat-item">
-                        <i class="fas fa-briefcase stat-icon"></i>
-                        <span class="stat-number">15 Y.</span>
-                        <span class="stat-label" data-translate-key="stat_experience">Experience</span>
-                    </div>
-                    <div class="stat-item">
-                        <i class="fas fa-check-circle stat-icon"></i>
-                        <span class="stat-number">250+</span>
-                        <span class="stat-label" data-translate-key="stat_projects_completed">Projects Completed</span>
-                    </div>
-                    <div class="stat-item">
-                        <i class="fas fa-smile stat-icon"></i>
-                        <span class="stat-number">58</span>
-                        <span class="stat-label" data-translate-key="stat_happy_clients">Happy Clients</span>
+    <main>
+        <section class="hero-section">
+            <div class="container hero-content-wrapper">
+                <div class="hero-text-content">
+                    <h1>
+                        I create <span class="gradient-text-1">engaging websites</span><br>
+                        and <span class="gradient-text-2">smart AI solutions</span>.
+                    </h1>
+                    <p class="hero-description">
+                        Hi! I'm Aleksander Tomczak, a website creator and AI developer based in Poland.
+                        I craft innovative digital experiences and intelligent AI applications that solve real-world problems and bring ideas to life.
+                    </p>
+                    <div class="hero-cta-buttons">
+                        <a href="#contact" class="btn btn-primary">Book a call</a>
+                        <a href="/path/to/your/cv.pdf" download class="btn btn-secondary">Download CV &rarr;</a>
                     </div>
                 </div>
+                <div class="hero-image-container">
+                    <!-- 
+                        Replace 'https://via.placeholder.com/600x600/f0f0f0/333?text=Aleksander+Tomczak' 
+                        with the path to your actual professional photo (e.g., 'images/aleksander-tomczak.jpg').
+                        The grayscale effect and bottom fade will be applied with CSS.
+                    -->
+                    <img src="https://via.placeholder.com/600x600/f0f0f0/333?text=Aleksander+Tomczak" alt="Aleksander Tomczak - Website Creator & AI Dev" class="hero-image">
+                </div>
             </div>
-            <div class="hero-image-content">
-                <img src="https://via.placeholder.com/400x500" alt="Aleksander Tomczak" class="profile-img">
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- About Section -->
-    <section id="about" class="about-section">
-        <div class="container about-wrapper">
-            <div class="about-image">
-                <img src="https://via.placeholder.com/400x500" alt="Aleksander Tomczak">
-            </div>
-            <div class="about-text">
-                <h2 data-translate-key="about_title">I am Professional <br> Photographer</h2>
-                <p data-translate-key="about_p1">
-                    I design and develop services for customers specializing
-                    creating stylish, modern websites, web services and online
-                    stores. My passion is to design digital user experiences.
-                </p>
-                <p data-translate-key="about_p2">
-                    I design and develop services for customers specializing
-                    creating stylish, modern websites, web services and online
-                    stores. My passion is to design digital user experiences.
-                </p>
-                <div class="about-buttons">
-                    <button class="btn btn-primary" data-translate-key="about_btn_projects">My Projects</button>
-                </div>
-                <div class="social-links">
-                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                    <a href="#" aria-label="Freelancer.com"><i class="fas fa-palette"></i></a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Work Process Section -->
-    <section id="process" class="process-section">
-        <div class="container process-wrapper">
-            <div class="process-intro">
-                <h2 data-translate-key="process_title">Work Process</h2>
-                <p data-translate-key="process_p1">
-                    Driven by design and powered by code, I create digital
-                    interfaces that feel intuitive and perform seamlessly.
-                </p>
-                <p data-translate-key="process_p2">
-                    I blend clean design with efficient code to build
-                    engaging, user-friendly web experiences that stand out.
-                </p>
-            </div>
-            <div class="process-steps-grid">
-                <div class="step-card">
-                    <div class="step-icon"><i class="fas fa-file-alt"></i></div>
-                    <h3 data-translate-key="step1_title">1. Research</h3>
-                    <p data-translate-key="step1_description">Design meets function in every pixel, blending clarity with intuitive motion.</p>
-                </div>
-                <div class="step-card">
-                    <div class="step-icon"><i class="fas fa-chart-line"></i></div>
-                    <h3 data-translate-key="step2_title">2. Analyze</h3>
-                    <p data-translate-key="step2_description">Crafting clean, thoughtful interfaces where form flows seamlessly into function and clarity.</p>
-                </div>
-                <div class="step-card">
-                    <div class="step-icon"><i class="fas fa-pencil-ruler"></i></div>
-                    <h3 data-translate-key="step3_title">3. Design</h3>
-                    <p data-translate-key="step3_description">I design seamless digital experiences with precision, purpose, and a touch of elegance.</p>
-                </div>
-                <div class="step-card">
-                    <div class="step-icon"><i class="fas fa-rocket"></i></div>
-                    <h3 data-translate-key="step4_title">4. Launch</h3>
-                    <p data-translate-key="step4_description">I craft digital products where thoughtful design meets purposeful drive and responsive development.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Portfolio Section (unchanged, just cleaner spacing) -->
-    <!-- ... keep as-is -->
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section">
-        <div class="container">
-            <div class="contact-card">
-                <div class="contact-info-block">
-                    <h2 data-translate-key="contact_info_title">Let's discuss your Project</h2>
-                    <p data-translate-key="contact_info_p">I'm available for freelance work. Drop me a line if you have a project you think I'd be a good fit for.</p>
-                    <div class="info-list">
-                        <div class="info-item">
-                            <i class="fas fa-map-marker-alt icon"></i>
-                            <div>
-                                <h3 data-translate-key="contact_address_heading">Address:</h3>
-                                <p>Wrocław, Polska 51-515</p>
-                            </div>
-                        </div>
-                        <div class="info-item">
-                            <i class="fas fa-envelope icon"></i>
-                            <div>
-                                <h3 data-translate-key="contact_email_heading">My Email:</h3>
-                                <p>thoughtrealstudio@gmail.com</p>
-                            </div>
-                        </div>
-                        <div class="info-item">
-                            <i class="fas fa-phone icon"></i>
-                            <div>
-                                <h3 data-translate-key="contact_phone_heading">Call Me Now:</h3>
-                                <p>+48 574 610 138</p>
-                            </div>
-                        </div>
+        <!-- My Showcase Web Projects Section -->
+        <section id="projects" class="projects-section">
+            <div class="container">
+                <h2 class="section-title">My Showcase Web Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <!-- Replace with your project image -->
+                        <img src="https://via.placeholder.com/400x250/f5f5f5/333?text=Project+1+Image" alt="E-commerce Store Development Thumbnail" class="project-thumbnail">
+                        <h3>E-commerce Store Development</h3>
+                        <p>Developed a responsive e-commerce platform with a custom backend and secure payment gateway integrations for a fashion brand.</p>
+                        <a href="#" class="btn btn-outline">View Project &rarr;</a>
                     </div>
-                    <div class="social-links">
-                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" aria-label="Behance"><i class="fab fa-behance"></i></a>
+                    <div class="project-card">
+                        <!-- Replace with your project image -->
+                        <img src="https://via.placeholder.com/400x250/f5f5f5/333?text=Project+2+Image" alt="AI-Powered Chatbot Integration Thumbnail" class="project-thumbnail">
+                        <h3>AI-Powered Chatbot Integration</h3>
+                        <p>Implemented an intelligent chatbot using natural language processing (NLP) to enhance customer support for a SaaS company.</p>
+                        <a href="#" class="btn btn-outline">View Project &rarr;</a>
+                    </div>
+                    <div class="project-card">
+                        <!-- Replace with your project image -->
+                        <img src="https://via.placeholder.com/400x250/f5f5f5/333?text=Project+3+Image" alt="Personal Portfolio Redesign Thumbnail" class="project-thumbnail">
+                        <h3>Personal Portfolio Redesign</h3>
+                        <p>Refreshed a developer's portfolio website with a modern, minimalist design and improved user experience across all devices.</p>
+                        <a href="#" class="btn btn-outline">View Project &rarr;</a>
                     </div>
                 </div>
-                <!-- Contact form block stays the same -->
             </div>
-        </div>
-    </section>
+        </section>
+
+        <!-- Elegant Social Links Section -->
+        <section id="social-links" class="social-links-section">
+            <div class="container">
+                <h2 class="section-title">Connect With Me</h2>
+                <div class="social-icons">
+                    <a href="https://www.freelancer.com/u/your-freelancer-username" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <img src="https://www.svgrepo.com/show/305542/freelancer-logo.svg" alt="Freelancer.com Logo" class="social-icon-img">
+                        <span class="social-text">Freelancer.com</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <img src="https://www.svgrepo.com/show/305544/linkedin-logo.svg" alt="LinkedIn Logo" class="social-icon-img">
+                        <span class="social-text">LinkedIn</span>
+                    </a>
+                    <a href="https://www.instagram.com/your-instagram-handle" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <img src="https://www.svgrepo.com/show/305537/instagram-logo.svg" alt="Instagram Logo" class="social-icon-img">
+                        <span class="social-text">Instagram</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Placeholder Sections (Expand these with your content) -->
+        <section id="about" class="placeholder-section">
+            <div class="container">
+                <h2 class="section-title">About Me</h2>
+                <p>This is where you can tell your story! Expand on your skills, experience, and what drives you as a website creator and AI developer. Share your passion, unique approach, and what makes you stand out.</p>
+            </div>
+        </section>
+
+        <section id="services" class="placeholder-section">
+            <div class="container">
+                <h2 class="section-title">My Services</h2>
+                <p>Detail the specific services you offer. For example:</p>
+                <ul>
+                    <li>Custom Website Development (Frontend & Backend)</li>
+                    <li>Responsive UI/UX Design</li>
+                    <li>AI Model Development & Integration</li>
+                    <li>Data Analysis & Machine Learning Solutions</li>
+                    <li>Website Maintenance & Optimization</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="blog" class="placeholder-section">
+            <div class="container">
+                <h2 class="section-title">My Blog</h2>
+                <p>A section where you can share your insights, tutorials, case studies, and experiences in web development and AI. This is great for demonstrating your expertise and attracting clients.</p>
+                <a href="#" class="btn btn-outline">Read Latest Posts &rarr;</a>
+            </div>
+        </section>
+
+        <section id="contact" class="placeholder-section">
+            <div class="container">
+                <h2 class="section-title">Get in Touch</h2>
+                <p>Ready to start a project or just want to chat about AI and web development? Feel free to reach out!</p>
+                <a href="mailto:your.email@example.com" class="btn btn-primary">Send an Email</a>
+                <!-- You could also add a simple contact form here -->
+            </div>
+        </section>
+    </main>
 
     <footer class="footer">
-        <div class="container footer-content">
-            <div class="footer-logo">
-                <span class="logo-icon">A</span> Aleksander
-            </div>
-            <nav class="footer-nav">
-                <ul>
-                    <li><a href="#hero" data-translate-key="nav_home">Home</a></li>
-                    <li><a href="#about" data-translate-key="nav_about">About</a></li>
-                    <li><a href="#process" data-translate-key="nav_process">Process</a></li>
-                    <li><a href="#portfolio" data-translate-key="nav_portfolio">Portfolio</a></li>
-                    <li><a href="#blog" data-translate-key="nav_blog">Blog</a></li>
-                    <li><a href="#services" data-translate-key="nav_services">Services</a></li>
-                    <li><a href="#contact" data-translate-key="nav_contact">Contact</a></li>
-                </ul>
-            </nav>
-            <p class="copyright">
-                <span data-translate-key="footer_copyright">Copyright</span> 
-                © 2025 ThoReSt
-            </p>
+        <div class="container">
+            <p>&copy; <span id="currentYear"></span> Aleksander Tomczak. All rights reserved.</p>
         </div>
     </footer>
 
-    <script src="translations.js"></script>
+    <!-- Basic JavaScript to dynamically update the copyright year -->
     <script>
-        document.querySelector('.hamburger-menu').addEventListener('click', () => {
-            document.querySelector('.nav-menu').classList.toggle('active');
-            document.querySelector('.hamburger-menu').classList.toggle('active');
-        });
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
     </script>
 </body>
 </html>
