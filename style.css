@@ -438,3 +438,41 @@ nav a.active {
     width: 20px; /* Give icon a fixed width for alignment */
     text-align: center;
 }
+
+/* --- Language Switcher Styles --- */
+.lang-switcher {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-left: 30px; /* Add some space from the navigation */
+}
+
+.lang-switcher button {
+    background: none;
+    border: none;
+    color: var(--text-gray);
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 5px;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.lang-switcher button:hover {
+    color: var(--text-white);
+}
+
+.lang-switcher button.active {
+    color: var(--primary-yellow);
+    font-weight: 700;
+}
+
+/* Adds a separator line */
+.lang-switcher button#lang-pl::before {
+    content: '|';
+    position: absolute;
+    left: -5px;
+    color: var(--border-color);
+}
