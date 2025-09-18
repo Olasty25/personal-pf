@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aleksander Tomczak - Website Creator & AI Dev</title>
+    <!-- Link to your CSS file -->
     <link rel="stylesheet" href="style.css">
+    <!-- Link to Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
@@ -17,8 +19,8 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#" class="active">Works</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#works" class="active">Works</a></li>
                     <li><a href="#">Blog</a></li>
                 </ul>
             </nav>
@@ -35,23 +37,23 @@
                     <p>I build elegant, responsive websites and intelligent AI solutions that solve real-world problems. Passionate about clean code and user-centric design.</p>
                     <a href="#about" class="cta-link">My Story <i class="fa-solid fa-arrow-right"></i></a>
 
-                    <!-- ADDED SECTION: SOCIAL LINKS -->
+                    <!-- SOCIAL LINKS -->
                     <div class="social-links">
                         <a href="https://github.com/your-username" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
                         <a href="https://linkedin.com/in/your-username" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
                         <a href="https://www.instagram.com/your-username" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
                         <a href="https://www.freelancer.com/u/your-username" target="_blank" aria-label="Freelancer"><i class="fa-solid fa-briefcase"></i></a>
                     </div>
-                    <!-- END OF ADDED SECTION -->
-
+                    
                 </div>
                 <div class="hero-image-container">
+                    <!-- Placeholder for your portrait image -->
                     <img src="https://i.imgur.com/8QtmPby.png" alt="Portrait of Aleksander Tomczak">
                 </div>
             </section>
 
             <!-- INFO & STATS SECTION -->
-            <section class="info-stats-section">
+            <section id="about" class="info-stats-section">
                 <div class="info-block">
                     <h3>Have a Project in Mind?</h3>
                     <p>Let's turn your idea into reality.</p>
@@ -73,7 +75,7 @@
             </section>
 
             <!-- PROJECTS SHOWCASE / SERVICES SECTION -->
-            <section class="services-showcase">
+            <section id="services" class="services-showcase">
                 <div class="service-card active">
                     <i class="fa-solid fa-code"></i>
                     <h3>Website Creator</h3>
@@ -92,23 +94,41 @@
             </section>
 
              <!-- RECENT WORKS SECTION -->
-            <section class="recent-works">
+            <section id="works" class="recent-works">
                 <div class="section-header">
                     <h2>All Creative Works</h2>
                     <p>A selection of my favorite projects.</p>
                 </div>
                 <div class="works-grid">
-                    <!-- ... Work items ... -->
+                    <div class="work-item">
+                        <img src="https://i.imgur.com/d9T25Pj.png" alt="Project 1 Screenshot">
+                        <h3>E-commerce Platform</h3>
+                        <p>Web Development</p>
+                    </div>
+                    <div class="work-item">
+                        <img src="https://i.imgur.com/tHqgR9u.png" alt="Project 2 Screenshot">
+                        <h3>AI Chatbot Integration</h3>
+                        <p>AI Development</p>
+                    </div>
+                    <div class="work-item">
+                        <img src="https://i.imgur.com/G55cSRP.png" alt="Project 3 Screenshot">
+                        <h3>Portfolio Website Redesign</h3>
+                        <p>UI/UX Design</p>
+                    </div>
+                    <div class="work-item">
+                        <img src="https://i.imgur.com/nJ2uDV3.png" alt="Project 4 Screenshot">
+                        <h3>SaaS Dashboard</h3>
+                        <p>Full-Stack Development</p>
+                    </div>
                 </div>
             </section>
 
-            <!-- ADDED SECTION: CONTACT ME -->
-            <section class="contact">
+            <!-- CONTACT SECTION -->
+            <section id="contact" class="contact">
                 <h2>Get In Touch</h2>
-                <p>Have a project for me, or just want to say hi? My inbox is always open.</p>
+                <p>Have a project for me, or just want to say hi? My inbox is always open. I'll get back to you as soon as I can.</p>
                 <a href="mailto:hello@aleks.dev" class="contact-button">Say Hello</a>
             </section>
-            <!-- END OF ADDED SECTION -->
 
         </main>
     </div>
