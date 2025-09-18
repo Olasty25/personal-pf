@@ -388,3 +388,26 @@ nav a.active {
     transform: translateY(-5px);
     background-color: #ffd466; /* A slightly lighter yellow on hover */
 }
+
+/* --- Styling for Clickable Project Cards --- */
+
+.work-item a {
+    text-decoration: none; /* Removes the default underline from links */
+    display: block; /* Makes the entire link area fill the card */
+}
+
+/* Inherit the correct text colors for h3 and p inside the link */
+.work-item a h3,
+.work-item a p {
+    color: inherit;
+}
+
+/* Add a subtle lift and shadow effect on hover for better feedback */
+.work-item {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.work-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
