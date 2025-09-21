@@ -50,18 +50,22 @@ header {
     padding: 30px 0;
 }
 
+/* --- REWRITTEN SECTION FOR LOGO IMAGE --- */
+/* The previous button-like styles have been removed. */
 .logo a {
-    font-size: 24px;
-    font-weight: 700;
-    background-color: var(--primary-yellow);
-    color: var(--bg-dark);
-    padding: 8px 14px;
-    border-radius: 8px;
-    display: inline-block;
-    max-width: 200px;
-    height: auto;
+    display: inline-block; /* Ensures the link behaves as a container */
 }
+
+.logo img {
+    /* Set a maximum height for the logo. Adjust the value as needed. */
+    /* The width will scale automatically to maintain the correct proportions. */
+    max-height: 50px; 
+    width: auto;
+    
+    /* Removes any extra space that can sometimes appear below an image. */
+    display: block; 
 }
+/* --- END OF REWRITTEN SECTION --- */
 
 nav ul {
     list-style: none;
