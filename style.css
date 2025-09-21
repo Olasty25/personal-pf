@@ -57,6 +57,10 @@ header {
     color: var(--bg-dark);
     padding: 8px 14px;
     border-radius: 8px;
+    display: inline-block;
+    max-width: 200px;
+    height: auto;
+}
 }
 
 nav ul {
