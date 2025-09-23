@@ -3,6 +3,21 @@ const translations = {
     // Header
     navServices: "Services",
     navWorks: "Works",
+        // Website Build Process Section
+        processTitle: "How I Build Your Website",
+        processDescription: "Step-by-step process for creating a website in close consultation with the client:",
+        processStep1Title: "Consultation & Needs Analysis",
+        processStep1Desc: "Initial meeting to understand your goals and expectations.",
+        processStep2Title: "Solution Proposal",
+        processStep2Desc: "Presenting concepts, technologies, and a preliminary quote.",
+        processStep3Title: "Design & Mockups",
+        processStep3Desc: "Creating wireframes and visual design, client approval.",
+        processStep4Title: "Development & Implementation",
+        processStep4Desc: "Building the website according to the approved design.",
+        processStep5Title: "Testing & Revisions",
+        processStep5Desc: "Checking functionality, making necessary adjustments.",
+        processStep6Title: "Launch & Support",
+  processStep6Desc: "Publishing the site and providing ongoing technical support.",
     navBlog: "Blog",
     // Hero Section
     heroTitle: "Aleksander Tomczak.",
@@ -94,5 +109,21 @@ const translations = {
     contactTitle: "Skontaktuj się",
     contactDescription: "Masz dla mnie projekt, a może chcesz się tylko przywitać? Moja skrzynka odbiorcza jest zawsze otwarta. Odpowiem tak szybko, jak to możliwe.",
     contactButton: "Napisz do Mnie"
+    ,
+    // Website Build Process Section
+    processTitle: "Jak Buduję Twoją Stronę",
+    processDescription: "Proces tworzenia strony krok po kroku, w ścisłej konsultacji z klientem:",
+    processStep1Title: "Konsultacja i Analiza Potrzeb",
+    processStep1Desc: "Spotkanie wstępne w celu poznania Twoich celów i oczekiwań.",
+    processStep2Title: "Propozycja Rozwiązania",
+    processStep2Desc: "Przedstawienie koncepcji, technologii oraz wstępnej wyceny.",
+    processStep3Title: "Projekt i Makiety",
+    processStep3Desc: "Tworzenie wireframe'ów i projektu graficznego, akceptacja przez klienta.",
+    processStep4Title: "Rozwój i Implementacja",
+    processStep4Desc: "Budowa strony według zatwierdzonego projektu.",
+    processStep5Title: "Testowanie i Poprawki",
+    processStep5Desc: "Sprawdzenie funkcjonalności, wprowadzenie niezbędnych korekt.",
+    processStep6Title: "Publikacja i Wsparcie",
+    processStep6Desc: "Opublikowanie strony oraz zapewnienie wsparcia technicznego."
   }
 };
