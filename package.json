@@ -1,0 +1,13 @@
+{
+  "name": "thorest-portfolio-old",
+  "version": "1.0.0",
+  "description": "Portfolio website for Aleksander Tomczak",
+  "main": "app.js",
+  "scripts": {
+    "dev": "live-server --port=3000"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}

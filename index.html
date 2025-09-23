@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,20 +10,18 @@
 </head>
 <body>
 
-    <div class="container">
-        <!-- HEADER SECTION -->
-        <header>
+    <div class="container modern-portfolio">
+        <header class="main-header">
             <div class="logo">
                 <img src="assets/pflogo.png" alt="Thorest Logo">
             </div>
-            <nav>
+            <nav class="main-nav">
                 <ul>
-                    <li><a href="#services" data-translate-key="navServices">Services</a></li>
-                    <li><a href="#works" class="active" data-translate-key="navWorks">Works</a></li>
+                    <li><a href="#services" data-translate-key="navServices">Usługi</a></li>
+                    <li><a href="#works" class="active" data-translate-key="navWorks">Projekty</a></li>
                     <li><a href="https://www.linkedin.com/in/aleksander-tomczak-75529a385/" data-translate-key="navBlog">Blog</a></li>
                 </ul>
             </nav>
-            <!-- ADDED: Language Switcher -->
             <div class="lang-switcher">
                 <button id="lang-en">EN</button>
                 <button id="lang-pl">PL</button>
@@ -31,134 +29,133 @@
         </header>
 
         <main>
-            <!-- HERO SECTION -->
-            <section class="hero">
-                <div class="hero-text-content">
-                    <h1 data-translate-key="heroTitle">Aleksander Tomczak.</h1>
-                    <span class="short-line"></span>
-                    <h2 data-translate-key="heroSubtitle">Website Creator & AI Dev, based in Poland.</h2>
-                    <p data-translate-key="heroDescription">I build elegant, responsive websites and intelligent AI solutions that solve real-world problems. Passionate about clean code and user-centric design.</p>
-                    <a href="#about" class="cta-link"><span data-translate-key="heroStoryLink">My Story</span> <i class="fa-solid fa-arrow-right"></i></a>
-                    <div class="social-links">
-                        <a href="https://github.com/Olasty25" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-                        <a href="https://www.linkedin.com/in/aleksander-tomczak-75529a385" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-                        <a href="https://www.instagram.com/thoughtrealstudio" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="https://www.freelancer.com/u/Olasty25" target="_blank" aria-label="Freelancer"><i class="fa-solid fa-briefcase"></i></a>
+            <section class="hero modern-hero">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1 data-translate-key="heroTitle">Aleksander Tomczak</h1>
+                        <span class="short-line"></span>
+                        <h2 data-translate-key="heroSubtitle">Website Creator & AI Dev, based in Poland.</h2>
+                        <p data-translate-key="heroDescription">I build elegant, responsive websites and intelligent AI solutions that solve real-world problems. Passionate about clean code and user-centric design.</p>
+                        <a href="#about" class="cta-link"><span data-translate-key="heroStoryLink">My Story</span> <i class="fa-solid fa-arrow-right"></i></a>
+                        <div class="social-links">
+                            <a href="https://github.com/Olasty25" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/aleksander-tomczak-75529a385" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="https://www.instagram.com/thoughtrealstudio" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.freelancer.com/u/Olasty25" target="_blank" aria-label="Freelancer"><i class="fa-solid fa-briefcase"></i></a>
+                        </div>
                     </div>
-                </div>
-                <div class="hero-image-container">
-                    <img src="assets/olek.jpeg" alt="Portrait of Aleksander Tomczak">
+                    <div class="hero-image">
+                    </div>
                 </div>
             </section>
 
-            <!-- INFO & STATS SECTION -->
-            <section id="about" class="info-stats-section">
+            <section id="worked-with" class="worked-with modern-worked-with">
+                <div class="section-header">
+                    <h2 data-translate-key="workedWithTitle"></h2>
+                    <p data-translate-key="workedWithSubtitle"></p>
+                </div>
+                <div class="worked-with-logos">
+                    <img src="assets/cubesoft.png" alt="Cubesoft" title="Cubesoft">
+                </div>
+            </section>
+
+            <section id="about" class="info-stats-section modern-info">
                 <div class="info-block">
-                    <h3 data-translate-key="infoTitle">Have a Project in Mind?</h3>
-                    <p data-translate-key="infoSubtitle">Let's turn your idea into reality.</p>
+                    <h3 data-translate-key="infoTitle">Masz Pomysł na Projekt?</h3>
+                    <p data-translate-key="infoSubtitle">Zmieńmy Twój pomysł w rzeczywistość.</p>
                     <div class="contact-details">
                         <a href="mailto:thoughtrealstudio@gmail.com"><i class="fa-solid fa-envelope"></i> thoughtrealstudio@gmail.com</a>
                         <a href="tel:+48574610138"><i class="fa-solid fa-phone"></i> +48 574 610 138</a>
                     </div>
                 </div>
                 <div class="info-block">
-                    <blockquote data-translate-key="quote">"You can't use up creativity. The more you use, the more you have."</blockquote>
+                    <blockquote data-translate-key="quote">"Kreatywności nie da się zużyć. Im więcej jej używasz, tym więcej jej masz."</blockquote>
                     <div class="stats">
                         <div class="stat-item">
                             <span>2</span>
-                            <p data-translate-key="statsYears">Years of Experience</p>
+                            <p data-translate-key="statsYears">Lata Doświadczenia</p>
                         </div>
                         <div class="stat-item">
                             <span>10+</span>
-                            <p data-translate-key="statsProjects">Projects Completed</p>
+                            <p data-translate-key="statsProjects">Ukończone Projekty</p>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- PROJECTS SHOWCASE / SERVICES SECTION -->
-            <section id="services" class="services-showcase">
+            <section id="services" class="services-showcase modern-services">
                 <div class="service-card active">
                     <i class="fa-solid fa-code"></i>
-                    <h3 data-translate-key="service1Title">Website Creator</h3>
+                    <h3 data-translate-key="service1Title">Twórca Stron</h3>
                     <p data-translate-key="service1Desc">Full-Stack Development</p>
                 </div>
                 <div class="service-card">
                     <i class="fa-solid fa-robot"></i>
-                    <h3 data-translate-key="service2Title">AI Development</h3>
-                    <p data-translate-key="service2Desc">Machine Learning Models</p>
+                    <h3 data-translate-key="service2Title">Rozwój i Wykorzystanie AI</h3>
+                    <p data-translate-key="service2Desc">Modele Uczenia Maszynowego</p>
                 </div>
                 <div class="service-card">
                     <i class="fa-solid fa-pen-ruler"></i>
-                    <h3 data-translate-key="service3Title">UI/UX Design</h3>
+                    <h3 data-translate-key="service3Title">Projektowanie UI/UX</h3>
                     <p data-translate-key="service3Desc">Figma & Webflow</p>
                 </div>
             </section>
 
-             <!-- RECENT WORKS SECTION -->
-            <section id="works" class="recent-works">
+            <section id="works" class="recent-works modern-works">
                 <div class="section-header">
-                    <h2 data-translate-key="worksTitle">All Creative Works</h2>
-                    <p data-translate-key="worksSubtitle">A selection of my favorite projects. Click to see the live preview.</p>
+                    <h2 data-translate-key="worksTitle">Wszystkie Projekty</h2>
+                    <p data-translate-key="worksSubtitle">Wybrane ulubione projekty. Kliknij, aby zobaczyć podgląd na żywo.</p>
                 </div>
                 <div class="works-grid">
                     <div class="work-item">
                         <a href="https://kawiarnia-w-krakowie.vercel.app" target="_blank">
-                            <img src="assets/grip.png" alt="E-commerce Platform Screenshot">
+                            <img src="assets/coffee shop.PNG" alt="Coffee Shop Website Preview">
                             <h3 data-translate-key="project1Title"></h3>
-                            <p data-translate-key="project1Desc">Web Development</p>
+                            <p data-translate-key="project1Desc"></p>
                         </a>
                     </div>
                     <div class="work-item">
                         <a href="https://frame-to-frontend-forge.vercel.app" target="_blank">
-                            <img src="assets/opt.png" alt="AI Chatbot Screenshot">
+                            <img src="assets/ears.PNG" alt="AI Chatbot Platform Preview">
                             <h3 data-translate-key="project2Title"></h3>
-                            <p data-translate-key="project2Desc">AI Development</p>
+                            <p data-translate-key="project2Desc"></p>
                         </a>
                     </div>
                     <div class="work-item">
                         <a href="https://vcard-ten-lyart.vercel.app" target="_blank">
-                            <img src="assets/port.png" alt="Portfolio Redesign Screenshot">
+                            <img src="assets/port.png" alt="Portfolio Redesign Preview">
                             <h3 data-translate-key="project3Title"></h3>
-                            <p data-translate-key="project3Desc">UI/UX Design</p>
+                            <p data-translate-key="project3Desc"></p>
                         </a>
                     </div>
                     <div class="work-item">
                         <a href="https://polski-fryzjer-klon.vercel.app" target="_blank">
-                            <img src="assets/vault.png" alt="SaaS Dashboard Screenshot">
+                            <img src="assets/salon.PNG" alt="Salon Stylizacji Włosów Preview">
                             <h3 data-translate-key="project4Title"></h3>
-                            <p data-translate-key="project4Desc">Full-Stack Development</p>
-                        </a>
-                    </div>
-                     <div class="work-item">
-                        <a href="https://vision-weave-arts.vercel.app/" target="_blank">
-                            <img src="assets/grip.png" alt="E-commerce Platform Screenshot">
-                            <h3 data-translate-key="project5Title"></h3>
-                            <p data-translate-key="project5Desc">Web Development</p>
+                            <p data-translate-key="project4Desc"></p>
                         </a>
                     </div>
                     <div class="work-item">
                         <a href="https://earlisteners-unwrapped.vercel.app" target="_blank">
-                            <img src="assets/opt.png" alt="AI Chatbot Screenshot">
+                            <img src="assets/ears.PNG" alt="Audio Recognition App Preview">
                             <h3 data-translate-key="project6Title"></h3>
-                            <p data-translate-key="project6Desc">AI Development</p>
+                            <p data-translate-key="project6Desc"></p>
                         </a>
                     </div>
-                     <div class="work-item">
+                    <div class="work-item">
                         <a href="https://prawnik.vercel.app" target="_blank">
-                            <img src="assets/opt.png" alt="AI Chatbot Screenshot">
+                            <img src="assets/law.PNG" alt="Legal Services Platform Preview">
                             <h3 data-translate-key="project7Title"></h3>
-                            <p data-translate-key="project7Desc">AI Development</p>
+                            <p data-translate-key="project7Desc"></p>
                         </a>
                     </div>
                 </div>
             </section>
 
-            <!-- CONTACT SECTION -->
-            <section id="contact" class="contact">
-                <h2 data-translate-key="contactTitle">Get In Touch</h2>
-                <p data-translate-key="contactDescription">Have a project for me, or just want to say hi? My inbox is always open. I'll get back to you as soon as I can.</p>
-                <a href="mailto:thoughtrealstudio@gmail.com" class="contact-button" data-translate-key="contactButton">Say Hello</a>
+            <section id="contact" class="contact modern-contact">
+                <h2 data-translate-key="contactTitle">Skontaktuj się</h2>
+                <p data-translate-key="contactDescription">Masz dla mnie projekt, a może chcesz się tylko przywitać? Moja skrzynka odbiorcza jest zawsze otwarta. Odpowiem tak szybko, jak to możliwe.</p>
+                <a href="mailto:thoughtrealstudio@gmail.com" class="contact-button" data-translate-key="contactButton">Napisz do Mnie</a>
             </section>
         </main>
     </div>

@@ -145,6 +145,40 @@ nav a.active {
     padding: 60px 0;
 }
 
+/* --- Worked With Section --- */
+.worked-with {
+    padding: 60px 0;
+    text-align: center;
+}
+.worked-with .section-header h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: var(--primary-yellow);
+}
+.worked-with .section-header p {
+    color: var(--text-gray);
+    margin-bottom: 30px;
+}
+.worked-with-logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    align-items: center;
+}
+.worked-with-logos img {
+    height: 100px;
+    width: auto;
+    filter: grayscale(60%);
+    opacity: 0.85;
+    transition: filter 0.3s, opacity 0.3s, transform 0.3s;
+}
+.worked-with-logos img:hover {
+    filter: none;
+    opacity: 1;
+    transform: scale(1.08);
+}
+
 .info-block {
     flex: 1;
 }
@@ -320,28 +354,73 @@ nav a.active {
 
 @media (max-width: 576px) {
     .container {
-        padding: 0 15px;
+        padding: 0 5px;
     }
-    
     header {
         flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+    .logo img {
+        max-height: 40px;
+    }
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .hero {
+        padding: 30px 0;
         gap: 20px;
     }
-
     .hero h1 {
-        font-size: 48px;
+        font-size: 32px;
     }
-
     .hero h2 {
-        font-size: 20px;
+        font-size: 16px;
     }
-
-    .stats {
-        gap: 30px;
+    .hero p {
+        font-size: 15px;
+        margin-bottom: 20px;
     }
-
-    .stat-item span {
-        font-size: 36px;
+    .hero-image-container img {
+        border-radius: 12px;
+    }
+    .worked-with-logos img {
+        height: 70px;
+        margin-bottom: 10px;
+    }
+    .worked-with .section-header h2 {
+        font-size: 22px;
+    }
+    .worked-with .section-header p {
+        font-size: 14px;
+    }
+    .info-stats-section {
+        gap: 20px;
+        padding: 30px 0;
+    }
+    .service-card {
+        padding: 15px;
+        font-size: 15px;
+    }
+    .works-grid {
+        gap: 15px;
+    }
+    .work-item img {
+        border-radius: 10px;
+    }
+    .contact {
+        padding: 40px 0;
+    }
+    .contact h2 {
+        font-size: 22px;
+    }
+    .contact p {
+        font-size: 14px;
+    }
+    .contact-button {
+        padding: 10px 20px;
+        font-size: 15px;
     }
 }
 /* --- Added Styles for Social Links & Contact Section --- */
