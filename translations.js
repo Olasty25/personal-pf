@@ -1,4 +1,4 @@
-const translations = {
+9const translations = {
   en: {
     // Header
     navServices: "Services",
@@ -45,7 +45,7 @@ const translations = {
     // Worked With Section
     workedWithTitle: "Collaborations",
     workedWithSubtitle: "Selected brands, clients, and technologies I've had the pleasure to work with:",
-  project2Title: "Earphone Company Website",
+  project2Title: "Car Detailing Company Website",
   project2Desc: "UI/UX, Branding",
   project3Title: "Portfolio Redesign",
   project3Desc: "UI/UX Design, Branding",
@@ -93,7 +93,7 @@ const translations = {
     // Worked With Section
     workedWithTitle: "Współpraca",
     workedWithSubtitle: "Wybrane marki, klienci i technologie, z którymi miałem przyjemność współpracować:",
-  project2Title: "Strona ",
+  project2Title: "Strona Firmy Detailingowej",
   project2Desc: "UI/UX, Branding",
   project3Title: "Nowy Design Portfolio",
   project3Desc: "UI/UX, Branding",
