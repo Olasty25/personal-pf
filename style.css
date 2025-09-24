@@ -129,4 +129,367 @@ section:last-of-type {
 
 .cta-link {
     color: var(--primary-yellow);
+    font-weight: 500;
+}
+.cta-link i {
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+}
+.cta-link:hover i {
+    transform: translateX(5px);
+}
+
+
+/* --- Worked With Section --- */
+.worked-with {
+    text-align: center;
+}
+.worked-with .section-header {
+    text-align: center; /* Override default left-align */
+}
+.worked-with-logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    align-items: center;
+}
+.worked-with-logos img {
+    height: 80px; /* ELEGANCE: Slightly smaller for a cleaner look */
+    width: auto;
+    filter: grayscale(80%);
+    opacity: 0.8;
+    transition: filter 0.3s, opacity 0.3s, transform 0.3s;
+}
+.worked-with-logos img:hover {
+    filter: none;
+    opacity: 1;
+    transform: scale(1.08);
+}
+
+/* --- Info & Stats Section --- */
+.info-stats-section {
+    display: flex;
+    gap: 60px;
+    align-items: center;
+}
+.info-block {
+    flex: 1;
+}
+.info-block h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+.info-block blockquote {
+    font-size: 22px;
+    color: var(--text-white);
+    line-height: 1.4;
+    border-left: 3px solid var(--primary-yellow);
+    padding-left: 20px;
+    margin-bottom: 30px;
+}
+.stats {
+    display: flex;
+    gap: 40px;
+}
+.stat-item span {
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--text-white);
+}
+.stat-item p {
+    margin: 0;
+}
+
+/* --- Services Showcase Section --- */
+.services-showcase {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* ELEGANCE: Naturally responsive grid */
+    gap: 30px;
+}
+.service-card {
+    background-color: var(--bg-card);
+    padding: 40px;
+    border-radius: 12px;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+.service-card i {
+    font-size: 28px;
+    color: var(--primary-yellow);
+    margin-bottom: 20px;
+}
+.service-card.active {
+    background-color: var(--primary-yellow);
+}
+.service-card.active h3, .service-card.active p, .service-card.active i {
+    color: var(--bg-card);
+}
+
+/* --- Recent Works Section --- */
+.section-header {
+    text-align: left;
+    margin-bottom: 40px;
+    max-width: 600px; /* ELEGANCE: Prevents long lines of text on wide screens */
+}
+.section-header h2 {
+    font-size: 36px;
+    margin-bottom: 5px;
+}
+.works-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* ELEGANCE: Naturally responsive grid */
+    gap: 30px;
+}
+.work-item {
+    background-color: var(--bg-card);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.work-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+.work-item img {
+    width: 100%;
+    display: block;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+}
+/* ELEGANCE: Added a content wrapper for proper padding */
+.work-item-content {
+    padding: 20px 25px 25px;
+}
+.work-item h3 {
+    font-size: 20px;
+    color: var(--text-white);
+    margin-bottom: 5px;
+}
+.work-item p {
+    color: var(--text-gray);
+}
+.work-item a {
+    text-decoration: none;
+    display: block;
+}
+
+/* --- Website Build Process Section --- */
+.website-process {
+    text-align: center;
+}
+.website-process .section-header {
+    margin-left: auto;
+    margin-right: auto;
+}
+.process-steps {
+    list-style: none;
+    counter-reset: process-counter;
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: left;
+}
+.process-steps li {
+    position: relative;
+    padding-left: 50px;
+    margin-bottom: 30px;
+}
+.process-steps li::before {
+    counter-increment: process-counter;
+    content: "0" counter(process-counter);
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--primary-yellow);
+}
+.process-steps strong {
+    color: var(--text-white);
+}
+.process-steps .step-desc {
+    font-size: 0.9rem;
+    color: var(--text-gray);
+}
+
+
+/* --- Social Links --- */
+.social-links {
+    margin-top: 40px;
+    display: flex;
+    gap: 25px;
+}
+.social-links a {
+    color: var(--text-gray);
+    font-size: 24px;
+    transition: color 0.3s ease, transform 0.3s ease; /* ELEGANCE: Smoother hover */
+}
+.social-links a:hover {
+    color: var(--primary-yellow);
+    transform: translateY(-3px);
+}
+
+/* --- Contact Section --- */
+.contact {
+    text-align: center;
+}
+.contact h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+.contact p {
+    max-width: 500px;
+    margin: 0 auto 30px auto;
+}
+.contact-button {
+    display: inline-block;
+    background-color: var(--primary-yellow);
+    color: var(--bg-dark);
+    padding: 15px 40px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 18px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.contact-button:hover {
+    transform: translateY(-5px);
+    background-color: #ffd466;
+}
+
+/* --- Contact Details in Info Section --- */
+.contact-details {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.contact-details a {
+    color: var(--primary-yellow);
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    width: fit-content;
+    white-space: nowrap; /* ELEGANCE: Prevents icon and text from splitting on new lines */
+}
+.contact-details a:hover {
+    color: var(--text-white);
+}
+
+/* --- Language Switcher Styles --- */
+.lang-switcher {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-left: 30px;
+}
+.lang-switcher button {
+    background: none;
+    border: none;
+    color: var(--text-gray);
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 5px;
+    transition: color 0.3s ease;
+    position: relative;
+}
+.lang-switcher button:hover {
+    color: var(--text-white);
+}
+.lang-switcher button.active {
+    color: var(--primary-yellow);
+    font-weight: 700;
+}
+.lang-switcher button#lang-pl::before {
+    content: '|';
+    position: absolute;
+    left: -5px;
+    color: var(--border-color);
+}
+
+
+/* ======================================================== */
+/* --- TABLET & MOBILE RESPONSIVE STYLES --- */
+/* ======================================================== */
+@media (max-width: 992px) {
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-text {
+        order: 2;
+    }
+    .hero-image {
+        order: 1;
+        margin-bottom: 30px;
+        width: 60%;
+        max-width: 400px;
+    }
+    .short-line, .social-links {
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: center;
+    }
+    .info-stats-section {
+        flex-direction: column;
+        gap: 50px;
+        text-align: center;
+    }
+    .stats {
+        justify-content: center;
+    }
+    .contact-details {
+        align-items: center;
+    }
+}
+
+/* ======================================================== */
+/* --- PHONE-SPECIFIC STYLES --- */
+/* ======================================================== */
+@media (max-width: 768px) {
+    /* ELEGANCE: Reduced vertical padding on all sections for less scrolling */
+    section {
+        padding: 60px 0;
+    }
+
+    .main-header {
+        padding: 20px 0;
+    }
+    .logo img {
+        max-height: 40px; /* ELEGANCE: Smaller logo on mobile */
+    }
+    .main-nav ul {
+        gap: 20px; /* ELEGANCE: Tighter nav links */
+    }
+    .lang-switcher {
+        margin-left: 20px;
+    }
     
+    /* ELEGANCE: Reduced font sizes for better readability on small screens */
+    .section-header h2, .contact h2 {
+        font-size: 28px;
+    }
+    .stat-item span {
+        font-size: 40px;
+    }
+    .info-block blockquote {
+        font-size: 18px;
+    }
+
+    .worked-with-logos img {
+        height: 60px; /* ELEGANCE: Smaller partner logos */
+    }
+
+    .process-steps li {
+        padding-left: 40px; /* ELEGANCE: Tighter padding for process list */
+    }
+    .process-steps li::before {
+        font-size: 18px;
+    }
+}
