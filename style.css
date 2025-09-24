@@ -50,22 +50,20 @@ header {
     padding: 30px 0;
 }
 
-/* --- REWRITTEN SECTION FOR LOGO IMAGE --- */
-/* The previous button-like styles have been removed. */
+.header-right-panel {
+    display: flex;
+    align-items: center;
+}
+
 .logo a {
-    display: inline-block; /* Ensures the link behaves as a container */
+    display: inline-block;
 }
 
 .logo img {
-    /* Set a maximum height for the logo. Adjust the value as needed. */
-    /* The width will scale automatically to maintain the correct proportions. */
     max-height: 50px; 
     width: auto;
-    
-    /* Removes any extra space that can sometimes appear below an image. */
     display: block; 
 }
-/* --- END OF REWRITTEN SECTION --- */
 
 nav ul {
     list-style: none;
@@ -257,17 +255,11 @@ nav a.active {
     font-size: 14px;
 }
 
-/* The active state for the yellow card */
 .service-card.active {
     background-color: var(--primary-yellow);
 }
 
-.service-card.active h3 {
-    color: var(--bg-dark);
-}
-
-.service-card.active p,
-.service-card.active i {
+.service-card.active h3, .service-card.active p, .service-card.active i {
     color: var(--bg-card);
 }
 
@@ -297,6 +289,12 @@ nav a.active {
     background-color: var(--bg-card);
     border-radius: 12px;
     overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.work-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
 .work-item img {
@@ -306,126 +304,25 @@ nav a.active {
     object-fit: cover;
 }
 
+.work-item-content {
+    padding: 20px;
+}
+
 .work-item h3 {
     font-size: 20px;
-    padding: 20px 20px 5px 20px;
+    padding: 0 0 5px 0;
 }
 
 .work-item p {
-    padding: 0 20px 20px 20px;
+    padding: 0;
 }
 
-/* --- Responsive Design --- */
-@media (max-width: 992px) {
-    .hero {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .short-line {
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .hero-text-content {
-        order: 2;
-    }
-
-    .hero-image-container {
-        order: 1;
-        margin-bottom: 30px;
-        flex-basis: auto;
-        width: 60%;
-    }
-
-    .info-stats-section {
-        flex-direction: column;
-        gap: 40px;
-    }
-    
-    .services-showcase {
-        grid-template-columns: 1fr;
-    }
-
-    .works-grid {
-        grid-template-columns: 1fr;
-    }
+.work-item a {
+    text-decoration: none;
+    display: block;
 }
 
-@media (max-width: 576px) {
-    .container {
-        padding: 0 5px;
-    }
-    header {
-        flex-direction: column;
-        gap: 10px;
-        text-align: center;
-    }
-    .logo img {
-        max-height: 40px;
-    }
-    nav ul {
-        flex-direction: column;
-        gap: 10px;
-    }
-    .hero {
-        padding: 30px 0;
-        gap: 20px;
-    }
-    .hero h1 {
-        font-size: 32px;
-    }
-    .hero h2 {
-        font-size: 16px;
-    }
-    .hero p {
-        font-size: 15px;
-        margin-bottom: 20px;
-    }
-    .hero-image-container img {
-        border-radius: 12px;
-    }
-    .worked-with-logos img {
-        height: 70px;
-        margin-bottom: 10px;
-    }
-    .worked-with .section-header h2 {
-        font-size: 22px;
-    }
-    .worked-with .section-header p {
-        font-size: 14px;
-    }
-    .info-stats-section {
-        gap: 20px;
-        padding: 30px 0;
-    }
-    .service-card {
-        padding: 15px;
-        font-size: 15px;
-    }
-    .works-grid {
-        gap: 15px;
-    }
-    .work-item img {
-        border-radius: 10px;
-    }
-    .contact {
-        padding: 40px 0;
-    }
-    .contact h2 {
-        font-size: 22px;
-    }
-    .contact p {
-        font-size: 14px;
-    }
-    .contact-button {
-        padding: 10px 20px;
-        font-size: 15px;
-    }
-}
-/* --- Added Styles for Social Links & Contact Section --- */
-
-/* --- Social Links in Hero Section --- */
+/* --- Social Links --- */
 .social-links {
     margin-top: 40px;
     display: flex;
@@ -439,9 +336,8 @@ nav a.active {
 
 .social-links a:hover {
     color: var(--primary-yellow);
-    transform: translateY(-3px); /* Add a subtle hover effect */
+    transform: translateY(-3px);
 }
-
 
 /* --- Contact Section --- */
 .contact {
@@ -457,7 +353,7 @@ nav a.active {
 
 .contact p {
     max-width: 500px;
-    margin: 0 auto 30px auto; /* Center the paragraph */
+    margin: 0 auto 30px auto;
 }
 
 .contact-button {
@@ -473,47 +369,24 @@ nav a.active {
 
 .contact-button:hover {
     transform: translateY(-5px);
-    background-color: #ffd466; /* A slightly lighter yellow on hover */
+    background-color: #ffd466;
 }
 
-/* --- Styling for Clickable Project Cards --- */
-
-.work-item a {
-    text-decoration: none; /* Removes the default underline from links */
-    display: block; /* Makes the entire link area fill the card */
-}
-
-/* Inherit the correct text colors for h3 and p inside the link */
-.work-item a h3,
-.work-item a p {
-    color: inherit;
-}
-
-/* Add a subtle lift and shadow effect on hover for better feedback */
-.work-item {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.work-item:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-}
-/* --- Styling for Contact Details in Info Section --- */
-
+/* --- Contact Details in Info Section --- */
 .contact-details {
-    margin-top: 15px; /* Add some space above the links */
+    margin-top: 15px;
     display: flex;
-    flex-direction: column; /* Stack links vertically */
-    gap: 10px; /* Add space between the links */
+    flex-direction: column;
+    gap: 10px;
 }
 
 .contact-details a {
     color: var(--primary-yellow);
     font-weight: 500;
-    display: inline-flex; /* Helps align icon and text */
+    display: inline-flex;
     align-items: center;
-    gap: 10px; /* Space between icon and text */
-    width: fit-content; /* Prevent link from taking full width */
+    gap: 10px;
+    width: fit-content;
 }
 
 .contact-details a:hover {
@@ -522,7 +395,7 @@ nav a.active {
 
 .contact-details a i {
     font-size: 16px;
-    width: 20px; /* Give icon a fixed width for alignment */
+    width: 20px;
     text-align: center;
 }
 
@@ -531,7 +404,7 @@ nav a.active {
     display: flex;
     align-items: center;
     gap: 5px;
-    margin-left: 30px; /* Add some space from the navigation */
+    margin-left: 30px;
 }
 
 .lang-switcher button {
@@ -556,10 +429,106 @@ nav a.active {
     font-weight: 700;
 }
 
-/* Adds a separator line */
 .lang-switcher button#lang-pl::before {
     content: '|';
     position: absolute;
     left: -5px;
     color: var(--border-color);
+}
+
+
+/* ======================================================== */
+/* --- MOBILE RESPONSIVE IMPROVEMENTS (Tablet & Down) --- */
+/* ======================================================== */
+@media (max-width: 992px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+    .social-links {
+        justify-content: center;
+    }
+    .short-line {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .hero-text-content {
+        order: 2;
+    }
+    .hero-image-container {
+        order: 1;
+        margin-bottom: 30px;
+        flex-basis: auto;
+        width: 60%;
+    }
+    .info-stats-section {
+        flex-direction: column;
+        gap: 40px;
+    }
+    .services-showcase {
+        grid-template-columns: 1fr;
+    }
+    .works-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ======================================================== */
+/* --- MOBILE RESPONSIVE IMPROVEMENTS (Phone Screens) --- */
+/* ======================================================== */
+@media (max-width: 768px) {
+    /* KEY CHANGE: Better spacing on small screens */
+    .container {
+        padding: 0 20px;
+    }
+
+    /* 
+       KEY CHANGE: This creates a more professional mobile header. 
+       The logo stays on the left, nav on the right. It prevents the huge vertical stacking.
+       For more items, a JavaScript "hamburger" menu would be the next step.
+    */
+    header {
+        flex-direction: row; /* Keep it as a row */
+        align-items: center;
+        padding: 20px 0;
+    }
+    nav ul {
+        gap: 20px; /* Reduce gap between nav items */
+    }
+    .lang-switcher {
+        margin-left: 20px;
+    }
+    .logo img {
+        max-height: 40px;
+    }
+
+    /* KEY CHANGE: Reduced font sizes for better readability */
+    .hero h1 {
+        font-size: 40px; /* Was 64px on desktop */
+    }
+    .hero h2 {
+        font-size: 18px; /* Was 24px */
+    }
+    .section-header h2, .contact h2 {
+        font-size: 28px; /* Was 36px */
+    }
+    .stat-item span {
+        font-size: 36px; /* Was 48px */
+    }
+
+    /* KEY CHANGE: Better vertical spacing for content */
+    .hero, .info-stats-section, .services-showcase, .recent-works, .worked-with, .contact {
+        padding: 40px 0;
+    }
+
+    .info-block h3 {
+        margin-top: 2em; /* Creates separation between list items */
+    }
+    .info-block h3:first-child {
+        margin-top: 0;
+    }
+    
+    .worked-with-logos img {
+        height: 60px; /* Slightly smaller logos */
+    }
 }
