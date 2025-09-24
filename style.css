@@ -18,6 +18,11 @@
     box-sizing: border-box;
 }
 
+/* ELEGANCE: Added smooth scrolling for anchor links */
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     background-color: var(--bg-dark);
@@ -28,7 +33,9 @@ body {
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 30px;
+    /* ELEGANCE: Changed to clamp for fluid padding. 30px on large screens, scales down to 15px on mobile */
+    padding-left: clamp(15px, 4vw, 30px);
+    padding-right: clamp(15px, 4vw, 30px);
 }
 
 h1, h2, h3 {
@@ -42,21 +49,21 @@ a {
     transition: color 0.3s ease;
 }
 
+/* ELEGANCE: Standardized vertical spacing for all sections */
+section {
+    padding: 80px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+section:last-of-type {
+    border-bottom: none;
+}
+
 /* --- Header & Navigation --- */
-header {
+.main-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 30px 0;
-}
-
-.header-right-panel {
-    display: flex;
-    align-items: center;
-}
-
-.logo a {
-    display: inline-block;
 }
 
 .logo img {
@@ -65,18 +72,18 @@ header {
     display: block; 
 }
 
-nav ul {
+.main-nav ul {
     list-style: none;
     display: flex;
     gap: 40px;
 }
 
-nav a {
+.main-nav a {
     font-weight: 500;
 }
 
-nav a:hover,
-nav a.active {
+.main-nav a:hover,
+.main-nav a.active {
     color: var(--text-white);
 }
 
@@ -84,17 +91,20 @@ nav a.active {
 .hero {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     gap: 60px;
-    padding: 60px 0;
-    border-bottom: 1px solid var(--border-color);
 }
-
-.hero-text-content {
+.hero-content {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+.hero-text {
     flex: 1;
 }
 
 .hero h1 {
-    font-size: 64px;
+    font-size: clamp(2.5rem, 5vw, 4rem); /* ELEGANCE: Fluid font size (40px to 64px) */
     line-height: 1.1;
     margin-bottom: 15px;
 }
@@ -108,7 +118,7 @@ nav a.active {
 }
 
 .hero h2 {
-    font-size: 24px;
+    font-size: clamp(1.125rem, 2vw, 1.5rem); /* ELEGANCE: Fluid font size (18px to 24px) */
     margin-bottom: 20px;
 }
 
@@ -119,416 +129,4 @@ nav a.active {
 
 .cta-link {
     color: var(--primary-yellow);
-    font-weight: 500;
-}
-
-.cta-link i {
-    margin-left: 5px;
-}
-
-.hero-image-container {
-    flex-basis: 40%;
-}
-
-.hero-image-container img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 20px;
-}
-
-/* --- Info & Stats Section --- */
-.info-stats-section {
-    display: flex;
-    gap: 60px;
-    padding: 60px 0;
-}
-
-/* --- Worked With Section --- */
-.worked-with {
-    padding: 60px 0;
-    text-align: center;
-}
-.worked-with .section-header h2 {
-    font-size: 32px;
-    margin-bottom: 10px;
-    color: var(--primary-yellow);
-}
-.worked-with .section-header p {
-    color: var(--text-gray);
-    margin-bottom: 30px;
-}
-.worked-with-logos {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 40px;
-    align-items: center;
-}
-.worked-with-logos img {
-    height: 100px;
-    width: auto;
-    filter: grayscale(60%);
-    opacity: 0.85;
-    transition: filter 0.3s, opacity 0.3s, transform 0.3s;
-}
-.worked-with-logos img:hover {
-    filter: none;
-    opacity: 1;
-    transform: scale(1.08);
-}
-
-.info-block {
-    flex: 1;
-}
-
-.info-block h3 {
-    font-size: 22px;
-    margin-bottom: 10px;
-}
-
-.info-block p {
-    margin-bottom: 20px;
-}
-
-.info-block a {
-    color: var(--primary-yellow);
-    font-weight: 500;
-}
-
-.info-block blockquote {
-    font-size: 22px;
-    color: var(--text-white);
-    line-height: 1.4;
-    border-left: 3px solid var(--primary-yellow);
-    padding-left: 20px;
-    margin-bottom: 30px;
-}
-
-.stats {
-    display: flex;
-    gap: 40px;
-}
-
-.stat-item span {
-    font-size: 48px;
-    font-weight: 700;
-    color: var(--text-white);
-}
-
-.stat-item p {
-    margin: 0;
-}
-
-/* --- Services Showcase Section --- */
-.services-showcase {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    padding: 60px 0;
-    border-top: 1px solid var(--border-color);
-}
-
-.service-card {
-    background-color: var(--bg-card);
-    padding: 40px;
-    border-radius: 12px;
-    text-align: left;
-    transition: transform 0.3s ease;
-}
-
-.service-card:hover {
-    transform: translateY(-10px);
-}
-
-.service-card i {
-    font-size: 28px;
-    color: var(--primary-yellow);
-    margin-bottom: 20px;
-}
-
-.service-card h3 {
-    font-size: 20px;
-    margin-bottom: 5px;
-}
-
-.service-card p {
-    font-size: 14px;
-}
-
-.service-card.active {
-    background-color: var(--primary-yellow);
-}
-
-.service-card.active h3, .service-card.active p, .service-card.active i {
-    color: var(--bg-card);
-}
-
-/* --- Recent Works Section --- */
-.recent-works {
-    padding: 60px 0;
-    border-top: 1px solid var(--border-color);
-}
-
-.section-header {
-    text-align: left;
-    margin-bottom: 40px;
-}
-
-.section-header h2 {
-    font-size: 36px;
-    margin-bottom: 5px;
-}
-
-.works-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-}
-
-.work-item {
-    background-color: var(--bg-card);
-    border-radius: 12px;
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.work-item:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-}
-
-.work-item img {
-    width: 100%;
-    display: block;
-    aspect-ratio: 16 / 10;
-    object-fit: cover;
-}
-
-.work-item-content {
-    padding: 20px;
-}
-
-.work-item h3 {
-    font-size: 20px;
-    padding: 0 0 5px 0;
-}
-
-.work-item p {
-    padding: 0;
-}
-
-.work-item a {
-    text-decoration: none;
-    display: block;
-}
-
-/* --- Social Links --- */
-.social-links {
-    margin-top: 40px;
-    display: flex;
-    gap: 25px;
-}
-
-.social-links a {
-    color: var(--text-gray);
-    font-size: 24px;
-}
-
-.social-links a:hover {
-    color: var(--primary-yellow);
-    transform: translateY(-3px);
-}
-
-/* --- Contact Section --- */
-.contact {
-    padding: 80px 0;
-    text-align: center;
-    border-top: 1px solid var(--border-color);
-}
-
-.contact h2 {
-    font-size: 36px;
-    margin-bottom: 15px;
-}
-
-.contact p {
-    max-width: 500px;
-    margin: 0 auto 30px auto;
-}
-
-.contact-button {
-    display: inline-block;
-    background-color: var(--primary-yellow);
-    color: var(--bg-dark);
-    padding: 15px 40px;
-    border-radius: 8px;
-    font-weight: 600;
-    font-size: 18px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.contact-button:hover {
-    transform: translateY(-5px);
-    background-color: #ffd466;
-}
-
-/* --- Contact Details in Info Section --- */
-.contact-details {
-    margin-top: 15px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.contact-details a {
-    color: var(--primary-yellow);
-    font-weight: 500;
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    width: fit-content;
-}
-
-.contact-details a:hover {
-    color: var(--text-white);
-}
-
-.contact-details a i {
-    font-size: 16px;
-    width: 20px;
-    text-align: center;
-}
-
-/* --- Language Switcher Styles --- */
-.lang-switcher {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    margin-left: 30px;
-}
-
-.lang-switcher button {
-    background: none;
-    border: none;
-    color: var(--text-gray);
-    font-family: 'Poppins', sans-serif;
-    font-size: 16px;
-    font-weight: 500;
-    cursor: pointer;
-    padding: 5px;
-    transition: color 0.3s ease;
-    position: relative;
-}
-
-.lang-switcher button:hover {
-    color: var(--text-white);
-}
-
-.lang-switcher button.active {
-    color: var(--primary-yellow);
-    font-weight: 700;
-}
-
-.lang-switcher button#lang-pl::before {
-    content: '|';
-    position: absolute;
-    left: -5px;
-    color: var(--border-color);
-}
-
-
-/* ======================================================== */
-/* --- MOBILE RESPONSIVE IMPROVEMENTS (Tablet & Down) --- */
-/* ======================================================== */
-@media (max-width: 992px) {
-    .hero {
-        flex-direction: column;
-        text-align: center;
-    }
-    .social-links {
-        justify-content: center;
-    }
-    .short-line {
-        margin-left: auto;
-        margin-right: auto;
-    }
-    .hero-text-content {
-        order: 2;
-    }
-    .hero-image-container {
-        order: 1;
-        margin-bottom: 30px;
-        flex-basis: auto;
-        width: 60%;
-    }
-    .info-stats-section {
-        flex-direction: column;
-        gap: 40px;
-    }
-    .services-showcase {
-        grid-template-columns: 1fr;
-    }
-    .works-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* ======================================================== */
-/* --- MOBILE RESPONSIVE IMPROVEMENTS (Phone Screens) --- */
-/* ======================================================== */
-@media (max-width: 768px) {
-    /* KEY CHANGE: Better spacing on small screens */
-    .container {
-        padding: 0 20px;
-    }
-
-    /* 
-       KEY CHANGE: This creates a more professional mobile header. 
-       The logo stays on the left, nav on the right. It prevents the huge vertical stacking.
-       For more items, a JavaScript "hamburger" menu would be the next step.
-    */
-    header {
-        flex-direction: row; /* Keep it as a row */
-        align-items: center;
-        padding: 20px 0;
-    }
-    nav ul {
-        gap: 20px; /* Reduce gap between nav items */
-    }
-    .lang-switcher {
-        margin-left: 20px;
-    }
-    .logo img {
-        max-height: 40px;
-    }
-
-    /* KEY CHANGE: Reduced font sizes for better readability */
-    .hero h1 {
-        font-size: 40px; /* Was 64px on desktop */
-    }
-    .hero h2 {
-        font-size: 18px; /* Was 24px */
-    }
-    .section-header h2, .contact h2 {
-        font-size: 28px; /* Was 36px */
-    }
-    .stat-item span {
-        font-size: 36px; /* Was 48px */
-    }
-
-    /* KEY CHANGE: Better vertical spacing for content */
-    .hero, .info-stats-section, .services-showcase, .recent-works, .worked-with, .contact {
-        padding: 40px 0;
-    }
-
-    .info-block h3 {
-        margin-top: 2em; /* Creates separation between list items */
-    }
-    .info-block h3:first-child {
-        margin-top: 0;
-    }
     
-    .worked-with-logos img {
-        height: 60px; /* Slightly smaller logos */
-    }
-}
