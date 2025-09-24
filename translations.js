@@ -93,7 +93,7 @@ const translations = {
     // Worked With Section
     workedWithTitle: "Współpraca",
     workedWithSubtitle: "Wybrane marki, klienci i technologie, z którymi miałem przyjemność współpracować:",
-  project2Title: "Strona Firmy Produkującej Słuchawy",
+  project2Title: "Strona ",
   project2Desc: "UI/UX, Branding",
   project3Title: "Nowy Design Portfolio",
   project3Desc: "UI/UX, Branding",
