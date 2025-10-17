@@ -260,6 +260,7 @@ section:last-of-type {
     display: block;
     aspect-ratio: 16 / 10;
     object-fit: cover;
+    transition: transform 0.3s ease; /* Add this line */
 }
 /* ELEGANCE: Added a content wrapper for proper padding */
 .work-item-content {
