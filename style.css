@@ -255,6 +255,10 @@ section:last-of-type {
     transform: translateY(-8px);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
+
+.work-item:hover img {
+    transform: scale(1.05); /* Make the image slightly larger on hover */
+}
 .work-item img {
     width: 100%;
     display: block;
