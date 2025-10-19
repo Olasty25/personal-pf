@@ -3,71 +3,240 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aleksander Tomczak - Website Creator & AI Developer</title>
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
-    <link rel="stylesheet" href="style.css">
+    <title>Aleksander Tomczak | Portfolio</title>
+    
+    <!-- Google Fonts: Playfair Display & Lato -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <!-- Link to your new CSS file -->
+    <link rel="stylesheet" href="elegant-style.css">
+    
+    <!-- Favicon Placeholder -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
 </head>
 <body>
 
-    <div class="container modern-portfolio">
-        <header class="main-header">
+    <!-- ===== HEADER ===== -->
+    <header class="site-header">
+        <div class="container header-content">
             <div class="logo">
-                <img src="assets/pflogo.png" alt="Thorest Logo">
+                <a href="#">A.T.</a>
             </div>
             <nav class="main-nav">
                 <ul>
-                    <li><a href="#services" data-translate-key="navServices">Usługi</a></li>
-                    <li><a href="#works" class="active" data-translate-key="navWorks">Projekty</a></li>
-                    <li><a href="https://www.linkedin.com/in/aleksander-tomczak-75529a385/" data-translate-key="navBlog">Blog</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#works">Work</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
-            <div class="lang-switcher">
-                <button id="lang-en">EN</button>
-                <button id="lang-pl">PL</button>
-            </div>
-        </header>
+            <!-- You can re-add your language switcher here if needed -->
+        </div>
+    </header>
 
-        <main>
-            <section class="hero modern-hero">
-                <div class="hero-content">
-                    <div class="hero-text">
-                        <h1 data-translate-key="heroTitle">Aleksander Tomczak</h1>
-                        <span class="short-line"></span>
-                        <h2 data-translate-key="heroSubtitle">Website Creator & AI Dev, based in Poland.</h2>
-                        <p data-translate-key="heroDescription">I build elegant, responsive websites and intelligent AI solutions that solve real-world problems. Passionate about clean code and user-centric design.</p>
-                        <a href="#about" class="cta-link"><span data-translate-key="heroStoryLink">My Story</span> <i class="fa-solid fa-arrow-right"></i></a>
-                        <div class="social-links">
-                            <a href="https://github.com/Olasty25" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-                            <a href="https://www.linkedin.com/in/aleksander-tomczak-75529a385" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-                            <a href="https://www.instagram.com/thoughtrealstudio" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                            <a href="https://www.freelancer.com/u/Olasty25" target="_blank" aria-label="Freelancer"><i class="fa-solid fa-briefcase"></i></a>
+    <main>
+
+        <!-- ===== HERO SECTION ===== -->
+        <section id="home" class="hero-section">
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <span class="subtitle">Website Creator & AI Developer</span>
+                    <h1>Aleksander Tomczak</h1>
+                    <p>Crafting digital experiences that are intelligent, beautiful, and intuitive. Based in Poland, building for the world.</p>
+                    <div class="hero-socials">
+                        <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <!-- IMAGE PLACEHOLDER: Replace with a professional photo of yourself (e.g., 'assets/me.jpg') -->
+                    <img src="https://via.placeholder.com/400x500/cccccc/969696?text=Olek" alt="Portrait of Aleksander Tomczak">
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== CLIENTS / WORKED WITH SECTION ===== -->
+        <section id="clients" class="clients-section">
+            <div class="container">
+                <h3 class="clients-title">Trusted by innovative companies</h3>
+                <div class="client-logos">
+                    <!-- IMAGE PLACEHOLDER: Replace with your client logos -->
+                    <img src="https://via.placeholder.com/150x50/ffffff/cccccc?text=ClientLogo" alt="Client Logo">
+                    <img src="https://via.placeholder.com/150x50/ffffff/cccccc?text=ClientLogo" alt="Client Logo">
+                    <img src="https://via.placeholder.com/150x50/ffffff/cccccc?text=ClientLogo" alt="Client Logo">
+                </div>
+            </div>
+        </section>
+        
+        <!-- ===== SERVICES SECTION ===== -->
+        <section id="services" class="services-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>My Expertise</h2>
+                    <p>I provide a range of creative and technical services.</p>
+                </div>
+                <div class="services-grid">
+                    <div class="service-item">
+                        <i class="fa-solid fa-code"></i>
+                        <h3>Web Development</h3>
+                        <p>Building responsive, high-performance websites from scratch with a focus on clean code and modern technologies.</p>
+                    </div>
+                    <div class="service-item">
+                        <i class="fa-solid fa-robot"></i>
+                        <h3>AI Integration</h3>
+                        <p>Developing and implementing custom AI solutions, from chatbots to machine learning models, to automate and enhance business processes.</p>
+                    </div>
+                    <div class="service-item">
+                        <i class="fa-solid fa-pen-ruler"></i>
+                        <h3>UI/UX Design</h3>
+                        <p>Designing user-centric interfaces that are not only visually appealing but also intuitive and easy to navigate.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== WORKS / PORTFOLIO SECTION ===== -->
+        <section id="works" class="portfolio-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Selected Work</h2>
+                    <p>A glimpse into projects I'm proud to have built.</p>
+                </div>
+                <div class="portfolio-grid">
+                    <!-- Project 1 Placeholder -->
+                    <div class="portfolio-item">
+                        <a href="#">
+                            <img src="https://via.placeholder.com/600x450/cccccc/969696?text=Project+1" alt="Project 1 Preview">
+                            <div class="portfolio-overlay">
+                                <h3>Coffee Shop Website</h3>
+                                <span>Web Design & Development</span>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- Project 2 Placeholder -->
+                    <div class="portfolio-item">
+                        <a href="#">
+                            <img src="https://via.placeholder.com/600x450/cccccc/969696?text=Project+2" alt="Project 2 Preview">
+                            <div class="portfolio-overlay">
+                                <h3>AI Chatbot Platform</h3>
+                                <span>AI Development</span>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- Project 3 Placeholder -->
+                    <div class="portfolio-item">
+                        <a href="#">
+                            <img src="https://via.placeholder.com/600x450/cccccc/969696?text=Project+3" alt="Project 3 Preview">
+                            <div class="portfolio-overlay">
+                                <h3>Legal Services Portal</h3>
+                                <span>Full-Stack Development</span>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- Project 4 Placeholder -->
+                    <div class="portfolio-item">
+                        <a href="#">
+                            <img src="https://via.placeholder.com/600x450/cccccc/969696?text=Project+4" alt="Project 4 Preview">
+                            <div class="portfolio-overlay">
+                                <h3>Audio Recognition App</h3>
+                                <span>Machine Learning</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== ABOUT & STATS SECTION ===== -->
+        <section id="about" class="about-section">
+            <div class="container about-content">
+                <div class="about-text">
+                    <div class="section-title" style="text-align: left;">
+                        <h2>My Story</h2>
+                    </div>
+                    <p>Driven by a passion for technology and design, I began my journey two years ago with a single goal: to build digital solutions that make a difference. Every line of code is written with purpose, and every design is crafted with the user in mind.</p>
+                    <blockquote>"Creativity is intelligence having fun."</blockquote>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">2+</span>
+                        <span class="stat-label">Years of Experience</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">10+</span>
+                        <span class="stat-label">Projects Completed</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">5</span>
+                        <span class="stat-label">Happy Clients</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== PROCESS SECTION ===== -->
+        <section id="process" class="process-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>How Ideas Become Reality</h2>
+                    <p>My collaborative and transparent development process.</p>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>01. Discovery & Strategy</h3>
+                            <p>We start by understanding your vision, goals, and target audience to create a solid strategic foundation.</p>
                         </div>
                     </div>
-                    <div class="hero-image">
-                        <img src="assets/olek.png" alt="A photo of Aleksander Tomczak">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>02. Design & Prototyping</h3>
+                            <p>I create wireframes and high-fidelity mockups, focusing on a seamless user experience and elegant design.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>03. Development</h3>
+                            <p>The approved design is brought to life with clean, efficient code and the best technologies for the job.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>04. Launch & Support</h3>
+                            <p>After rigorous testing, we launch your project. I provide ongoing support to ensure everything runs smoothly.</p>
+                        </div>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <section id="worked-with" class="worked-with modern-worked-with">
-                <div class="section-header">
-                    <h2 data-translate-key="workedWithTitle">I've Had the Pleasure of Working With</h2>
-                    <p data-translate-key="workedWithSubtitle">Creating value through collaboration.</p>
-                </div>
-                <div class="worked-with-logos">
-                    <img src="assets/cubesoft.png" alt="Cubesoft" title="Cubesoft">
-                </div>
-            </section>
+        <!-- ===== CONTACT / CTA SECTION ===== -->
+        <section id="contact" class="cta-section">
+            <div class="container">
+                <h2>Have a project in mind?</h2>
+                <p>Let's work together to create something exceptional. I'm available for freelance opportunities.</p>
+                <a href="mailto:your-email@example.com" class="cta-button">Get In Touch</a>
+            </div>
+        </section>
 
-            <section id="about" class="info-stats-section modern-info">
-                <div class="info-block">
-                    <h3 data-translate-key="infoTitle">Masz Pomysł na Projekt?</h3>
-                    <p data-translate-key="infoSubtitle">Zmieńmy Twój pomysł w rzeczywistość.</p>
-                    <div class="contact-details">
-                        <a href="mailto:thoughtrealstudio@gmail.com"><i class="fa-solid fa-envelope"></i> thoughtrealstudio@gmail.com</a>
-                        <a href="tel:+48574610138"><i class="fa-solid fa-phone"></i> +48 574 610 138</a>
-                    </div>
-                </div>
-                <div class="info-block">
-                    
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2024 Aleksander Tomczak. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
