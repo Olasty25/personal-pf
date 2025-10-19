@@ -502,3 +502,33 @@ img {
     .timeline-item { padding-left: 40px; }
     .timeline-dot { left: 0; }
 }
+
+
+
+/* --- Language Switcher Styles (add to your CSS) --- */
+.lang-switcher {
+    display: flex;
+    border: 1px solid var(--border-color);
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.lang-switcher button {
+    background: none;
+    border: none;
+    color: var(--text-primary);
+    padding: 0.4rem 1rem;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 700;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.lang-switcher button:hover {
+    color: var(--text-headings);
+}
+
+.lang-switcher button.active {
+    background-color: var(--accent-gold);
+    color: var(--bg-dark);
+}

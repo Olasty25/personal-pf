@@ -1,129 +1,132 @@
-9const translations = {
-  en: {
-    // Header
-    navServices: "Services",
-    navWorks: "Works",
-        // Website Build Process Section
-        processTitle: "How I Build Your Website",
-        processDescription: "Step-by-step process for creating a website in close consultation with the client:",
-        processStep1Title: "Consultation & Needs Analysis",
-        processStep1Desc: "Initial meeting to understand your goals and expectations.",
-        processStep2Title: "Solution Proposal",
-        processStep2Desc: "Presenting concepts, technologies, and a preliminary quote.",
-        processStep3Title: "Design & Mockups",
-        processStep3Desc: "Creating wireframes and visual design, client approval.",
-        processStep4Title: "Development & Implementation",
-        processStep4Desc: "Building the website according to the approved design.",
-        processStep5Title: "Testing & Revisions",
-        processStep5Desc: "Checking functionality, making necessary adjustments.",
-        processStep6Title: "Launch & Support",
-  processStep6Desc: "Publishing the site and providing ongoing technical support.",
-    navBlog: "Blog",
-    // Hero Section
-    heroTitle: "Aleksander Tomczak.",
-    heroSubtitle: "Website Creator & AI Dev, based in Poland.",
-    heroDescription: "I build elegant, responsive websites and intelligent AI solutions that solve real-world problems. Passionate about clean code and user-centric design.",
-    heroStoryLink: "My Story",
-    // Info & Stats Section
-    infoTitle: "Have a Project in Mind?",
-    infoSubtitle: "Let's turn your idea into reality.",
-    quote: `"You can't use up creativity. The more you use, the more you have."`,
-    statsYears: "Years of Experience",
-    statsProjects: "Projects Completed",
-    // Services Section
-    service1Title: "Website Creator",
-    service1Desc: "Full-Stack Development",
-    service2Title: "AI Development",
-    service2Desc: "Machine Learning Models",
-    service3Title: "UI/UX Design",
-    service3Desc: "Figma & Webflow",
-    // Works Section
-  worksTitle: "All Creative Works",
-  worksSubtitle: "A selection of my favorite projects. Click to see the live preview.",
-  project1Title: "Coffee Shop Website",
-  project1Desc: "E-commerce, Web Development",
-    // Worked With Section
-    workedWithTitle: "Collaborations",
-    workedWithSubtitle: "Selected brands, clients, and technologies I've had the pleasure to work with:",
-  project2Title: "Car Detailing Company Website",
-  project2Desc: "UI/UX, Branding",
-  project3Title: "Portfolio Redesign",
-  project3Desc: "UI/UX Design, Branding",
-  project4Title: "Hair Salon Website",
-  project4Desc: "Full-Stack Development",
-  project5Title: "Art Gallery Website",
-  project5Desc: "Web Development, UI/UX",
-  project6Title: "Earphone Company Landing Page",
-  project6Desc: "UI/UX, Web Development",
-  project7Title: "Legal Services Platform",
-  project7Desc: "AI Development, Web App",
-    // Contact Section
-    contactTitle: "Get In Touch",
-    contactDescription: "Have a project for me, or just want to say hi? My inbox is always open. I'll get back to you as soon as I can.",
-    contactButton: "Say Hello"
-  },
-  pl: {
-    // Header
-    navServices: "Usługi",
-    navWorks: "Projekty",
-    navBlog: "Blog",
-    // Hero Section
-    heroTitle: "Aleksander Tomczak.",
-    heroSubtitle: "Twórca Stron & AI Dev, Polak.",
-    heroDescription: "Buduję eleganckie, responsywne strony internetowe i inteligentne rozwiązania AI, które rozwiązują realne problemy. Pasjonuję się czystym kodem i projektowaniem zorientowanym na użytkownika.",
-    heroStoryLink: "Moja Historia",
-    // Info & Stats Section
-    infoTitle: "Masz Pomysł na Projekt?",
-    infoSubtitle: "Zmieńmy Twój pomysł w rzeczywistość.",
-    quote: `"Kreatywności nie da się zużyć. Im więcej jej używasz, tym więcej jej masz."`,
-    statsYears: "Lata Doświadczenia",
-    statsProjects: "Ukończone Projekty",
-    // Services Section
-    service1Title: "Twórca Stron",
-    service1Desc: "Full-Stack Development",
-    service2Title: "Rozwój i Wykorzystanie AI",
-    service2Desc: "Modele Uczenia Maszynowego",
-    service3Title: "Projektowanie UI/UX",
-    service3Desc: "Figma & Webflow",
-    // Works Section
-  worksTitle: "Wszystkie Projekty",
-  worksSubtitle: "Wybrane ulubione projekty. Kliknij, aby zobaczyć podgląd na żywo.",
-  project1Title: "Strona Kawiarni",
-  project1Desc: "E-commerce, Web Development",
-    // Worked With Section
-    workedWithTitle: "Współpraca",
-    workedWithSubtitle: "Wybrane marki, klienci i technologie, z którymi miałem przyjemność współpracować:",
-  project2Title: "Strona Firmy Detailingowej",
-  project2Desc: "UI/UX, Branding",
-  project3Title: "Nowy Design Portfolio",
-  project3Desc: "UI/UX, Branding",
-  project4Title: "Strona Salonu Fryzjerskiego",
-  project4Desc: "Full-Stack Development",
-  project5Title: "Strona Galerii Sztuki",
-  project5Desc: "Web Development, UI/UX",
-  project6Title: "Wizytówka Firmy Słuchawkowej",
-  project6Desc: "UI/UX, Web Development",
-  project7Title: "Strona Usług Prawnych",
-  project7Desc: "UI/UX Design",
-    // Contact Section
-    contactTitle: "Skontaktuj się",
-    contactDescription: "Masz dla mnie projekt, a może chcesz się tylko przywitać? Moja skrzynka odbiorcza jest zawsze otwarta. Odpowiem tak szybko, jak to możliwe.",
-    contactButton: "Napisz do Mnie"
-    ,
-    // Website Build Process Section
-    processTitle: "Jak Buduję Twoją Stronę",
-    processDescription: "Proces tworzenia strony krok po kroku, w ścisłej konsultacji z klientem:",
-    processStep1Title: "Konsultacja i Analiza Potrzeb",
-    processStep1Desc: "Spotkanie wstępne w celu poznania Twoich celów i oczekiwań.",
-    processStep2Title: "Propozycja Rozwiązania",
-    processStep2Desc: "Przedstawienie koncepcji, technologii oraz wstępnej wyceny.",
-    processStep3Title: "Projekt i Makiety",
-    processStep3Desc: "Tworzenie wireframe'ów i projektu graficznego, akceptacja przez klienta.",
-    processStep4Title: "Rozwój i Implementacja",
-    processStep4Desc: "Budowa strony według zatwierdzonego projektu.",
-    processStep5Title: "Testowanie i Poprawki",
-    processStep5Desc: "Sprawdzenie funkcjonalności, wprowadzenie niezbędnych korekt.",
-    processStep6Title: "Publikacja i Wsparcie",
-    processStep6Desc: "Opublikowanie strony oraz zapewnienie wsparcia technicznego."
-  }
+const translations = {
+    en: {
+        // Navigation
+        navServices: "Services",
+        navWork: "Work",
+        navAbout: "About",
+        navContact: "Contact",
+
+        // Hero Section
+        heroSubtitle: "Website Creator & AI Developer",
+        heroTitle: "Aleksander Tomczak",
+        heroDescription: "Crafting digital experiences that are intelligent, beautiful, and intuitive. Based in Poland, building for the world.",
+
+        // Clients Section
+        clientsTitle: "Trusted by innovative companies",
+
+        // Services Section
+        servicesTitle: "My Expertise",
+        servicesSubtitle: "I provide a range of creative and technical services.",
+        service1Title: "Web Development",
+        service1Desc: "Building responsive, high-performance websites from scratch with a focus on clean code and modern technologies.",
+        service2Title: "AI Integration",
+        service2Desc: "Developing and implementing custom AI solutions, from chatbots to machine learning models, to automate and enhance business processes.",
+        service3Title: "UI/UX Design",
+        service3Desc: "Designing user-centric interfaces that are not only visually appealing but also intuitive and easy to navigate.",
+
+        // Portfolio Section
+        portfolioTitle: "Selected Work",
+        portfolioSubtitle: "A glimpse into projects I'm proud to have built.",
+        project1Title: "Coffee Shop Website",
+        project1Type: "Web Design & Development",
+        project2Title: "AI Chatbot Platform",
+        project2Type: "AI Development",
+        project3Title: "Legal Services Portal",
+        project3Type: "Full-Stack Development",
+        project4Title: "Audio Recognition App",
+        project4Type: "Machine Learning",
+
+        // About Section
+        aboutTitle: "My Story",
+        aboutDescription: "Driven by a passion for technology and design, I began my journey two years ago with a single goal: to build digital solutions that make a difference. Every line of code is written with purpose, and every design is crafted with the user in mind.",
+        aboutQuote: `"Creativity is intelligence having fun."`,
+        stat1Label: "Years of Experience",
+        stat2Label: "Projects Completed",
+        stat3Label: "Happy Clients",
+
+        // Process Section
+        processTitle: "How Ideas Become Reality",
+        processSubtitle: "My collaborative and transparent development process.",
+        step1Title: "01. Discovery & Strategy",
+        step1Desc: "We start by understanding your vision, goals, and target audience to create a solid strategic foundation.",
+        step2Title: "02. Design & Prototyping",
+        step2Desc: "I create wireframes and high-fidelity mockups, focusing on a seamless user experience and elegant design.",
+        step3Title: "03. Development",
+        step3Desc: "The approved design is brought to life with clean, efficient code and the best technologies for the job.",
+        step4Title: "04. Launch & Support",
+        step4Desc: "After rigorous testing, we launch your project. I provide ongoing support to ensure everything runs smoothly.",
+
+        // CTA Section
+        ctaTitle: "Have a project in mind?",
+        ctaSubtitle: "Let's work together to create something exceptional. I'm available for freelance opportunities.",
+        ctaButton: "Get In Touch",
+
+        // Footer
+        footerText: "© 2024 Aleksander Tomczak. All Rights Reserved.",
+    },
+    pl: {
+        // Nawigacja
+        navServices: "Usługi",
+        navWork: "Projekty",
+        navAbout: "O Mnie",
+        navContact: "Kontakt",
+
+        // Sekcja Hero
+        heroSubtitle: "Twórca Stron & Deweloper AI",
+        heroTitle: "Aleksander Tomczak",
+        heroDescription: "Tworzę cyfrowe doświadczenia, które są inteligentne, piękne i intuicyjne. Pracuję w Polsce, budując dla świata.",
+
+        // Sekcja Klienci
+        clientsTitle: "Zaufały mi innowacyjne firmy",
+
+        // Sekcja Usługi
+        servicesTitle: "Moja Ekspertyza",
+        servicesSubtitle: "Świadczę szereg kreatywnych i technicznych usług.",
+        service1Title: "Tworzenie Stron WWW",
+        service1Desc: "Buduję responsywne, wydajne strony internetowe od podstaw, z naciskiem na czysty kod i nowoczesne technologie.",
+        service2Title: "Integracja AI",
+        service2Desc: "Projektuję i wdrażam niestandardowe rozwiązania AI, od chatbotów po modele uczenia maszynowego, aby automatyzować i ulepszać procesy biznesowe.",
+        service3Title: "Projektowanie UI/UX",
+        service3Desc: "Projektuję interfejsy zorientowane na użytkownika, które są nie tylko atrakcyjne wizualnie, ale także intuicyjne i łatwe w nawigacji.",
+
+        // Sekcja Portfolio
+        portfolioTitle: "Wybrane Projekty",
+        portfolioSubtitle: "Przegląd projektów, z których jestem dumny.",
+        project1Title: "Strona Kawiarni",
+        project1Type: "Projektowanie i Tworzenie Stron",
+        project2Title: "Platforma Chatbotów AI",
+        project2Type: "Rozwój AI",
+        project3Title: "Portal Usług Prawnych",
+        project3Type: "Full-Stack Development",
+        project4Title: "Aplikacja do Rozpoznawania Dźwięku",
+        project4Type: "Uczenie Maszynowe",
+        
+        // Sekcja O Mnie
+        aboutTitle: "Moja Historia",
+        aboutDescription: "Kierowany pasją do technologii i designu, rozpocząłem swoją podróż dwa lata temu z jednym celem: tworzyć cyfrowe rozwiązania, które robią różnicę. Każda linia kodu jest pisana z celem, a każdy projekt tworzony z myślą o użytkowniku.",
+        aboutQuote: `"Kreatywność to inteligencja, która dobrze się bawi."`,
+        stat1Label: "Lata Doświadczenia",
+        stat2Label: "Ukończone Projekty",
+        stat3Label: "Zadowoleni Klienci",
+
+        // Sekcja Proces
+        processTitle: "Jak Pomysły Stają Się Rzeczywistością",
+        processSubtitle: "Mój oparty na współpracy i przejrzysty proces tworzenia.",
+        step1Title: "01. Odkrycie i Strategia",
+        step1Desc: "Zaczynamy od zrozumienia Twojej wizji, celów i grupy docelowej, aby stworzyć solidne podstawy strategiczne.",
+        step2Title: "02. Projektowanie i Prototypowanie",
+        step2Desc: "Tworzę makiety i prototypy, koncentrując się na płynnym doświadczeniu użytkownika i eleganckim designie.",
+        step3Title: "03. Development",
+        step3Desc: "Zatwierdzony projekt ożywa dzięki czystemu, wydajnemu kodowi i najlepszym technologiom do danego zadania.",
+        step4Title: "04. Wdrożenie i Wsparcie",
+        step4Desc: "Po rygorystycznych testach wdrażamy Twój projekt. Zapewniam bieżące wsparcie, aby wszystko działało bez zarzutu.",
+
+        // Sekcja CTA
+        ctaTitle: "Masz pomysł na projekt?",
+        ctaSubtitle: "Pracujmy razem, aby stworzyć coś wyjątkowego. Jestem otwarty na zlecenia freelancerskie.",
+        ctaButton: "Skontaktuj Się",
+
+        // Stopka
+        footerText: "© 2024 Aleksander Tomczak. Wszelkie Prawa Zastrzeżone.",
+    }
 };

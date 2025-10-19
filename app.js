@@ -1,21 +1,21 @@
 document.addEventListener('DOMContentLoaded', () => {
     const langEnBtn = document.getElementById('lang-en');
     const langPlBtn = document.getElementById('lang-pl');
-    
+    const translatableElements = document.querySelectorAll('[data-translate-key]');
+
     const setLanguage = (lang) => {
-        // Find all elements with the data-translate-key attribute
-        const elements = document.querySelectorAll('[data-translate-key]');
-        
-        // Loop through each element
-        elements.forEach(element => {
+        // Update text content
+        translatableElements.forEach(element => {
             const key = element.getAttribute('data-translate-key');
-            // Check if a translation exists for this key and language
             if (translations[lang] && translations[lang][key]) {
-                element.innerText = translations[lang][key];
+                element.textContent = translations[lang][key];
             }
         });
 
-        // Update active language button style
+        // Update HTML lang attribute for accessibility
+        document.documentElement.lang = lang;
+
+        // Update active button state
         if (lang === 'pl') {
             langPlBtn.classList.add('active');
             langEnBtn.classList.remove('active');
@@ -24,15 +24,23 @@ document.addEventListener('DOMContentLoaded', () => {
             langPlBtn.classList.remove('active');
         }
 
-        // Save the chosen language to local storage
+        // Save language preference
         localStorage.setItem('language', lang);
     };
 
-    // Add click event listeners to language buttons
+    // Event listeners for buttons
     langEnBtn.addEventListener('click', () => setLanguage('en'));
     langPlBtn.addEventListener('click', () => setLanguage('pl'));
 
-    // Check for a saved language in local storage, or default to English
-    const savedLang = localStorage.getItem('language') || 'en';
-    setLanguage(savedLang);
+    // Initial language setup
+    const savedLang = localStorage.getItem('language');
+    const browserLang = navigator.language.split('-')[0]; // 'pl-PL' -> 'pl'
+
+    if (savedLang) {
+        setLanguage(savedLang);
+    } else if (browserLang === 'pl') {
+        setLanguage('pl');
+    } else {
+        setLanguage('en'); // Default to English
+    }
 });
