@@ -239,8 +239,8 @@ img {
 
 /* Add this new block of code */
 .client-logos img {
-    max-width: 160px;   /* Cap the maximum width of any logo */
-    max-height: 55px;   /* Cap the maximum height to keep the row even */
+    max-width: 185px;   /* Cap the maximum width of any logo */
+    max-height: 70px;   /* Cap the maximum height to keep the row even */
     object-fit: contain; /* IMPORTANT: Keeps aspect ratio, prevents squishing */
     width: 100%;        /* Allows the logo to be smaller if its container is smaller */
 }
