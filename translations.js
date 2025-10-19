@@ -9,7 +9,7 @@ const translations = {
         // Hero Section
         heroSubtitle: "Website Creator & AI Developer",
         heroTitle: "Aleksander Tomczak",
-        heroDescription: "Crafting digital experiences that are intelligent, beautiful, and intuitive. Based in Poland, building for the world.",
+        heroDescription: "Crafting websites that are smart, beautiful, and intuitive. Based in Poland, building for the world.",
 
         // Clients Section
         clientsTitle: "Trusted by innovative companies",
@@ -47,13 +47,13 @@ const translations = {
         // Process Section
         processTitle: "How Ideas Become Reality",
         processSubtitle: "My collaborative and transparent development process.",
-        step1Title: "01. Discovery & Strategy",
+        step1Title: "1. Discovery & Strategy",
         step1Desc: "We start by understanding your vision, goals, and target audience to create a solid strategic foundation.",
-        step2Title: "02. Design & Prototyping",
+        step2Title: "2. Design & Prototyping",
         step2Desc: "I create wireframes and high-fidelity mockups, focusing on a seamless user experience and elegant design.",
-        step3Title: "03. Development",
+        step3Title: "3. Development",
         step3Desc: "The approved design is brought to life with clean, efficient code and the best technologies for the job.",
-        step4Title: "04. Launch & Support",
+        step4Title: "4. Launch & Support",
         step4Desc: "After rigorous testing, we launch your project. I provide ongoing support to ensure everything runs smoothly.",
 
         // CTA Section
@@ -74,10 +74,10 @@ const translations = {
         // Sekcja Hero
         heroSubtitle: "Twórca Stron & Deweloper AI",
         heroTitle: "Aleksander Tomczak",
-        heroDescription: "Tworzę cyfrowe doświadczenia, które są inteligentne, piękne i intuicyjne. Pracuję w Polsce, budując dla świata.",
+        heroDescription: "Tworzę strony internetowe, które są inteligentne, piękne i intuicyjne. Z Polski, dla świata.",
 
         // Sekcja Klienci
-        clientsTitle: "Zaufały mi innowacyjne firmy",
+        clientsTitle: "Klienci",
 
         // Sekcja Usługi
         servicesTitle: "Moja Ekspertyza",
@@ -112,13 +112,13 @@ const translations = {
         // Sekcja Proces
         processTitle: "Jak Pomysły Stają Się Rzeczywistością",
         processSubtitle: "Mój oparty na współpracy i przejrzysty proces tworzenia.",
-        step1Title: "01. Odkrycie i Strategia",
+        step1Title: "1. Odkrycie i Strategia",
         step1Desc: "Zaczynamy od zrozumienia Twojej wizji, celów i grupy docelowej, aby stworzyć solidne podstawy strategiczne.",
-        step2Title: "02. Projektowanie i Prototypowanie",
+        step2Title: "2. Projektowanie i Prototypowanie",
         step2Desc: "Tworzę makiety i prototypy, koncentrując się na płynnym doświadczeniu użytkownika i eleganckim designie.",
-        step3Title: "03. Development",
+        step3Title: "3. Development",
         step3Desc: "Zatwierdzony projekt ożywa dzięki czystemu, wydajnemu kodowi i najlepszym technologiom do danego zadania.",
-        step4Title: "04. Wdrożenie i Wsparcie",
+        step4Title: "4. Wdrożenie i Wsparcie",
         step4Desc: "Po rygorystycznych testach wdrażamy Twój projekt. Zapewniam bieżące wsparcie, aby wszystko działało bez zarzutu.",
 
         // Sekcja CTA
@@ -127,6 +127,6 @@ const translations = {
         ctaButton: "Skontaktuj Się",
 
         // Stopka
-        footerText: "© 2024 Aleksander Tomczak. Wszelkie Prawa Zastrzeżone.",
+        footerText: "© 2025 Aleksander Tomczak. Wszelkie Prawa Zastrzeżone.",
     }
 };
