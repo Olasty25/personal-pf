@@ -27,14 +27,13 @@ const translations = {
         // Portfolio Section
         portfolioTitle: "Selected Work",
         portfolioSubtitle: "A glimpse into projects I'm proud to have built.",
-        project1Title: "Coffee Shop Website",
+        project1Title: "Car Detailing Company Website",
         project1Type: "Web Design & Development",
-        project2Title: "AI Chatbot Platform",
+        project2Title: "AI Edu Chatbot Platform",
         project2Type: "AI Development",
-        project3Title: "Legal Services Portal",
-        project3Type: "Full-Stack Development",
-        project4Title: "Audio Recognition App",
-        project4Type: "Machine Learning",
+        project3Title: "Portfolio Template Customization",
+        project3Type: "Low-Code Development",
+
 
         // About Section
         aboutTitle: "My Story",
@@ -62,7 +61,7 @@ const translations = {
         ctaButton: "Get In Touch",
 
         // Footer
-        footerText: "© 2024 Aleksander Tomczak. All Rights Reserved.",
+        footerText: "© 2025 Aleksander Tomczak. All Rights Reserved.",
     },
     pl: {
         // Nawigacja
@@ -92,14 +91,12 @@ const translations = {
         // Sekcja Portfolio
         portfolioTitle: "Wybrane Projekty",
         portfolioSubtitle: "Przegląd projektów, z których jestem dumny.",
-        project1Title: "Strona Kawiarni",
+        project1Title: "Strona Firmy Detailingowej",
         project1Type: "Projektowanie i Tworzenie Stron",
-        project2Title: "Platforma Chatbotów AI",
+        project2Title: "Edukacyjny Czatbot AI",
         project2Type: "Rozwój AI",
-        project3Title: "Portal Usług Prawnych",
-        project3Type: "Full-Stack Development",
-        project4Title: "Aplikacja do Rozpoznawania Dźwięku",
-        project4Type: "Uczenie Maszynowe",
+        project3Title: "Personalizacja Szablonu Portfolio",
+        project3Type: "Low-Code Development",
         
         // Sekcja O Mnie
         aboutTitle: "Moja Historia",
