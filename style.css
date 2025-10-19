@@ -210,6 +210,9 @@ img {
 /* =================================
    5. CLIENTS SECTION
 ==================================== */
+/* =================================
+   5. CLIENTS SECTION
+==================================== */
 .clients-section {
     padding: 4rem 0;
     background-color: var(--bg-light-dark);
@@ -226,11 +229,20 @@ img {
 
 .client-logos {
     display: flex;
-    justify-content: space-around;
+    justify-content: center; /* Changed from space-around for better alignment */
     align-items: center;
-    gap: 2rem;
+    gap: 3rem; /* Increased gap slightly for better spacing */
     flex-wrap: wrap;
     filter: grayscale(100%) opacity(0.6);
+    transition: filter 0.3s ease; /* Smooth transition for hover */
+}
+
+/* Add this new block of code */
+.client-logos img {
+    max-width: 160px;   /* Cap the maximum width of any logo */
+    max-height: 55px;   /* Cap the maximum height to keep the row even */
+    object-fit: contain; /* IMPORTANT: Keeps aspect ratio, prevents squishing */
+    width: 100%;        /* Allows the logo to be smaller if its container is smaller */
 }
 
 /* =================================
