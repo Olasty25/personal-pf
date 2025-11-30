@@ -27,7 +27,7 @@ const translations = {
         // Portfolio Section
         portfolioTitle: "Selected Work",
         portfolioSubtitle: "A glimpse into projects I'm proud to have built.",
-        project1Title: "Car Detailing Company Website",
+        project1Title: "Car Leasing Company Website",
         project1Type: "Web Design & Development",
         project2Title: "AI Edu Chatbot Platform",
         project2Type: "AI Development",
@@ -91,7 +91,7 @@ const translations = {
         // Sekcja Portfolio
         portfolioTitle: "Wybrane Projekty",
         portfolioSubtitle: "Przegląd projektów, z których jestem dumny.",
-        project1Title: "Strona Firmy Detailingowej",
+        project1Title: "Strona Firmy Leasingowej",
         project1Type: "Projektowanie i Tworzenie Stron",
         project2Title: "Edukacyjny Czatbot AI",
         project2Type: "Rozwój AI",
