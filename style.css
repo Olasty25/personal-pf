@@ -233,7 +233,7 @@ img {
     align-items: center;
     gap: 3rem; /* Increased gap slightly for better spacing */
     flex-wrap: wrap;
-    filter: grayscale(100%) opacity(0.9);
+
     transition: filter 0.3s ease; /* Smooth transition for hover */
 }
 
