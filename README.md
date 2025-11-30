@@ -1,11 +1,10 @@
 # Aleksander Tomczak - Personal Portfolio
 
-
-_Replace the image URL above with a screenshot of your finished website._
+<img width="1943" height="1109" alt="strona" src="https://github.com/user-attachments/assets/97d0d80b-d8cf-4a93-a199-755a334d09a1" />
 
 Welcome to the official repository for my personal portfolio website. This project is a dynamic and responsive digital space designed to showcase my skills, projects, and journey as a Website Creator and AI Developer based in Poland.
 
-### 🚀 [View Live Demo](https://your-live-website-url.com)
+### 🚀 [View Live Demo](https://thorest.dev)
 
 ---
 
