@@ -67,7 +67,7 @@ const translations = {
         formTypeMulti: "Multi Page",
         formTypeEcom: "E-commerce Store",
         formMessageLabel: "Your Message",
-        formSubmit: "Send Message"
+        formSubmit: "Send Message",
 
         // Footer
         footerText: "© 2025 Aleksander Tomczak. All Rights Reserved.",
@@ -139,7 +139,7 @@ const translations = {
         formTypeMulti: "Strona Wielopodstronowa",
         formTypeEcom: "Sklep Internetowy (E-commerce)",
         formMessageLabel: "Twoja Wiadomość",
-        formSubmit: "Wyślij Wiadomość"
+        formSubmit: "Wyślij Wiadomość",
 
         // Stopka
         footerText: "© 2025 Aleksander Tomczak. Wszelkie Prawa Zastrzeżone.",
