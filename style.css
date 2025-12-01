@@ -215,7 +215,7 @@ img {
 ==================================== */
 .clients-section {
     padding: 4rem 0;
-    background-color: var(--bg-light-dark);
+    background-color: var(--text-headings);
 }
 
 .clients-title {
