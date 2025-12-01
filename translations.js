@@ -60,6 +60,15 @@ const translations = {
         ctaSubtitle: "Let's work together to create something exceptional. I'm available for freelance opportunities.",
         ctaButton: "Get In Touch",
 
+        formNameLabel: "Name & Surname",
+        formEmailLabel: "Email Address",
+        formTypeLabel: "Type of Website",
+        formTypeSingle: "Single Page",
+        formTypeMulti: "Multi Page",
+        formTypeEcom: "E-commerce Store",
+        formMessageLabel: "Your Message",
+        formSubmit: "Send Message"
+
         // Footer
         footerText: "© 2025 Aleksander Tomczak. All Rights Reserved.",
     },
@@ -122,6 +131,15 @@ const translations = {
         ctaTitle: "Masz pomysł na projekt?",
         ctaSubtitle: "Pracujmy razem, aby stworzyć coś wyjątkowego. Jestem otwarty na zlecenia freelancerskie.",
         ctaButton: "Skontaktuj Się",
+
+        formNameLabel: "Imię i Nazwisko",
+        formEmailLabel: "Adres E-mail",
+        formTypeLabel: "Rodzaj Strony",
+        formTypeSingle: "Strona typu One-Page",
+        formTypeMulti: "Strona Wielopodstronowa",
+        formTypeEcom: "Sklep Internetowy (E-commerce)",
+        formMessageLabel: "Twoja Wiadomość",
+        formSubmit: "Wyślij Wiadomość"
 
         // Stopka
         footerText: "© 2025 Aleksander Tomczak. Wszelkie Prawa Zastrzeżone.",
