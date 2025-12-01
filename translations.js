@@ -9,7 +9,7 @@ const translations = {
         // Hero Section
         heroSubtitle: "Website Creator & AI Developer",
         heroTitle: "Aleksander Tomczak",
-        heroDescription: "Crafting websites that are smart, beautiful, and intuitive. Based in Poland, building for the world.",
+        heroDescription: "Crafting websites that are smart, beautiful, and intuitive. With conscientious precision.",
 
         // Clients Section
         clientsTitle: "Trusted by innovative companies",
@@ -44,7 +44,7 @@ const translations = {
         stat3Label: "Happy Clients",
 
         // Process Section
-        processTitle: "How Ideas Become Reality",
+        processTitle: "Cooperation With Me",
         processSubtitle: "My collaborative and transparent development process.",
         step1Title: "1. Discovery & Strategy",
         step1Desc: "We start by understanding your vision, goals, and target audience to create a solid strategic foundation.",
@@ -73,7 +73,7 @@ const translations = {
         // Sekcja Hero
         heroSubtitle: "Twórca Stron & Deweloper AI",
         heroTitle: "Aleksander Tomczak",
-        heroDescription: "Tworzę strony internetowe, które są inteligentne, piękne i intuicyjne. Z Polski, dla świata.",
+        heroDescription: "Tworzę strony internetowe, które są inteligentne, piękne i intuicyjne. Z sumienną precyzją.",
 
         // Sekcja Klienci
         clientsTitle: "Klienci",
@@ -107,7 +107,7 @@ const translations = {
         stat3Label: "Zadowoleni Klienci",
 
         // Sekcja Proces
-        processTitle: "Jak Pomysły Stają Się Rzeczywistością",
+        processTitle: "Jak Wygląda Współpraca ze Mną",
         processSubtitle: "Mój oparty na współpracy i przejrzysty proces tworzenia.",
         step1Title: "1. Odkrycie i Strategia",
         step1Desc: "Zaczynamy od zrozumienia Twojej wizji, celów i grupy docelowej, aby stworzyć solidne podstawy strategiczne.",
