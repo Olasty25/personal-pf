@@ -45,7 +45,7 @@ const translations = {
 
         // Process Section
         processTitle: "Cooperation With Me",
-        processSubtitle: "My collaborative and transparent development process.",
+        processSubtitle: "I build webpages on WordPress, but also custom ones with React.js.",
         step1Title: "1. Discovery & Strategy",
         step1Desc: "We start by understanding your vision, goals, and target audience to create a solid strategic foundation.",
         step2Title: "2. Design & Prototyping",
@@ -117,7 +117,7 @@ const translations = {
 
         // Sekcja Proces
         processTitle: "Jak Wygląda Współpraca ze Mną",
-        processSubtitle: "Mój oparty na współpracy i przejrzysty proces tworzenia.",
+        processSubtitle: "Buduję strony na WordPressie, ale także customowe w React.js.",
         step1Title: "1. Odkrycie i Strategia",
         step1Desc: "Zaczynamy od zrozumienia Twojej wizji, celów i grupy docelowej, aby stworzyć solidne podstawy strategiczne.",
         step2Title: "2. Projektowanie i Prototypowanie",
