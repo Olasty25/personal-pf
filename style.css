@@ -475,22 +475,34 @@ img {
 /* =================================
    11. RESPONSIVE DESIGN
 ==================================== */
+/* =================================
+   11. RESPONSIVE DESIGN
+==================================== */
 @media (max-width: 992px) {
     .hero-content {
-        flex-direction: column-reverse;
+        /* CHANGE: 'column' puts Text first, Image second. 
+           'column-reverse' was putting Image first. */
+        flex-direction: column; 
         text-align: center;
+        gap: 2rem; /* Adds space between the text/socials and the image */
     }
+
     .hero-text {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
+
     .hero-image {
-        margin-bottom: 2rem;
+        /* CHANGE: Removed margin-bottom, added margin-top if needed, 
+           but 'gap' in .hero-content handles spacing now. */
+        margin-bottom: 0;
         flex-basis: auto;
-        width: 60%;
+        width: 60%; 
         max-width: 350px;
     }
+
+    /* Keep the rest of your existing responsive styles below */
     .about-content {
         flex-direction: column;
         text-align: center;
