@@ -31,8 +31,8 @@ const translations = {
         project1Type: "Web Design & Development",
         project2Title: "AI Edu Chatbot Platform",
         project2Type: "AI Development",
-        project3Title: "Portfolio Template Customization",
-        project3Type: "Low-Code Development",
+        project3Title: "IT Company Website",
+        project3Type: "Complete Website Development",
 
 
         // About Section
@@ -104,8 +104,8 @@ const translations = {
         project1Type: "Projektowanie i Tworzenie Stron",
         project2Title: "Edukacyjny Czatbot AI",
         project2Type: "Rozwój AI",
-        project3Title: "Personalizacja Szablonu Portfolio",
-        project3Type: "Low-Code Development",
+        project3Title: "Strona Firmy Usług IT",
+        project3Type: "Complete Website Build",
         
         // Sekcja O Mnie
         aboutTitle: "Moja Historia",
