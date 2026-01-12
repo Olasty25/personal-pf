@@ -7,9 +7,9 @@ const translations = {
         navContact: "Contact",
 
         // Hero Section
-        heroSubtitle: "Website Creator & AI Developer",
-        heroTitle: "Aleksander Tomczak",
-        heroDescription: "Crafting websites that are smart, beautiful, and intuitive. With conscientious precision.",
+        heroSubtitle: "My name is Aleksander Tomczak",
+        heroTitle: "I create websites that bring customers to firms",
+        heroDescription: "Proffessionally, rapidly, with sudden effects",
 
         // Clients Section
         clientsTitle: "Trusted by innovative companies",
@@ -80,9 +80,9 @@ const translations = {
         navContact: "Kontakt",
 
         // Sekcja Hero
-        heroSubtitle: "Twórca Stron & Deweloper AI",
-        heroTitle: "Aleksander Tomczak",
-        heroDescription: "Tworzę strony internetowe, które są inteligentne, piękne i intuicyjne. Z sumienną precyzją.",
+        heroSubtitle: "Mam na imię Aleksander Tomczak",
+        heroTitle: "Tworzę strony, które pozyskują klientów firmom",
+        heroDescription: "Profesjonalnie, szybko i skutecznie",
 
         // Sekcja Klienci
         clientsTitle: "Klienci",
