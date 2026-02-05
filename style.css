@@ -176,7 +176,7 @@ img {
 }
 
 .hero-text h1 {
-    font-size: 4rem;
+    font-size: 2.5rem;
     margin-bottom: 1.5rem;
 }
 
@@ -196,8 +196,15 @@ img {
     color: var(--text-primary);
 }
 
+.hero-social-useme-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    vertical-align: middle;
+    object-fit: contain;
+}
+
 .hero-image {
-    flex-basis: 400px;
+    flex-basis: 600px;
     flex-shrink: 0;
 }
 
@@ -212,13 +219,13 @@ img {
 ==================================== */
 .clients-section {
     padding: 4rem 0;
-    background-color: var(--text-headings);
+    background-color: var(--bg-light-dark);
 }
 
 .clients-title {
     text-align: center;
     font-family: var(--font-body);
-    color: #a0a0a0;
+    color: var(--text-primary);
     font-weight: 400;
     letter-spacing: 1px;
     margin-bottom: 2rem;
@@ -237,9 +244,20 @@ img {
 /* Add this new block of code */
 .client-logos img {
     max-width: 200px;   /* Cap the maximum width of any logo */
-    max-height: 100px;   /* Cap the maximum height to keep the row even */
+    max-height: 150px;   /* Cap the maximum height to keep the row even */
     object-fit: contain; /* IMPORTANT: Keeps aspect ratio, prevents squishing */
     width: 100%;        /* Allows the logo to be smaller if its container is smaller */
+}
+
+.client-logo {
+    filter: grayscale(100%) brightness(0.6);
+    opacity: 0.7;
+    transition: filter 0.3s ease, opacity 0.3s ease;
+}
+
+.client-logo:hover {
+    filter: grayscale(80%) brightness(0.8);
+    opacity: 1;
 }
 
 /* =================================
@@ -345,7 +363,83 @@ img {
 }
 
 /* =================================
-   8. ABOUT SECTION
+   8. TESTIMONIALS SECTION
+==================================== */
+.testimonials-section {
+    padding: 100px 0;
+    background-color: var(--bg-dark);
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+.testimonial-card {
+    background: var(--bg-light-dark);
+    padding: 2rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-gold);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.testimonial-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.testimonial-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--border-color);
+}
+
+.testimonial-info h4 {
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    color: var(--text-headings);
+    margin: 0 0 0.5rem 0;
+    font-weight: 700;
+}
+
+.testimonial-rating {
+    display: flex;
+    gap: 0.25rem;
+}
+
+.testimonial-rating i {
+    color: var(--accent-gold);
+    font-size: 0.9rem;
+}
+
+.testimonial-text {
+    color: var(--text-primary);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    font-style: italic;
+}
+
+.testimonial-date {
+    color: #a0a0a0;
+    font-size: 0.85rem;
+    display: block;
+    margin-top: 1rem;
+}
+
+/* =================================
+   9. ABOUT SECTION
 ==================================== */
 .about-section {
     padding: 100px 0;
@@ -498,8 +592,8 @@ img {
            but 'gap' in .hero-content handles spacing now. */
         margin-bottom: 0;
         flex-basis: auto;
-        width: 60%; 
-        max-width: 350px;
+        width: 90%; 
+        max-width: 550px;
     }
 
     /* Keep the rest of your existing responsive styles below */
@@ -561,6 +655,25 @@ img {
 /* =================================
    12. CONTACT FORM STYLES
 ==================================== */
+.contact-phone {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.contact-phone i {
+    margin-right: 0.5rem;
+    color: var(--accent-gold);
+}
+
+.contact-phone-link {
+    margin-left: 0.25rem;
+    color: var(--text-primary);
+}
+
+.contact-phone-link:hover {
+    color: var(--accent-gold);
+}
+
 .contact-form {
     max-width: 600px;
     margin: 3rem auto 0;

@@ -48,11 +48,11 @@ You only need a modern web browser.
 
 1.  **Clone the repository:**
     ```sh
-    git clone https://github.com/your-username/your-repo-name.git
+    git clone https://github.com/your-username/personal-pf.git
     ```
 2.  **Navigate to the project directory:**
     ```sh
-    cd your-repo-name
+    cd personal-pf
     ```
 3.  **Open the `index.html` file in your browser.**
 
