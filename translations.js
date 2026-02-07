@@ -40,20 +40,22 @@ const translations = {
         // Portfolio Section
         portfolioTitle: "Selected Work",
         portfolioSubtitle: "A glimpse into projects I'm proud to have built.",
-        project1Title: "Car Leasing Company Website",
-       
-        project2Title: "AI Edu Chatbot Platform",
-        
-        project3Title: "IT Company Website",
+        project1Title: "Barber",
 
-        project4Title: "IT Company Website",
+        project2Title: "Florist",
 
-        project5Title: "IT Company Website",
+        project3Title: "Car Services",
 
-        project6Title: "IT Company Website",
+        project4Title: "Roofing Services",
 
-        project7Title: "IT Company Website",
-        
+        project5Title: "Portugese Restaurant",
+
+        project6Title: "Food + Bistrot",
+
+        project7Title: "Hotel Management App",
+
+        project8Title: "Beauty Salon ",
+
 
 
         // About Section
@@ -138,19 +140,21 @@ const translations = {
         portfolioSubtitle: "Przegląd projektów, z których jestem dumny.",
 
         project1Title: "Strona Zakładu Barberskiego",
-       
+
         project2Title: "Strona Kwiaciarnii",
-        
+
         project3Title: "Strona Serwisu Samochodowego",
-        
+
         project4Title: "Strona Firmy Dekarskiej",
-       
+
         project5Title: "Strona Restauracji",
-        
+
         project6Title: "Strona Kateringu + Jadłodalni",
-        
+
         project7Title: "Aplikacja Do Zarządzania Hotelem",
-        
+
+        project8Title: "Strona Salonu Piękności",
+
 
         // Sekcja O Mnie
         aboutTitle: "Moja Historia",
