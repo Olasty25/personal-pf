@@ -231,22 +231,41 @@ img {
     margin-bottom: 2rem;
 }
 
-.client-logos {
-    display: flex;
-    justify-content: center; /* Changed from space-around for better alignment */
-    align-items: center;
-    gap: 3rem; /* Increased gap slightly for better spacing */
-    flex-wrap: wrap;
-
-    transition: filter 0.3s ease; /* Smooth transition for hover */
+/* Track: hides overflow so only one viewport-width of logos is visible */
+.client-logos-track {
+    overflow: hidden;
+    width: 100%;
 }
 
-/* Add this new block of code */
+.client-logos {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+/* Scrolling row: duplicated logos so we can loop seamlessly */
+.client-logos--scroll {
+    width: max-content;
+    animation: client-scroll-left-to-right 45s linear infinite;
+}
+
+.client-logos--scroll .client-logo {
+    flex-shrink: 0;
+}
+
+@keyframes client-scroll-left-to-right {
+    from {
+        transform: translateX(-50%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
 .client-logos img {
-    max-width: 200px;   /* Cap the maximum width of any logo */
-    max-height: 150px;   /* Cap the maximum height to keep the row even */
-    object-fit: contain; /* IMPORTANT: Keeps aspect ratio, prevents squishing */
-    width: 100%;        /* Allows the logo to be smaller if its container is smaller */
+    max-width: 200px;
+    max-height: 150px;
+    object-fit: contain;
 }
 
 .client-logo {
