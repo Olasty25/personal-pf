@@ -56,6 +56,8 @@ const translations = {
 
         project8Title: "Beauty Salon ",
 
+        project9Title: "Carpenter",
+
 
 
         // About Section
@@ -154,6 +156,8 @@ const translations = {
         project7Title: "Aplikacja Do Zarządzania Hotelem",
 
         project8Title: "Strona Salonu Piękności",
+
+        project9Title: "Strona Usług Stolarskich i Ciesielskich",
 
 
         // Sekcja O Mnie
