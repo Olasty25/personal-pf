@@ -75,75 +75,29 @@ document.addEventListener('DOMContentLoaded', () => {
                     processSection.classList.add('in-view');
                 }
 
-                // Calculate scroll progress within the slides wrapper
+                // Determine which slide is currently in view
+                const slideCount = processSlides.length;
                 const wrapperTop = slidesWrapper.getBoundingClientRect().top;
                 const scrollProgress = Math.max(0, Math.min(1, 
                     (windowHeight - wrapperTop) / (slidesWrapper.offsetHeight - windowHeight + headerHeight)
                 ));
 
                 // Animate route path drawing
-                const routeProgress = scrollProgress;
-                const drawLength = pathLength * routeProgress;
+                const drawLength = pathLength * scrollProgress;
                 routePath.style.strokeDashoffset = pathLength - drawLength;
 
-                // Determine which slide should be active
-                // Adjusted calculation to make slides stay active longer
-                const slideCount = processSlides.length;
-                // Use a much slower progression - each slide gets significantly more scroll distance
-                // Multiply by 2.5 to give each slide much more time to read
-                const adjustedProgress = scrollProgress * (slideCount * 2.5);
-                const slideIndex = Math.floor(adjustedProgress);
-                const activeSlideIndex = Math.min(slideIndex, slideCount - 1);
+                // Keep slides active - they stay visible throughout their scroll duration
+                // Use slower progression so each slide gets more scroll distance
+                const adjustedProgress = scrollProgress * slideCount * 2;
+                const currentActive = Math.floor(adjustedProgress);
 
-                // Update active slide - keep previous slides visible longer
-                if (activeSlideIndex !== currentActiveSlide) {
-                    processSlides.forEach((slide, index) => {
-                        if (index === activeSlideIndex) {
-                            slide.classList.add('active');
-                        } else if (index < activeSlideIndex) {
-                            // Keep previous slides active (visible) longer
-                            slide.classList.add('active');
-                        } else {
-                            slide.classList.remove('active');
-                        }
-                    });
-                    currentActiveSlide = activeSlideIndex;
-                }
-
-                // Fade in/out slides based on scroll position
-                // Much more generous visibility zones - text stays visible longer
                 processSlides.forEach((slide, index) => {
                     const slideProgress = adjustedProgress - index;
-                    const textElements = slide.querySelectorAll('.process-slide-text h3, .process-slide-text p');
-                    
-                    // Extended visibility range - slides stay visible much longer
-                    if (slideProgress >= -0.5 && slideProgress <= 3.0) {
-                        let slideOpacity = 1;
-                        if (slideProgress < 0) {
-                            // Very gentle fade in as approaching
-                            slideOpacity = Math.max(0.5, (slideProgress + 0.5) / 0.5);
-                        } else if (slideProgress > 2.5) {
-                            // Very gentle fade out - only at the very end
-                            slideOpacity = Math.max(0.5, (3.0 - slideProgress) / 0.5);
-                        } else {
-                            // Full opacity for most of the slide's duration (0 to 2.5)
-                            slideOpacity = 1;
-                        }
-                        slide.style.opacity = slideOpacity;
-                        
-                        // Keep text elements fully visible once they've appeared
-                        if (slideProgress >= 0.2 && slideProgress <= 2.8) {
-                            textElements.forEach(el => {
-                                el.style.opacity = '1';
-                                el.style.transform = 'translateY(0)';
-                            });
-                        }
-                    } else if (slideProgress < -0.5) {
-                        // Before slide comes into view
-                        slide.style.opacity = 0.3;
+                    // Keep slide active if it's in its visible range
+                    if (slideProgress >= -0.2 && slideProgress <= 2) {
+                        slide.classList.add('active');
                     } else {
-                        // After slide has passed
-                        slide.style.opacity = 0.3;
+                        slide.classList.remove('active');
                     }
                 });
 

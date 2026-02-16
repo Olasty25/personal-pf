@@ -516,13 +516,13 @@ img {
 .process-header {
     position: relative;
     z-index: 10;
-    padding: 80px 0 30px;
+    padding: 60px 0 10px;
     background: var(--bg-dark);
 }
 
 .process-slides-wrapper {
     position: relative;
-    min-height: 400vh; /* Much more scroll space - each slide stays visible longer */
+    min-height: 800vh; /* More scroll space so slides stay visible longer */
 }
 
 /* Route SVG - positioned to align with icons */
@@ -572,19 +572,14 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 2rem;
+    padding: 1rem;
     z-index: 2;
     opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 0.4s ease, transform 0.4s ease;
-    margin-bottom: 0; /* Remove gap between slides */
-    background: radial-gradient(circle at 20% 50%, rgba(212, 175, 55, 0.03) 0%, transparent 50%),
-                radial-gradient(circle at 80% 80%, rgba(212, 175, 55, 0.02) 0%, transparent 50%);
 }
 
 .process-slide.active {
     opacity: 1;
-    transform: translateY(0);
+    transition: opacity 0.3s ease;
 }
 
 .process-slide-content {
@@ -593,7 +588,7 @@ img {
     display: grid;
     grid-template-columns: auto 1fr;
     align-items: center;
-    gap: 5rem;
+    gap: 2rem;
     position: relative;
 }
 
@@ -654,7 +649,7 @@ img {
 
 .process-slide-text {
     position: relative;
-    padding: 4rem 0;
+    padding: 2rem 0;
 }
 
 /* Modern card design with gradient border effect */
@@ -662,25 +657,13 @@ img {
     content: '';
     position: absolute;
     top: 0;
-    left: -2rem;
-    right: -2rem;
+    left: -1rem;
+    right: -1rem;
     bottom: 0;
     background: linear-gradient(135deg, rgba(30, 30, 30, 0.95), rgba(18, 18, 18, 0.95));
     border-radius: 20px;
-    border: 2px solid transparent;
-    background-clip: padding-box;
-    box-shadow: 
-        0 20px 60px rgba(0, 0, 0, 0.6),
-        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
     z-index: -1;
-    opacity: 0;
-    transform: scale(0.95);
-    transition: opacity 0.6s ease, transform 0.6s ease;
-}
-
-.process-slide.active .process-slide-text::before {
-    opacity: 1;
-    transform: scale(1);
 }
 
 /* Gradient border effect */
@@ -688,60 +671,31 @@ img {
     content: '';
     position: absolute;
     top: -2px;
-    left: -2rem;
-    right: -2rem;
+    left: -1rem;
+    right: -1rem;
     bottom: -2px;
     background: linear-gradient(135deg, var(--accent-gold), rgba(212, 175, 55, 0.3), var(--accent-gold));
     border-radius: 20px;
     z-index: -2;
-    opacity: 0;
-    transition: opacity 0.6s ease 0.2s;
-}
-
-.process-slide.active .process-slide-text::after {
-    opacity: 1;
 }
 
 .process-slide-text h3 {
     font-size: 3.5rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     color: var(--text-headings);
     font-weight: 700;
     letter-spacing: -1px;
     line-height: 1.1;
-    background: linear-gradient(135deg, #FFFFFF, rgba(255, 255, 255, 0.8));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.6s ease 0.3s, transform 0.6s ease 0.3s;
-    will-change: opacity, transform;
-}
-
-.process-slide.active .process-slide-text h3 {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Keep text visible even when slide opacity changes during scroll */
-.process-slide-text h3,
-.process-slide-text p {
-    transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .process-slide-text p {
     font-size: 1.35rem;
     line-height: 2;
-    color: #D0D0D0;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease 0.5s, transform 0.6s ease 0.5s;
+    color: #E8E8E8;
     letter-spacing: 0.2px;
     font-weight: 300;
     position: relative;
     padding-left: 2rem;
-    will-change: opacity, transform;
 }
 
 .process-slide-text p::before {
@@ -753,20 +707,6 @@ img {
     height: calc(100% - 1rem);
     background: linear-gradient(180deg, var(--accent-gold), rgba(212, 175, 55, 0.3));
     border-radius: 2px;
-    opacity: 0;
-    transform: scaleY(0);
-    transform-origin: top;
-    transition: opacity 0.5s ease 0.7s, transform 0.5s ease 0.7s;
-}
-
-.process-slide.active .process-slide-text p::before {
-    opacity: 1;
-    transform: scaleY(1);
-}
-
-.process-slide.active .process-slide-text p {
-    opacity: 1;
-    transform: translateY(0);
 }
 
 /* Ensure text content stays visible - opacity controlled by JavaScript for smooth transitions */
@@ -895,8 +835,9 @@ img {
    10. CTA & FOOTER
 ==================================== */
 .cta-section {
-    padding: 80px 0;
+    padding: 10px 0 80px;
     text-align: center;
+    margin-top: -10px;
 }
 
 .cta-section h2 { font-size: 2.5rem; }
