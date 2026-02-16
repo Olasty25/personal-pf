@@ -586,7 +586,7 @@ img {
 }
 
 .process-slide-content {
-    max-width: 900px;
+    max-width: 1100px;
     width: 100%;
     display: flex;
     align-items: center;
@@ -651,14 +651,23 @@ img {
 
 .process-slide-text {
     flex: 1;
+    background: rgba(30, 30, 30, 0.75);
+    padding: 3.5rem;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
 }
 
 .process-slide-text h3 {
-    font-size: 2.5rem;
-    margin-bottom: 1.5rem;
+    font-size: 3rem;
+    margin-bottom: 2rem;
     color: var(--text-headings);
     position: relative;
-    padding-left: 1rem;
+    padding-left: 1.5rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    line-height: 1.2;
 }
 
 .process-slide-text h3::before {
@@ -667,11 +676,12 @@ img {
     left: 0;
     top: 0;
     bottom: 0;
-    width: 4px;
+    width: 5px;
     background: var(--accent-gold);
     transform: scaleY(0);
     transform-origin: bottom;
     transition: transform 0.8s ease 0.3s;
+    box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
 }
 
 .process-slide.active .process-slide-text h3::before {
@@ -679,12 +689,14 @@ img {
 }
 
 .process-slide-text p {
-    font-size: 1.2rem;
-    line-height: 1.8;
-    color: var(--text-primary);
+    font-size: 1.4rem;
+    line-height: 2;
+    color: #E8E8E8;
     opacity: 0;
     transform: translateX(-20px);
     transition: opacity 0.8s ease 0.5s, transform 0.8s ease 0.5s;
+    letter-spacing: 0.3px;
+    max-width: 90%;
 }
 
 .process-slide.active .process-slide-text p {
@@ -749,13 +761,24 @@ img {
         font-size: 1rem;
     }
     
+    .process-slide-text {
+        padding: 2rem;
+    }
+    
     .process-slide-text h3 {
-        font-size: 2rem;
+        font-size: 2.2rem;
         padding-left: 0;
+        margin-bottom: 1.5rem;
     }
     
     .process-slide-text h3::before {
         display: none;
+    }
+    
+    .process-slide-text p {
+        font-size: 1.2rem;
+        line-height: 1.9;
+        max-width: 100%;
     }
     
     .process-route {
@@ -764,12 +787,18 @@ img {
 }
 
 @media (max-width: 768px) {
+    .process-slide-text {
+        padding: 1.5rem;
+    }
+    
     .process-slide-text h3 {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
+        margin-bottom: 1.2rem;
     }
     
     .process-slide-text p {
-        font-size: 1rem;
+        font-size: 1.1rem;
+        line-height: 1.8;
     }
     
     .process-icon-circle {
