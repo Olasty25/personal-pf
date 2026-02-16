@@ -52,7 +52,7 @@ const translations = {
 
         project6Title: "Food + Bistrot",
 
-        project7Title: "Hotel Management App",
+        project7Title: "Clothing Brand Store",
 
         project8Title: "Beauty Salon ",
 
@@ -153,7 +153,7 @@ const translations = {
 
         project6Title: "Strona Kateringu + Jadłodalni",
 
-        project7Title: "Aplikacja Do Zarządzania Hotelem",
+        project7Title: "Sklep Marki Odzieżowej",
 
         project8Title: "Strona Salonu Piękności",
 
