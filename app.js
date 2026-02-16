@@ -89,16 +89,19 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Determine which slide should be active
                 // Adjusted calculation to make slides stay active longer
                 const slideCount = processSlides.length;
-                // Use a slower progression - each slide gets more scroll distance
-                // Multiply by 1.75 to give each slide more time (was 1.5)
-                const adjustedProgress = scrollProgress * (slideCount * 1.75);
+                // Use a much slower progression - each slide gets significantly more scroll distance
+                // Multiply by 2.5 to give each slide much more time to read
+                const adjustedProgress = scrollProgress * (slideCount * 2.5);
                 const slideIndex = Math.floor(adjustedProgress);
                 const activeSlideIndex = Math.min(slideIndex, slideCount - 1);
 
-                // Update active slide
+                // Update active slide - keep previous slides visible longer
                 if (activeSlideIndex !== currentActiveSlide) {
                     processSlides.forEach((slide, index) => {
                         if (index === activeSlideIndex) {
+                            slide.classList.add('active');
+                        } else if (index < activeSlideIndex) {
+                            // Keep previous slides active (visible) longer
                             slide.classList.add('active');
                         } else {
                             slide.classList.remove('active');
@@ -108,24 +111,39 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
 
                 // Fade in/out slides based on scroll position
-                // Adjusted for longer visibility per slide with smoother transitions
+                // Much more generous visibility zones - text stays visible longer
                 processSlides.forEach((slide, index) => {
                     const slideProgress = adjustedProgress - index;
-                    if (slideProgress >= -0.3 && slideProgress <= 1.75) {
-                        // Extended fade zones - slides stay visible longer
-                        let opacity = 1;
+                    const textElements = slide.querySelectorAll('.process-slide-text h3, .process-slide-text p');
+                    
+                    // Extended visibility range - slides stay visible much longer
+                    if (slideProgress >= -0.5 && slideProgress <= 3.0) {
+                        let slideOpacity = 1;
                         if (slideProgress < 0) {
-                            // Fade in as approaching
-                            opacity = Math.max(0.2, (slideProgress + 0.3) / 0.3);
-                        } else if (slideProgress > 1.5) {
-                            // Fade out after extended visibility
-                            opacity = Math.max(0.2, (1.75 - slideProgress) / 0.25);
+                            // Very gentle fade in as approaching
+                            slideOpacity = Math.max(0.5, (slideProgress + 0.5) / 0.5);
+                        } else if (slideProgress > 2.5) {
+                            // Very gentle fade out - only at the very end
+                            slideOpacity = Math.max(0.5, (3.0 - slideProgress) / 0.5);
+                        } else {
+                            // Full opacity for most of the slide's duration (0 to 2.5)
+                            slideOpacity = 1;
                         }
-                        slide.style.opacity = opacity;
-                    } else if (slideProgress < -0.3) {
-                        slide.style.opacity = 0.2;
+                        slide.style.opacity = slideOpacity;
+                        
+                        // Keep text elements fully visible once they've appeared
+                        if (slideProgress >= 0.2 && slideProgress <= 2.8) {
+                            textElements.forEach(el => {
+                                el.style.opacity = '1';
+                                el.style.transform = 'translateY(0)';
+                            });
+                        }
+                    } else if (slideProgress < -0.5) {
+                        // Before slide comes into view
+                        slide.style.opacity = 0.3;
                     } else {
-                        slide.style.opacity = 0.2;
+                        // After slide has passed
+                        slide.style.opacity = 0.3;
                     }
                 });
 
