@@ -87,8 +87,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 routePath.style.strokeDashoffset = pathLength - drawLength;
 
                 // Determine which slide should be active
+                // Adjusted calculation to make slides stay active longer
                 const slideCount = processSlides.length;
-                const slideIndex = Math.floor(scrollProgress * slideCount);
+                // Use a slower progression - each slide gets more scroll distance
+                // Multiply by 1.75 to give each slide more time (was 1.5)
+                const adjustedProgress = scrollProgress * (slideCount * 1.75);
+                const slideIndex = Math.floor(adjustedProgress);
                 const activeSlideIndex = Math.min(slideIndex, slideCount - 1);
 
                 // Update active slide
@@ -104,12 +108,24 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
 
                 // Fade in/out slides based on scroll position
+                // Adjusted for longer visibility per slide with smoother transitions
                 processSlides.forEach((slide, index) => {
-                    const slideProgress = (scrollProgress * slideCount) - index;
-                    if (slideProgress >= 0 && slideProgress <= 1) {
-                        const opacity = slideProgress < 0.3 ? slideProgress / 0.3 : 
-                                       slideProgress > 0.7 ? (1 - slideProgress) / 0.3 : 1;
-                        slide.style.opacity = Math.max(0.3, opacity);
+                    const slideProgress = adjustedProgress - index;
+                    if (slideProgress >= -0.3 && slideProgress <= 1.75) {
+                        // Extended fade zones - slides stay visible longer
+                        let opacity = 1;
+                        if (slideProgress < 0) {
+                            // Fade in as approaching
+                            opacity = Math.max(0.2, (slideProgress + 0.3) / 0.3);
+                        } else if (slideProgress > 1.5) {
+                            // Fade out after extended visibility
+                            opacity = Math.max(0.2, (1.75 - slideProgress) / 0.25);
+                        }
+                        slide.style.opacity = opacity;
+                    } else if (slideProgress < -0.3) {
+                        slide.style.opacity = 0.2;
+                    } else {
+                        slide.style.opacity = 0.2;
                     }
                 });
 

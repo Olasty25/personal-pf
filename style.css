@@ -516,13 +516,13 @@ img {
 .process-header {
     position: relative;
     z-index: 10;
-    padding: 100px 0 50px;
+    padding: 80px 0 30px;
     background: var(--bg-dark);
 }
 
 .process-slides-wrapper {
     position: relative;
-    min-height: 400vh; /* 4 slides × 100vh each */
+    min-height: 700vh; /* Increased for more reading time per slide */
 }
 
 /* Route SVG - positioned to align with icons */
@@ -577,6 +577,7 @@ img {
     opacity: 0;
     transform: translateY(50px);
     transition: opacity 0.8s ease, transform 0.8s ease;
+    margin-bottom: 0; /* Remove gap between slides */
 }
 
 .process-slide.active {
@@ -627,7 +628,7 @@ img {
     border-radius: 50%;
     border: 2px solid var(--accent-gold);
     opacity: 0.3;
-    animation: ripple 1s ease-out infinite;
+    animation: ripple 2s ease-out infinite;
 }
 
 .process-step-number {
