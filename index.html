@@ -85,11 +85,11 @@
                     <img src="assets/bialykamien.png" alt="Client Logo" class="client-logo">
                     <img src="assets/cubesoft.png" alt="Client Logo" class="client-logo">
                     <img src="assets/czatoza.png" alt="Client Logo" class="client-logo">
-                    <img src="assets/lyczek.png" alt="Client Logo" class="client-logo">
-                    <img src="assets/adonisian.png" alt="Client Logo" class="client-logo">
-                    <img src="assets/bialykamien.png" alt="Client Logo" class="client-logo">
-                    <img src="assets/czatoza.png" alt="Client Logo" class="client-logo">
-                    <img src="assets/cubesoft.png" alt="Client Logo" class="client-logo">
+                    <img src="assets/najem24.png" alt="Client Logo" class="client-logo">
+                    
+                    
+                    
+                    
                 </div>
             </div>
         </section>
@@ -321,39 +321,95 @@
 
         <!-- ===== PROCESS SECTION ===== -->
         <section id="process" class="process-section">
-            <div class="container">
+            <div class="process-header">
                 <div class="section-title">
                     <h2 data-translate-key="processTitle">How Ideas Become Reality</h2>
                     <p data-translate-key="processSubtitle">My collaborative and transparent development process.</p>
                 </div>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
+            </div>
+            
+            <div class="process-slides-wrapper">
+                <!-- Route line SVG -->
+                <svg class="process-route" viewBox="0 0 100 400" preserveAspectRatio="none">
+                    <path class="route-path" d="M 50 0 L 50 400" 
+                          fill="none" stroke="url(#routeGradient)" 
+                          stroke-width="4" stroke-linecap="round" 
+                          stroke-dasharray="400" stroke-dashoffset="400"/>
+                    <defs>
+                        <linearGradient id="routeGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" style="stop-color:#D4AF37;stop-opacity:0.4" />
+                            <stop offset="25%" style="stop-color:#D4AF37;stop-opacity:0.8" />
+                            <stop offset="50%" style="stop-color:#D4AF37;stop-opacity:1" />
+                            <stop offset="75%" style="stop-color:#D4AF37;stop-opacity:0.8" />
+                            <stop offset="100%" style="stop-color:#D4AF37;stop-opacity:0.4" />
+                        </linearGradient>
+                        <filter id="glow">
+                            <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                            <feMerge>
+                                <feMergeNode in="coloredBlur"/>
+                                <feMergeNode in="SourceGraphic"/>
+                            </feMerge>
+                        </filter>
+                    </defs>
+                </svg>
+
+                <div class="process-slide" data-slide="1">
+                    <div class="process-slide-content">
+                        <div class="process-icon-wrapper">
+                            <div class="process-icon-circle">
+                                <i class="fa-solid fa-lightbulb"></i>
+                            </div>
+                            <div class="process-step-number">01</div>
+                        </div>
+                        <div class="process-slide-text">
                             <h3 data-translate-key="step1Title">1. Discovery & Strategy</h3>
                             <p data-translate-key="step1Desc">We start by understanding your vision, goals, and target
                                 audience to create a solid strategic foundation.</p>
                         </div>
                     </div>
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
+                </div>
+
+                <div class="process-slide" data-slide="2">
+                    <div class="process-slide-content">
+                        <div class="process-icon-wrapper">
+                            <div class="process-icon-circle">
+                                <i class="fa-solid fa-palette"></i>
+                            </div>
+                            <div class="process-step-number">02</div>
+                        </div>
+                        <div class="process-slide-text">
                             <h3 data-translate-key="step2Title">2. Design & Prototyping</h3>
                             <p data-translate-key="step2Desc">I create wireframes and high-fidelity mockups, focusing on
                                 a seamless user experience and elegant design.</p>
                         </div>
                     </div>
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
+                </div>
+
+                <div class="process-slide" data-slide="3">
+                    <div class="process-slide-content">
+                        <div class="process-icon-wrapper">
+                            <div class="process-icon-circle">
+                                <i class="fa-solid fa-code"></i>
+                            </div>
+                            <div class="process-step-number">03</div>
+                        </div>
+                        <div class="process-slide-text">
                             <h3 data-translate-key="step3Title">3. Development</h3>
                             <p data-translate-key="step3Desc">The approved design is brought to life with clean,
                                 efficient code and the best technologies for the job.</p>
                         </div>
                     </div>
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
+                </div>
+
+                <div class="process-slide" data-slide="4">
+                    <div class="process-slide-content">
+                        <div class="process-icon-wrapper">
+                            <div class="process-icon-circle">
+                                <i class="fa-solid fa-rocket"></i>
+                            </div>
+                            <div class="process-step-number">04</div>
+                        </div>
+                        <div class="process-slide-text">
                             <h3 data-translate-key="step4Title">4. Launch & Support</h3>
                             <p data-translate-key="step4Desc">After rigorous testing, we launch your project. I provide
                                 ongoing support to ensure everything runs smoothly.</p>
@@ -374,7 +430,7 @@
                 <p class="contact-phone">
                     <i class="fa-solid fa-phone"></i>
                     <span data-translate-key="contactPhoneLabel">Phone:</span>
-                    <a href="tel:+48123456789" class="contact-phone-link">+48 574 610 138</a>
+                    <a href="tel:+48574610138" class="contact-phone-link">+48 574 610 138</a>
                 </p>
 
                 <!-- NEW CONTACT FORM -->

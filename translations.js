@@ -175,7 +175,7 @@ const translations = {
         step1Desc: "Zaczynamy od zrozumienia Twojej wizji, celów i grupy docelowej, aby stworzyć solidne podstawy strategiczne.",
         step2Title: "2. Projektowanie i Prototypowanie",
         step2Desc: "Podpisujemy prostą umowę. Ja tworzę prototypy strony, koncentrując się na płynnym doświadczeniu użytkownika i eleganckim designie. ",
-        step3Title: "3. Development",
+        step3Title: "3. Rozwój",
         step3Desc: "Zatwierdzony projekt pojawia się w sieci na twojej wybranej domenie, Ożywa dzięki wydajnemu kodowi i najlepszym technologiom do danego zadania.",
         step4Title: "4. Wdrożenie i Wsparcie",
         step4Desc: "Po rygorystycznych testach wdrażamy Twój projekt. Zapewniam bieżące wsparcie, aby wszystko działało bez zarzutu i byś miał intuicyjny dostęp do wszystkiego.",
