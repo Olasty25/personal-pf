@@ -522,7 +522,7 @@ img {
 
 .process-slides-wrapper {
     position: relative;
-    min-height: 1000vh; /* Much more scroll space - each slide stays visible longer */
+    min-height: 400vh; /* Much more scroll space - each slide stays visible longer */
 }
 
 /* Route SVG - positioned to align with icons */
