@@ -124,10 +124,13 @@ img {
 }
 
 .logo a {
-    font-family: var(--font-heading);
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: var(--text-headings);
+    display: inline-block;
+}
+
+.logo-image {
+    height: 50px;
+    width: auto;
+    display: block;
 }
 
 .main-nav ul {
@@ -153,6 +156,10 @@ img {
     display: flex;
     align-items: center;
     padding: 6rem 0;
+    background-image: url('assets/bgshape.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .hero-content {
@@ -209,9 +216,8 @@ img {
 }
 
 .hero-image img {
-    border-radius: 8px;
-    border: 3px solid var(--border-color);
-    padding: 10px;
+    width: 100%;
+    height: auto;
 }
 
 /* =================================
@@ -522,7 +528,7 @@ img {
 
 .process-slides-wrapper {
     position: relative;
-    min-height: 800vh; /* More scroll space so slides stay visible longer */
+    min-height: 300vh; /* Compressed scroll space for tighter spacing */
 }
 
 /* Route SVG - positioned to align with icons */
@@ -546,7 +552,7 @@ img {
 /* Align route with icon position on desktop */
 @media (min-width: 993px) {
     .process-route {
-        left: calc(50% - 380px); /* Approximate icon center position */
+        left: calc(50% - 380px);
     }
 }
 
@@ -558,9 +564,6 @@ img {
 
 .route-path {
     filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.6));
-}
-
-.route-path {
     transition: stroke-dashoffset 0.1s linear;
 }
 
@@ -649,34 +652,17 @@ img {
 
 .process-slide-text {
     position: relative;
-    padding: 2rem 0;
+    padding: 2rem;
+    background: rgba(30, 30, 30, 0.95);
+    border-radius: 12px;
+    border: 2px solid var(--accent-gold);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Modern card design with gradient border effect */
-.process-slide-text::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -1rem;
-    right: -1rem;
-    bottom: 0;
-    background: linear-gradient(135deg, rgba(30, 30, 30, 0.95), rgba(18, 18, 18, 0.95));
-    border-radius: 20px;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
-    z-index: -1;
-}
-
-/* Gradient border effect */
-.process-slide-text::after {
-    content: '';
-    position: absolute;
-    top: -2px;
-    left: -1rem;
-    right: -1rem;
-    bottom: -2px;
-    background: linear-gradient(135deg, var(--accent-gold), rgba(212, 175, 55, 0.3), var(--accent-gold));
-    border-radius: 20px;
-    z-index: -2;
+.process-slide.active .process-slide-text {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 50px rgba(212, 175, 55, 0.3);
 }
 
 .process-slide-text h3 {
@@ -709,10 +695,6 @@ img {
     border-radius: 2px;
 }
 
-/* Ensure text content stays visible - opacity controlled by JavaScript for smooth transitions */
-.process-slide-text {
-    pointer-events: auto;
-}
 
 /* Animations */
 @keyframes iconPulse {
@@ -773,13 +755,7 @@ img {
     }
     
     .process-slide-text {
-        padding: 3rem 0;
-    }
-    
-    .process-slide-text::before,
-    .process-slide-text::after {
-        left: -1rem;
-        right: -1rem;
+        padding: 2rem;
     }
     
     .process-slide-text h3 {
@@ -804,13 +780,7 @@ img {
 
 @media (max-width: 768px) {
     .process-slide-text {
-        padding: 2rem 0;
-    }
-    
-    .process-slide-text::before,
-    .process-slide-text::after {
-        left: -0.5rem;
-        right: -0.5rem;
+        padding: 1.5rem;
     }
     
     .process-slide-text h3 {
